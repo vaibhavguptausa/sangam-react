@@ -3,9 +3,7 @@ import '../Header/headerStyle.css';
 import Image from '../logoggk-sangam.png' ;
 
 export class Header extends React.Component {
-
     render() {
-
         return (
             <div className='main-header'>
                 <div className='main-header-logo'>
@@ -17,9 +15,6 @@ export class Header extends React.Component {
                     <span className="main-header-username">Vaibhav Gupta</span>
                 </div>
             </div>
-
         );
-
-
     }
 }
