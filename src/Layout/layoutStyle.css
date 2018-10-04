@@ -1,0 +1,9 @@
+
+.Tabs{
+    grid-column-start: 2;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin: 10% 2% 2% 10%
+
+}
