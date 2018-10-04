@@ -1,0 +1,23 @@
+.col-md-6 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.form-group {
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+form {
+    padding-top: 20px;
+    font-family: calibri!important;
+}

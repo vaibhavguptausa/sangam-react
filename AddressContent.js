@@ -1,22 +1,27 @@
-import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import React from 'react';
 
-export class AddressInfo extends Component {
+export default class AddressContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { edit: true, user: {} };
     }
+
     handleAddressClick = () => {
         let add = document.getElementById('currentAddress');
-        if (add.style.display == 'none')
+
+        if (add.style.display == 'none'){
             add.style.display = 'block';
-        else
+        }
+        else {
             add.style.display = 'none'
+        }
     }
+
     handleEdit = () => {
         this.setState({ edit: false });
-        this.setState({ tempObj: this.state.user })
+        this.setState({ tempObj: this.state.user });
     }
+
     handleSave = () => {
         this.setState({ edit: true });
         console.log(this.state, 'state');
@@ -24,53 +29,50 @@ export class AddressInfo extends Component {
 
     handleChange = (e) => {
         const name = e.target.id;
-
         this.setState({ user: Object.assign({}, this.state.user, { [name]: e.target.value }) });
     }
 
     handleCancel = () => {
-
         this.setState({ user: Object.assign({}, this.state.tempObj) })
     }
+
     render() {
         return (
             <div>
                 <div className="col-md-12 form-group windowWidth" style={{ marginTop: '1%' + "!important", float: 'left' }}>
+                    
                     <div className="toggle btn btn-default off" data-toggle="toggle" style={{ width: 57 + 'px', height: 34 + 'px' }} disabled="disabled">
-                        {/* <input checked="" data-onstyle="success" id="chkPermanentSameAsPresent" type="checkbox" disabled="" /> */}
                         <div className="toggle-group">
-                            {/* <label className="btn btn-success toggle-on">Yes</label>
-            <label className="btn btn-default active toggle-off">No</label> */}
                             <span className="toggle-handle btn btn-default"></span>
                         </div>
 
-
                         <label className="calibriFont14 padding-top-5" >Present Address is same as Permanent Address</label>
-
                     </div>
+
                 </div>
+
                 <div className="col-xs-4 form-group">
                     <button className="btn btn-primary font-bold default-cursor" id="btnAddPermanentAddr" >
-                        <i className="fa fa-plus"></i> Add Permanent Address
-            </button>
+                        <i className="fa fa-plus"></i> 
+                        <span>Add Permanent Address</span>
+                    </button>
                 </div>
 
                 <div className="col-sm-11" id="presentAddressDetails">
                     <div className="panel panel-primary">
                         <div className="panel-heading clickable height-0 panel-blue-color panel-collapsed" id="curAddressDiv" style={{ paddingTop: 8 + 'px' }} onClick={this.handleAddressClick}>
-                            <h3 className="panel-title">
-                                Present Address
-                    </h3>
-
+                            <h3 className="panel-title">Present Address</h3>
                         </div>
+                        
                         <div className="row padding-top-20" id="currentAddress" style={{ display: 'none' }}>
+                            
                             <div className="col-md-6 form-group windowWidth">
+                                
                                 <div className="col-md-4 form-group labelWidth">
                                     <label className="calibriFont14 padding-top-5" >Address Line1:</label>
-                                </div>
-                                <div className="col-md-6 form-group textboxWidth" title="">
                                     <input className="form-control addressEditableField requiredAddressField ng-untouched ng-pristine" id="currentAddressLine1" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
-
+                                {/* </div>
+                                <div className="col-md-6 form-group textboxWidth" title=""> */}
                                 </div>
                             </div>
                             <div className="col-md-6 form-group windowWidth">
@@ -153,9 +155,9 @@ export class AddressInfo extends Component {
                             </div>
                         </div>
                     </div>
-                    <Button onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }} >Edit</Button>
-                    <Button onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}>Save</Button>
-                    <Button onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}>Cancel</Button>
+                    <button onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }} >Edit</button>
+                    <button onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}>Save</button>
+                    <button onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}>Cancel</button>
                 </div>
             </div>
         );

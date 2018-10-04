@@ -1,0 +1,6 @@
+@import './bootstrap.min.css';
+
+h2 {
+  text-align: center;
+  margin: 10px;
+}
