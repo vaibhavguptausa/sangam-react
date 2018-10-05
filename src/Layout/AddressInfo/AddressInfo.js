@@ -30,14 +30,14 @@ export class AddressInfo extends Component {
 
     handleCancel = () => {
 
-        this.setState({ user: Object.assign({}, this.state.tempObj) })
+        this.setState({ user: Object.assign({}, this.state.tempObj),edit: true })
     }
     render() {
         return (
             <div>
                 <div className="col-md-12 form-group windowWidth" style={{ marginTop: '1%' + "!important", float: 'left' }}>
                     <div className="toggle btn btn-default off" data-toggle="toggle" style={{ width: 57 + 'px', height: 34 + 'px' }} disabled="disabled">
-                        {/* <input checked="" data-onstyle="success" id="chkPermanentSameAsPresent" type="checkbox" disabled="" /> */}
+                        {/* <input value={this.state.} onChange={this.handleChange} checked="" data-onstyle="success" id="chkPermanentSameAsPresent" type="checkbox" disabled="" /> */}
                         <div className="toggle-group">
                             {/* <label className="btn btn-success toggle-on">Yes</label>
             <label className="btn btn-default active toggle-off">No</label> */}
@@ -69,7 +69,7 @@ export class AddressInfo extends Component {
                                     <label className="calibriFont14 padding-top-5" >Address Line1:</label>
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth" title="">
-                                    <input className="form-control addressEditableField requiredAddressField ng-untouched ng-pristine" id="currentAddressLine1" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                    <input value={this.state.user.currentAddressLine1} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField ng-untouched ng-pristine" id="currentAddressLine1" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
 
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ export class AddressInfo extends Component {
                                     <label className="calibriFont14 padding-top-5" >Address Line2:</label>
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth">
-                                    <input className="form-control addressEditableField ng-untouched ng-pristine" id="currentAddressLine2" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                    <input value={this.state.user.currentAddressLine2} onChange={this.handleChange} className="form-control addressEditableField ng-untouched ng-pristine" id="currentAddressLine2" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
 
                                 </div>
                             </div>
@@ -87,20 +87,20 @@ export class AddressInfo extends Component {
                                     <label className="calibriFont14 padding-top-5" >Street:</label>
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth" title="">
-                                    <input className="form-control addressEditableField requiredAddressField ng-untouched ng-pristine" id="currentAddressStreet" maxLength="100" type="select" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} >
+                                    <input value={this.state.user.currentAddressStreet} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField ng-untouched ng-pristine" id="currentAddressStreet" maxLength="100" type="select" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} >
 
-                                    </input>
+                                    </input >
 
                                 </div>
                             </div>
                             <div className="col-md-6 form-group windowWidth">
                                 <div className="col-md-4 form-group labelWidth select">
                                     <label className="calibriFont14 padding-top-5" >Country:</label>
-                                    {/* <input type="select" className="form-control twitter-typeahead underLineTextBox typeAheadStyle tt-input" placeholder="Select a country" id="countrySearch2" autocomplete="off" spellcheck="false"  style={{position: 'relative', verticalAlign: 'top', backgroundColor: 'transparent'}} /> */}
+                                    {/* <input value={this.state.} onChange={this.handleChange} type="select" className="form-control twitter-typeahead underLineTextBox typeAheadStyle tt-input value={this.state.} onChange={this.handleChange}" placeholder="Select a country" id="countrySearch2" autoComplete="off" spellCheck="false"  style={{position: 'relative', verticalAlign: 'top', backgroundColor: 'transparent'}} /> */}
 
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth t" >
-                                    <select className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' id='currentAddressCountry' disabled={this.state.edit}>
+                                    <select value={this.state.user.currentAddressCountry} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' id='currentAddressCountry' disabled={this.state.edit}>
                                         <option value="">Select</option>
                                         <option value="INDIA">India</option>
                                         <option value="AMERICA">America</option>
@@ -117,7 +117,7 @@ export class AddressInfo extends Component {
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth typeAheadEditableField" id="curAddrState" disabled="disabled">
                                     <div>
-                                        <select className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' id='currentAddressState' disabled={this.state.edit}>
+                                        <select value={this.state.user.currentAddressState} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' id='currentAddressState' disabled={this.state.edit}>
                                             <option value="">Select</option>
                                             <option value="UP">UP</option>
                                             <option value="TELANGANA">Telangana</option>
@@ -136,7 +136,7 @@ export class AddressInfo extends Component {
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth typeAheadEditableField" id="curAddrCity" disabled="disabled">
                                     <div>
-                                        <input type="text" className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' tabIndex="-1" disabled={this.state.edit} autocomplete="off" spellcheck="false" />
+                                        <input value={this.state.user.txtcurrentCity} onChange={this.handleChange} id="txtcurrentCity" type="text" className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' tabIndex="-1" disabled={this.state.edit} autoComplete="off" spellCheck="false" />
 
                                     </div>
 
@@ -147,7 +147,7 @@ export class AddressInfo extends Component {
                                     <label className="calibriFont14 padding-top-5" >Pincode:</label>
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth" title="">
-                                    <input className="form-control addressEditableField requiredAddressField ng-untouched ng-pristine" id="currentAddressZipCode" min="0" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                    <input value={this.state.user.currentAddressZipCode} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField ng-untouched ng-pristine" id="currentAddressZipCode" min="0" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
 
                                 </div>
                             </div>

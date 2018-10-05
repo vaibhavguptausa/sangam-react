@@ -6,6 +6,8 @@ import 'react-tabs/style/react-tabs.scss';
 import {AddressInfo} from './AddressInfo/AddressInfo';
 import { ProfessionalInfo } from './Professional/ProfessionalInfo';
 import {SkillsInfo} from './SkillsInfo/SkillsInfo' ;
+import { Identification } from './Identification/Identification';
+import { Contact } from './Contact/Contact';
 export class Layout extends Component {
   constructor(props) {
     super(props);
@@ -24,6 +26,9 @@ export class Layout extends Component {
                 <NavItem eventKey="4"><i className="fa fa-asterisk fa-2x"></i>Skills</NavItem>
                 <NavItem eventKey="5"><i className="fa fa-book fa-2x"></i>Certification</NavItem>
                 <NavItem eventKey="6"><i className="fa fa-graduation-cap fa-2x"></i>Academic</NavItem>
+                <NavItem eventKey="7"><i className="fa fa-graduation-cap fa-2x"></i>Experience</NavItem>
+                <NavItem eventKey="8"><i className="fa fa-graduation-cap fa-2x"></i>Contact</NavItem>
+                <NavItem eventKey="9"><i className="fa fa-graduation-cap fa-2x"></i>Identification</NavItem>
               </Nav>
             </Col>
             <Col sm={11}>
@@ -34,6 +39,9 @@ export class Layout extends Component {
                 <Tab.Pane eventKey="4"><SkillsInfo /></Tab.Pane>
                 <Tab.Pane eventKey="5">Tab 5 content</Tab.Pane>
                 <Tab.Pane eventKey="6">Tab 6 content</Tab.Pane>
+                <Tab.Pane eventKey="7">Tab 7 content</Tab.Pane>
+                <Tab.Pane eventKey="8"><Contact /></Tab.Pane>
+                <Tab.Pane eventKey="9"><Identification/></Tab.Pane>
               </Tab.Content>
             </Col>
           </Row>
