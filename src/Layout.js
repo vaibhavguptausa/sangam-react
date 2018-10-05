@@ -7,11 +7,15 @@ import Tabs from './Tab.js';
 export default class App extends React.Component {
   render() {
     return (
-      <div className="container" style={{display: 'grid'}}>
+      <div>
+        <div>
       <div><Header /></div>
       <div><Sidebar /></div>
+      </div>
+      <div>
       <div><Tabs /></div>
       <div><Footer /></div>
+      </div>
       </div>
     );
   }

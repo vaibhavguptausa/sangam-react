@@ -1,7 +1,7 @@
 import React from 'react';
 import './personalcontent.css';
 
-export default class Content extends React.Component {
+export default class PersonalContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { edit: true, value: '', user: {} };
@@ -30,7 +30,6 @@ export default class Content extends React.Component {
     render() {
         return (
             <div>
-                <form ref="form">
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label for="inputFirstName">First Name:</label>
@@ -155,7 +154,6 @@ export default class Content extends React.Component {
                     <button type="edit" className="btn btn-primary" onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }}>EDIT</button>
                     <button type="save" className="btn btn-primary" onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}>SAVE</button>
                     <button type="cancel" className="btn btn-primary" onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}>CANCEL</button>
-                </form>
             </div >
         );
     }

@@ -29,7 +29,7 @@ export default class ProfessionalContent extends React.Component {
     render() {
         return (
             <div>
-                <form ref="form">
+                
                     <div className="form-row">
                         <div className="form-group col-md-6">
                             <label for="inputDateOfJoining">Date of Joining:</label>
@@ -69,7 +69,7 @@ export default class ProfessionalContent extends React.Component {
                     <button type="edit" className="btn btn-primary" onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }}>EDIT</button>
                     <button type="save" className="btn btn-primary" onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}>SAVE</button>
                     <button type="cancel" className="btn btn-primary" onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}>CANCEL</button>
-                </form>
+                
             </div >
 
         );
