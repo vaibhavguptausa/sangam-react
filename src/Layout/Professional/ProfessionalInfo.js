@@ -12,9 +12,9 @@ export class ProfessionalInfo extends Component{
                 <div className="col-md-6 form-group textboxWidth">
                     <div className="inlineFlex">
                         
-                        <label className="input-group-addon btn actionIcon display-none" id="DateOfJoinCalendarIcon">
+                        {/* <label className="input-group-addon btn actionIcon display-none" id="DateOfJoinCalendarIcon">
                             <span className="glyphicon glyphicon-calendar"></span>
-                        </label>
+                        </label> */}
                         <label className="calibriFont14 padding-top-5 form-control font-weight-400  readonly" >05/07/2018</label>
                     </div>
 

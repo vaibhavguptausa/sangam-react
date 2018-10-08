@@ -22,13 +22,14 @@ export class MultiSelect extends React.Component {
   {
     super(props);
     this.state = {
-      selectedOption: null,
+      selectedOption: [],
     }
   }
 
   handleChange = (selectedOption) => {
     this.setState({ selectedOption });
     console.log(`Option selected:`, selectedOption);
+    this.props.onClick(selectedOption);
   }
   render() {
     const { selectedOption } = this.state;
