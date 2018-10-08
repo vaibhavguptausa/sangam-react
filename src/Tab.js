@@ -11,11 +11,11 @@ import ContactContent from './ContactContent.js';
 import IdentificationContent from './IdentificationContent.js';
 
 export default class Tab extends React.Component {
-  render() {   
-    return(
+  render() {
+    return (
       <div className="tabs">
         <div><h2>EMPLOYEE DETAILS</h2></div>
-            
+
         <div id="exTab2" className="container">
           <ul className="nav nav-tabs" id="myTab" role="tablist">
             <li className="nav-item">
@@ -53,12 +53,12 @@ export default class Tab extends React.Component {
             <div className="tab-pane" id="professional" role="tabpanel" aria-labelledby="professional-tab"><ProfessionalContent /></div>
             <div className="tab-pane" id="skills" role="tabpanel" aria-labelledby="skills-tab"><SkillsContent /></div>
             <div className="tab-pane" id="certification" role="tabpanel" aria-labelledby="certification-tab"><CertificationContent /></div>
-            <div className="tab-pane" id="academic" role="tabpanel" aria-labelledby="academic-tab"><AcademicContent/></div>
-            <div className="tab-pane" id="experience" role="tabpanel" aria-labelledby="experience-tab"><ExperienceContent/></div>
+            <div className="tab-pane" id="academic" role="tabpanel" aria-labelledby="academic-tab"><AcademicContent /></div>
+            <div className="tab-pane" id="experience" role="tabpanel" aria-labelledby="experience-tab"><ExperienceContent /></div>
             <div className="tab-pane" id="contact" role="tabpanel" aria-labelledby="contact-tab"><ContactContent /></div>
             <div className="tab-pane" id="identification" role="tabpanel" aria-labelledby="identification-tab"><IdentificationContent /></div>
           </div>
-      </div>
+        </div>
       </div>
     );
   }

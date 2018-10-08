@@ -21,3 +21,79 @@ form {
     padding-top: 20px;
     font-family: calibri!important;
 }
+
+.btn-success {
+    background-color: #00a65a;
+    border-color: #008d4c;
+    color: #fff;
+}
+
+.btn {
+    box-shadow: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    display: inline-block;
+    line-height: 1.42857143;
+    border-radius: 3px;
+    background-image: none;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 25px;
+}
+
+.margin-left-right-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.pull-right {
+    float: right!important;
+}
+
+button {
+    overflow: visible;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    -webkit-appearance: button;
+    align-items: flex-start;
+    text-transform: none;
+    margin: 0;
+    font: inherit;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    font: 400 13.3333px Arial;
+    -webkit-writing-mode: horizontal-tb !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: #325d93;
+    border-color: #367fa9;
+    color: #fff;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+element.style {
+    position: relative;
+    left: 90px;
+}

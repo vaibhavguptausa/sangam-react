@@ -5,11 +5,11 @@ export default class AddressContent extends React.Component {
         super(props);
         this.state = { edit: true, user: {} };
     }
-    
+
     handleAddressClick = () => {
         let add = document.getElementById('currentAddress');
 
-        if (add.style.display == 'none') {
+        if (add.style.display === 'none') {
             add.style.display = 'block';
         }
         else {
@@ -39,7 +39,7 @@ export default class AddressContent extends React.Component {
     render() {
         return (
             <div>
-                <div className="col-md-12 form-group windowWidth" style={{ marginTop: '1%' + "!important", float: 'left' }}> 
+                <div className="col-md-12 form-group windowWidth" style={{ marginTop: '1%' + "!important", float: 'left' }}>
                     <div className="toggle btn btn-default off" data-toggle="toggle" style={{ width: 57 + 'px', height: 34 + 'px' }} disabled="disabled">
                         <div className="toggle-group">
                             <span className="toggle-handle btn btn-default"></span>
@@ -51,7 +51,7 @@ export default class AddressContent extends React.Component {
 
                 <div className="col-md-12 form-group">
                     <button className="btn btn-primary font-bold default-cursor" id="btnAddPermanentAddr" >
-                        <i className="fa fa-plus"></i> 
+                        <i className="fa fa-plus"></i>
                         <span>Add Permanent Address</span>
                     </button>
                 </div>
@@ -61,9 +61,9 @@ export default class AddressContent extends React.Component {
                         <div className="panel-heading clickable height-0 panel-blue-color panel-collapsed" id="curAddressDiv" style={{ paddingTop: 8 + 'px' }} onClick={this.handleAddressClick}>
                             <h3 className="panel-title">Present Address</h3>
                         </div>
-                        
+
                         <div className="row padding-top-20" id="currentAddress" style={{ display: 'none' }}>
-                            
+
                             <div className="form-row">
                                 <div className="form-group col-md-6">
                                     <label className="calibriFont14 padding-top-5" >Address Line1:</label>
@@ -109,10 +109,10 @@ export default class AddressContent extends React.Component {
                                         <option value="RAJASTHAN">Rajasthan</option>
                                     </select>
                                 </div>
-                                
+
                                 <div className="col-md-6 form-group">
                                     <label className="calibriFont14 padding-top-5" >City:</label>
-                                    <input type="text" className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' tabIndex="-1" disabled={this.state.edit} autocomplete="off" spellcheck="false" />
+                                    <input type="text" className='form-control addressEditableField requiredAddressField ng-untouched ng-pristine' tabIndex="-1" disabled={this.state.edit} autoComplete="off" spellCheck="false" />
                                 </div>
                             </div>
 
@@ -127,9 +127,9 @@ export default class AddressContent extends React.Component {
                     </div>
                 </div>
                 <div>
-                    <button onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }} >Edit</button>
-                    <button onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}>Save</button>
-                    <button onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}>Cancel</button>
+                    <button type="edit" className="btn btn-success pull-right margin-left-right-10 margin-bottom-20" id="btnEditPersonalDetails" onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }}><i className="fa fa-edit"></i>EDIT</button>
+                    <button type="save" className="btn btn-primary pull-right margin-left-right-10 font-bold display-none margin-bottom-20" id="btnSavePersonalDetails" onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}><i className="fa fa-save"></i>SAVE</button>
+                    <button type="cancel" className="btn btn-success pull-right margin-left-right-10 display-none margin-bottom-20" data-target="#myModal" data-toggle="modal" id="btnPersonalDetailsCancel" onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}><i className="fa fa-ban"></i>CANCEL</button>
                 </div>
             </div>
         );
