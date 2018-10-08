@@ -1,0 +1,17 @@
+.col-md-12 {
+    margin-top: 1% !important;
+    float: left;  
+}
+
+.toggle {
+    width: 57px;
+    height: 34px;
+}
+
+#curAddressDiv {
+    padding-top: 8px;
+}
+
+#currentAddress {
+    display: none;
+}

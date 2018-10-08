@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import './layoutStyle.css';
-import {Personal} from './personalContent';
-import { Tab, TabContainer, TabContent, TabPane , MenuItem, NavDropdown, Nav, NavItem, Row, Col} from 'react-bootstrap';
+import React from 'react';
+import { Tab, TabContainer, TabContent, TabPane, MenuItem, NavDropdown, Nav, NavItem, Row, Col } from 'react-bootstrap';
 import 'react-tabs/style/react-tabs.scss';
-import {AddressInfo} from './AddressInfo/AddressInfo';
-import { ProfessionalInfo } from './Professional/ProfessionalInfo';
-import {SkillsInfo} from './SkillsInfo/SkillsInfo' ;
-import { Identification } from './Identification/Identification';
-import { Contact } from './Contact/Contact';
-export class Layout extends Component {
+import Personal from './personalContent';
+import AddressInfo from './AddressInfo/AddressInfo';
+import ProfessionalInfo from './Professional/ProfessionalInfo';
+import SkillsInfo from './SkillsInfo/SkillsInfo';
+import Identification from './Identification/Identification';
+import Contact from './Contact/Contact';
+import './layoutStyle.css';
+
+export default class Layout extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -31,6 +32,7 @@ export class Layout extends Component {
                 <NavItem eventKey="9"><i className="fa fa-graduation-cap fa-2x"></i>Identification</NavItem>
               </Nav>
             </Col>
+
             <Col sm={11}>
               <Tab.Content animation>
                 <Tab.Pane eventKey="first"><Personal /></Tab.Pane>
@@ -41,14 +43,12 @@ export class Layout extends Component {
                 <Tab.Pane eventKey="6">Tab 6 content</Tab.Pane>
                 <Tab.Pane eventKey="7">Tab 7 content</Tab.Pane>
                 <Tab.Pane eventKey="8"><Contact /></Tab.Pane>
-                <Tab.Pane eventKey="9"><Identification/></Tab.Pane>
+                <Tab.Pane eventKey="9"><Identification /></Tab.Pane>
               </Tab.Content>
             </Col>
           </Row>
-        </Tab.Container>;
-           
+        </Tab.Container>
       </div>
-    )
-
-  };
+    );
+  }
 } 

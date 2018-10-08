@@ -7,7 +7,6 @@
   width:100%;
 }
 
-
 /* .App-header {
   background-color: #222;
   height: 150px;
@@ -23,11 +22,10 @@
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 4;
-
 }
-.App-layout{
 
-   grid-column-start: 4;
+.App-layout{
+  grid-column-start: 4;
   grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 4;

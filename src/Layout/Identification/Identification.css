@@ -1,0 +1,15 @@
+.glyphicon .glyphicon-minus {
+    font-size: 0.8em;
+}
+
+.padding-top-20 {
+    display: none;
+}
+
+#accountInfoDiv {
+    padding-top: 8px;
+}
+
+#identityInfoDiv {
+    padding-top: 8px;
+}
