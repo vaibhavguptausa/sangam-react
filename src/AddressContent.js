@@ -5,7 +5,7 @@ export default class AddressContent extends React.Component {
         super(props);
         this.state = { edit: true, user: {} };
     }
-
+    
     handleAddressClick = () => {
         let add = document.getElementById('currentAddress');
 
