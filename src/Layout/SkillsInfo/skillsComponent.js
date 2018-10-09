@@ -1,55 +1,58 @@
 import React from 'react';
-
+import {SkillsComponentComponent} from './skillsComponentComponent';
 export default class SkillsComponent extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { edit: true, user: {}, menuopen: false,  classhandler: [], isEditable: false };
+        console.log(`isEditable`, this.state.isEditable)
     }
-
+    handleClick=()=>{
+       this.setState({menuopen: !this.state.menuopen});
+    }
+   
+    // handleChange = (e) => {
+    //     const name = e.target.name;
+    //     console.log(name);
+    
+    //     // this.setState({ old: this.state.value })
+    //     this.setState({ user: Object.assign({}, this.state.user, { [name]: e.target.value }) });
+    //   }
+    
+    handleComponentofComponentAdd=()=>{
+        let classhandler=[];
+        Object.assign(classhandler, this.state.classhandler);
+        var passingprop= this.props.editable ;
+       
+        classhandler.push(<SkillsComponentComponent editableComponent={this.props.editable}/>)
+        this.setState({classhandler: classhandler});
+       
+    }  
     render() {
+     
+        const style1={
+        
+            'display': 'none' 
+    }
+    const style2={
+        'display': 'block'
+    }
         return (
-            <div class="col-xs-11 col-sm-11 " style={{ display: 'block' }} id='NewComponent'>
-                <div class="panel panel-primary">
-                    <div class="panel-heading clickable height-0" style={{ paddingTop: '8px' }} id="Skills10">
-                        <h3 class="panel-title" style={{ float: 'left' }}> {this.props.title} </h3>
-                        <span class="pull-right" style={{ marginTop: '-3px' }} id="click10"><i class="glyphicon glyphicon-minus" style={{ fontSize: '0.8em' }}></i></span>
-                    </div>
+            <div className="col-xs-11 col-sm-11 " style={{ display: 'grid', width: `${100}vh` }} id='NewComponent' >
+                <div className="panel panel-primary" >
+                    <div className="panel-heading clickable height-0" style={{ paddingTop: '8px',display:'flex', height:`${40}px` }} id="Skills10" onClick={this.handleClick}>
+                        <h4 className="panel-title" style={{ float: 'left' }}>
+                            {this.props.title}
+                        </h4>
 
-                    <div class="col-xs-11 col-sm-11  padding-top-bottom-20" style={{ display: 'block' }} id="EmployeeSkills10">
-                        <div>
-                            <table align="center" cellspacing="0">
-                                <thead>
-                                    <tr id="skillHeader">
-                                        <th class="text-center form-group col-sm-3 padding-left-right-40">
-                                            <label class="text-center calibriFont14 padding-top-5" for="_lblSkill">Skill</label>
-                                        </th>
-                                        <th class="text-center form-group col-sm-3  padding-left-right-40">
-                                            <label class="calibriFont14 padding-top-5" for="_lblExpertLevel">Expert Level</label>
-                                        </th>
-                                        <th class="text-center form-group col-sm-3  padding-left-right-40">
-                                            <label class="calibriFont14 padding-top-5" for="_lblNumOfYears">Number Of Years</label>
-                                        </th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td data-label="Skill" disabled="" id="skilldrpdown6849">
-                                            <div class="col-sm-12" disabled="" id="skilldrpdown6849"></div>
-                                        </td>
-                                        <td data-label="Expert Level" disabled="" id="proficiencydrpdown">
-                                            <div class="proficiencyEditableField col-sm-12" disabled=""></div>
-                                        </td>
-                                        <td data-label="Number of Years" id="numofyears">
-                                            <div>
-                                                <input class="form-control proficiencyEditableField proficiencyRequiredField col-sm-8 ng-untouched ng-pristine ng-valid" min="0" readonly="" tabindex="-1" type="number" id="empSkillNumberofYears6849" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                      
                     </div>
+                   <div style={this.state.menuopen?style1: style2 }>
+                       
+                       <button onClick={this.handleComponentofComponentAdd}>Add field</button>
+                       {this.state.classhandler}
+                   </div>
                 </div>
+               
             </div>
         );
     }
