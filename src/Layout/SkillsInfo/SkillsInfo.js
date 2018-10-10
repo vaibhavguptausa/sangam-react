@@ -21,18 +21,25 @@ const options = [
 export default class SkillsInfo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { selectedOption: [], classhandler: [] };
+        this.state = {
+            selectedOption: [],
+            classhandler: [],
+            isEditable: false
+        }
     }
 
     handleOptionSelect = (data) => {
         let classhandler = [];
-        console.log(`data`, data.length);
+        console.log(`data`, data);
         for (let i = 0; i < data.length; i++) {
-            classhandler.push(<SkillsComponent title={data[i].value} />)
+            classhandler.push(data[i].value)
         }
         this.setState({ classhandler })
     }
-
+    handleEdit = () => {
+        this.setState({ isEditable: !this.state.isEditable })
+        console.log(`parentisEditable`, this.state.isEditable)
+    }
     render() {
         return (
             <div className="row">
@@ -53,8 +60,12 @@ export default class SkillsInfo extends React.Component {
                     <input placeholder="Training" disabled={true} />
                 </div>
                 <div>
-                    {this.state.classhandler}
+                    {this.state.classhandler.map((ch) => (
+                        <SkillsComponent title={ch} editable={this.state.isEditable} />
+                    ))}
                 </div>
+                {!this.state.isEditable ? <button onClick={this.handleEdit}>Edit</button> :
+                    <button onClick={this.handleEdit}>Save</button>}
             </div>
         );
     }
