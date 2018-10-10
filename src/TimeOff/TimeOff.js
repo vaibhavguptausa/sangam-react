@@ -1,6 +1,8 @@
 import React from 'react';
 import { Tab, Tabs, TabContainer, TabContent, TabPane, MenuItem, NavDropdown, Nav, NavItem, Row, Col } from 'react-bootstrap';
 import ApplyTimeOff from './ApplyTimeOff.js';
+import ApplyEventRequest from './ApplyEventRequest.js';
+import Calendar from './Calendar.js';
 
 export default class TimeOff extends React.Component {
     render() {
@@ -31,11 +33,13 @@ export default class TimeOff extends React.Component {
                                 <ApplyTimeOff />
                             </Tab>
                             <Tab eventKey={2} title="ApplyEventRequest">
-                                Apply Event Request
+                                <ApplyEventRequest />
                             </Tab>
                         </Tabs>
                     </div>
                 </section>
+
+                {/* <div><Calendar /></div> */}
             </div>
         );
     }
