@@ -1,22 +1,26 @@
 import React from 'react';
 import {SkillsComponentComponent} from './skillsComponentComponent';
 export default class SkillsComponent extends React.Component {
+    
     constructor(props) {
         super(props);
-        this.state = { edit: true, user: {}, menuopen: false,  classhandler: [], isEditable: false };
-        console.log(`isEditable`, this.state.isEditable)
+        this.state = { edit: true, user: {}, menuopen: false,  classhandler: [], isEditable: this.props.editable };
+        console.log(`2nd stage`,this.state.isEditable )
     }
+    static getDerivedStateFromProps(props, state) {
+        
+        if (props.editable !== state.isEditable) {
+          return {
+            isEditable: props.editable
+           
+          };
+        }
+        return null;
+      }
     handleClick=()=>{
        this.setState({menuopen: !this.state.menuopen});
     }
-   
-    // handleChange = (e) => {
-    //     const name = e.target.name;
-    //     console.log(name);
     
-    //     // this.setState({ old: this.state.value })
-    //     this.setState({ user: Object.assign({}, this.state.user, { [name]: e.target.value }) });
-    //   }
     
     handleComponentofComponentAdd=()=>{
         let classhandler=[];

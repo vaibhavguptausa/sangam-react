@@ -4,11 +4,14 @@ export class SkillsComponentComponent extends React.Component{
     constructor(props)
     {
         super(props);
-        this.state={user: [], DisplayStatus: true, };
+        this.state={user: [], DisplayStatus: true };
     }
     handleRemoveField=()=>{
         this.setState({DisplayStatus: false});
     }
+    componentWillReceiveProps({editableComponent}) {
+        this.setState({...this.state,editableComponent})
+      }
     render(){
     
         if(!this.state.DisplayStatus)
