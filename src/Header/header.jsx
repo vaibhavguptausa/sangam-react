@@ -11,8 +11,8 @@ export default class Header extends React.Component {
                 </div>
 
                 <div className='main-header-user'>
-                    <img src="http://sangam.ggktech.com/docs/ProfilePhotos/10154_ProfilePhoto.JPG" />
-                    <span className="main-header-username">Vaibhav Gupta</span>
+                    <img src={this.props.profile.image_url} />
+                    <span className="main-header-username">{this.props.profile.name}</span>
                 </div>
             </div>
         );
