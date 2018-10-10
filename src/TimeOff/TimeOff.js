@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tab, Tabs, TabContainer, TabContent, TabPane, MenuItem, NavDropdown, Nav, NavItem, Row, Col } from 'react-bootstrap';
+import ApplyTimeOff from './ApplyTimeOff.js';
 
 export default class TimeOff extends React.Component {
     render() {
@@ -27,10 +28,10 @@ export default class TimeOff extends React.Component {
                     <div className='Tabs'>
                         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                             <Tab eventKey={1} title="Apply TimeOff">
-                                Apply TimeOff
+                                <ApplyTimeOff />
                             </Tab>
-                            <Tab eventKey={2} title="Tab 2">
-                                Tab 2 content
+                            <Tab eventKey={2} title="ApplyEventRequest">
+                                Apply Event Request
                             </Tab>
                         </Tabs>
                     </div>
