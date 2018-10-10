@@ -67,7 +67,7 @@ export default class ApplyTimeOff extends React.Component {
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 control-group">
                                     <div className="twitter-typeahead">
-                                            <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="LicenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
+                                        <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="LicenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
                                     </div>
                                 </div>
                             </div>

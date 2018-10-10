@@ -3,6 +3,8 @@ import { Tab, Tabs, TabContainer, TabContent, TabPane, MenuItem, NavDropdown, Na
 import ApplyTimeOff from './ApplyTimeOff.js';
 import ApplyEventRequest from './ApplyEventRequest.js';
 import Calendar from './Calendar.js';
+import BarGraph from './BarGraph.js';
+import './TimeOff.css';
 
 export default class TimeOff extends React.Component {
     render() {
@@ -26,8 +28,8 @@ export default class TimeOff extends React.Component {
                     </div>
                 </section>
 
-                <section>
-                    <div className='Tabs'>
+                <section className='tabs'>
+                    <div>
                         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
                             <Tab eventKey={1} title="Apply TimeOff">
                                 <ApplyTimeOff />
@@ -40,6 +42,7 @@ export default class TimeOff extends React.Component {
                 </section>
 
                 {/* <div><Calendar /></div> */}
+                <div className="bar-graph"><BarGraph /></div>
             </div>
         );
     }
