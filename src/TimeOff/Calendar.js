@@ -3,10 +3,13 @@ import dateFns from "date-fns";
 import './calendar.css';
 
 export default class Calendar extends React.Component {
-  state = {
-    currentMonth: new Date(),
-    selectedDate: new Date()
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentMonth: new Date(),
+      selectedDate: new Date()
+    };
+  }
 
   renderHeader() {
     const dateFormat = "MMMM YYYY";
@@ -14,9 +17,7 @@ export default class Calendar extends React.Component {
     return (
       <div className="header row flex-middle">
         <div className="col col-start">
-          <div className="icon" onClick={this.prevMonth}>
-            pre
-          </div>
+          <div className="icon" onClick={this.prevMonth}>pre</div>
         </div>
         <div className="col col-center">
           <span>{dateFns.format(this.state.currentMonth, dateFormat)}</span>

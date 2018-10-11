@@ -52,7 +52,7 @@ export default class BarGraph extends React.Component {
                 renderTo: 'timeOff-balance'
             },
             title: {
-                //verticalAlign: 'middle',
+                // verticalAlign: 'middle',
                 floating: true,
                 text: 'TimeOff Balance for the year 2018',
                 style: {
@@ -92,8 +92,7 @@ export default class BarGraph extends React.Component {
 
     render() {
         return (
-            <div id="timeOff-balance">
-            </div>
+            <div id="timeOff-balance"></div>
         );
     }
 }
