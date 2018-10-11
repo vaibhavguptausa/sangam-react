@@ -52,39 +52,20 @@ export default class BarGraph extends React.Component {
                 renderTo: 'timeOff-balance'
             },
             title: {
-                // verticalAlign: 'middle',
+                //verticalAlign: 'middle',
                 floating: true,
                 text: 'TimeOff Balance for the year 2018',
                 style: {
-                    fontSize: '25px',
+                    fontSize: '30px',
                 }
             },
             plotOptions: {
-                column: {
+                pie: {
                     dataLabels: {
                         format: '{point.name}: {point.percentage:.1f} %'
                     },
                     innerSize: '70%'
                 }
-            },
-            xAxis: {
-                type: 'category',
-                labels: {
-                    rotation: 0,
-                    style: {
-                        fontSize: '13px',
-                        fontFamily: 'Verdana, sans-serif'
-                    }
-                }
-            },
-            yAxis: {
-                min: 0,
-                title: {
-                    text: null
-                }
-            },
-            legend: {
-                enabled: false
             },
             series: this.state.series
         });
@@ -92,7 +73,8 @@ export default class BarGraph extends React.Component {
 
     render() {
         return (
-            <div id="timeOff-balance"></div>
+            <div id="timeOff-balance">
+            </div>
         );
     }
 }
