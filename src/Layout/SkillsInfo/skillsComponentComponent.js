@@ -8,6 +8,7 @@ export class SkillsComponentComponent extends React.Component{
     }
     handleRemoveField=()=>{
         this.setState({DisplayStatus: false});
+       // this.props.removefield(this.props.compIndex);
     }
     componentWillReceiveProps({editableComponent}) {
         this.setState({...this.state,editableComponent})
@@ -43,17 +44,17 @@ export class SkillsComponentComponent extends React.Component{
                                 <tbody>
 
                                     <tr>
-                                        <td data-label="Skill" disabled="" id="skilldrpdown6849">
-                                            <div className="col-sm-12" disabled="" id="skilldrpdown6849">
-                                                <select >
+                                        <td data-label="Skill"  id="skilldrpdown">
+                                            <div className="col-sm-12"  id="skilldrpdown" >
+                                                <select disabled={!this.props.editable} className='form-control' >
                                                     <option>{this.props.title}</option>
                                                 </select>
 
                                             </div>
                                         </td>
-                                        <td data-label="Expert Level" disabled="" id="proficiencydrpdown">
-                                            <div className="proficiencyEditableField col-sm-12" disabled="">
-                                            <select value={this.state.user.proficiencydrpdown} onChange={this.handleChange}>
+                                        <td data-label="Expert Level"  id="proficiencydrpdown">
+                                            <div className="proficiencyEditableField col-sm-12" >
+                                            <select  disabled={!this.props.editable} className='form-control addressEditableField requiredAddressField '>
                                                 <option>Beginner</option>
                                                 <option>Intermediate</option>
                                                 <option>Advanced</option>
@@ -64,7 +65,7 @@ export class SkillsComponentComponent extends React.Component{
                                         </td>
                                         <td data-label="Number of Years" id="numofyears">
                                             <div>
-                                                <input className="form-control proficiencyEditableField proficiencyRequiredField col-sm-8 " min="0" disabled={!this.props.editableComponent} tabindex="-1" type="number" id="empSkillNumberofYears6849" />
+                                                <input className="form-control" min="0" disabled={!this.props.editable} type="number" id="empSkillNumberofYears6849" />
                                             </div>
                                         </td>
 
@@ -80,7 +81,7 @@ export class SkillsComponentComponent extends React.Component{
 
                     </div>
                    
-                    <button onClick={this.handleRemoveField}>Remove field</button>
+                    <button onClick={this.handleRemoveField} id={this.props.compIndex}>Remove field</button>
                     </div>
         ) 
     }
