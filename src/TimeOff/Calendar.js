@@ -1,6 +1,6 @@
 import React from "react";
 import dateFns from "date-fns";
-//import './calendar.css';
+import './calendar.css';
 
 export default class Calendar extends React.Component {
   state = {
@@ -15,14 +15,14 @@ export default class Calendar extends React.Component {
       <div className="header row flex-middle">
         <div className="col col-start">
           <div className="icon" onClick={this.prevMonth}>
-            chevron_left
+            pre
           </div>
         </div>
         <div className="col col-center">
           <span>{dateFns.format(this.state.currentMonth, dateFormat)}</span>
         </div>
         <div className="col col-end" onClick={this.nextMonth}>
-          <div className="icon">chevron_right</div>
+          <div className="icon">nxt</div>
         </div>
       </div>
     );
@@ -69,7 +69,7 @@ export default class Calendar extends React.Component {
               !dateFns.isSameMonth(day, monthStart)
                 ? "disabled"
                 : dateFns.isSameDay(day, selectedDate) ? "selected" : ""
-            }`}
+              }`}
             key={day}
             onClick={() => this.onDateClick(dateFns.parse(cloneDay))}
           >

@@ -56,16 +56,35 @@ export default class BarGraph extends React.Component {
                 floating: true,
                 text: 'TimeOff Balance for the year 2018',
                 style: {
-                    fontSize: '30px',
+                    fontSize: '25px',
                 }
             },
             plotOptions: {
-                pie: {
+                column: {
                     dataLabels: {
                         format: '{point.name}: {point.percentage:.1f} %'
                     },
                     innerSize: '70%'
                 }
+            },
+            xAxis: {
+                type: 'category',
+                labels: {
+                    rotation: 0,
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: null
+                }
+            },
+            legend: {
+                enabled: false
             },
             series: this.state.series
         });

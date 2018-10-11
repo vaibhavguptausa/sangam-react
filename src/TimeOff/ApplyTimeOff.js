@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 
 export default class ApplyTimeOff extends React.Component {
     constructor(props) {
@@ -67,7 +66,7 @@ export default class ApplyTimeOff extends React.Component {
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 control-group">
                                     <div className="twitter-typeahead">
-                                        <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="LicenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
+                                        <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="LicenseDate" type="date" />
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +90,7 @@ export default class ApplyTimeOff extends React.Component {
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-6 form-group">
                                     <div _ngcontent-fgg-1="" className="_divLeaveComments">
-                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxlength="256" rows="5" style={{ resize: 'none' }}></textarea>
+                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxLength="256" rows="5" style={{ resize: 'none' }}></textarea>
                                     </div>
                                 </div>
                             </div>
