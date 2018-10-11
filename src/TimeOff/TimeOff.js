@@ -2,7 +2,7 @@ import React from 'react';
 import { Tab, Tabs, TabContainer, TabContent, TabPane, MenuItem, NavDropdown, Nav, NavItem, Row, Col } from 'react-bootstrap';
 import ApplyTimeOff from './ApplyTimeOff.js';
 import ApplyEventRequest from './ApplyEventRequest.js';
-import Calendar from './Calendar.js';
+import MyCalendar from './Calendar.js';
 import BarGraph from './BarGraph.js';
 import './TimeOff.css';
 
@@ -10,23 +10,6 @@ export default class TimeOff extends React.Component {
     render() {
         return (
             <div className="content-wrapper" style={{ minHeight: 912 + 'px' }}>
-
-                <section className="content-header margintop-20">
-                    <h1 id="lblReportName">Apply TimeOff</h1>
-
-                    <div className="breadcrumb hidden-sm hidden-xs">
-                        <div className="item">
-                            <a href="http://sangam.ggktech.com/Home/Index">Dashboard</a> &gt;
-                            <span style={{ color: 'Gray' }}>
-                                <i className="fa fa-calendar-times-o"></i>
-                                <span> TimeOff Management</span>
-                            </span> &gt;
-                            <span style={{ color: 'Gray' }}>
-                                <i className="fa fa-calendar-minus-o"></i>Apply TimeOff
-                            </span>
-                        </div>
-                    </div>
-                </section>
 
                 <section className='tabs'>
                     <div>
@@ -41,7 +24,7 @@ export default class TimeOff extends React.Component {
                     </div>
                 </section>
 
-                {/* <div><Calendar /></div> */}
+                <div className='calendar'><MyCalendar /></div>
                 <div className="bar-graph"><BarGraph /></div>
             </div>
         );

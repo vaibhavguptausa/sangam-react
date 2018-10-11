@@ -1,15 +1,15 @@
 .content-wrapper {
     text-align: center;
     display: grid;
-    grid-template: 100px auto 300px 100px 30px/ 200px 0.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr 1fr ;
+    grid-template: 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px/ 100px 50px 50px 0.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr 1fr ;
     background-color: whitesmoke;
     height:100vh;
     width:100%;
 }
 
 .tabs {
-    grid-column-start: 7;
-    grid-column-end: 12;
+    grid-column-start: 9;
+    grid-column-end: 13;
     grid-row-start: 2;
     grid-row-end: 4;
     overflow: visible;
@@ -17,14 +17,14 @@
 
 .bar-graph {
     grid-column-start: 2;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 9;
 }
 
-.content-header {
+.calendar {
     grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-end: 8;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: 6;
 }

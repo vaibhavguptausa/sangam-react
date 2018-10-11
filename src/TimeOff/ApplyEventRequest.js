@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 import './ApplyEventRequest.css';
 
 export default class ApplyEventRequest extends React.Component {

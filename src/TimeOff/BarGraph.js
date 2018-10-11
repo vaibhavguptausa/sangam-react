@@ -52,12 +52,24 @@ export default class BarGraph extends React.Component {
                 renderTo: 'timeOff-balance'
             },
             title: {
-                //verticalAlign: 'middle',
                 floating: true,
                 text: 'TimeOff Balance for the year 2018',
                 style: {
                     fontSize: '30px',
                 }
+            },
+            xAxis: {
+                type: 'category',
+                labels: {
+                    rotation: 0,
+                    style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            },
+            legend: {
+                enabled: false
             },
             plotOptions: {
                 pie: {
