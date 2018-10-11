@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 export default class AddressInfo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { edit: true, user: {} };
+        this.state = { edit: true, user: {}, toggle: false };
     }
 
     handleAddressClick = () => {
@@ -33,20 +33,112 @@ export default class AddressInfo extends React.Component {
     handleCancel = () => {
         this.setState({ user: Object.assign({}, this.state.tempObj), edit: true })
     }
-
+    handleToggleChange = () => {
+        this.setState({ toggle: true });
+    }
     render() {
+        const element = (
+            <div class="col-sm-11" id="presentAddressDetails">
+                <div class="panel panel-primary">
+                    <div class="panel-heading clickable height-0 panel-blue-color" id="curAddressDiv" style={{ paddingTop: 8 + 'px' }}>
+                        <h3 class="panel-title">
+                            Present Address
+                    </h3>
+                        <span class="pull-right "><i class="glyphicon glyphicon-minus" style={{ fontSize: 0.8 + 'em' }}></i></span>
+                    </div>
+                    <div class="row padding-top-20" id="currentAddress" style={{ display: 'block' }}>
+                        <div class="col-md-6 form-group windowWidth">
+                            <div class="col-md-4 form-group labelWidth">
+                                <label class="calibriFont14 padding-top-5" for="_lblCurrentAddressLine1">Address Line1:</label>
+                            </div>
+                            <div class="col-md-6 form-group textboxWidth">
+                                <input class="form-control addressEditableField requiredAddressField " id="currentAddressLine1" maxlength="100" type="text" required="required" />
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group windowWidth">
+                            <div class="col-md-4 form-group labelWidth">
+                                <label class="calibriFont14 padding-top-5" for="_lblCurrentAddressLine2">Address Line2:</label>
+                            </div>
+                            <div class="col-md-6 form-group textboxWidth">
+                                <input class="form-control addressEditableField " id="currentAddressLine2" maxlength="100" type="text" />
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group windowWidth">
+                            <div class="col-md-4 form-group labelWidth">
+                                <label class="calibriFont14 padding-top-5" for="_lblCurrentAddressStreet">Street:</label>
+                            </div>
+                            <div class="col-md-6 form-group textboxWidth">
+                                <input class="form-control addressEditableField requiredAddressField " id="currentAddressStreet" maxlength="100" type="text" required="required" />
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group windowWidth">
+                            <div class="col-md-4 form-group labelWidth">
+                                <label class="calibriFont14 padding-top-5" for="_lblCurrentAddressCountry">Country:</label>
+                            </div>
+                            <div class="col-md-6 form-group textboxWidth typeAheadEditableField">
+                                <div>
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group windowWidth">
+                            <div class="col-md-4 form-group labelWidth">
+                                <label class="calibriFont14 padding-top-5" for="_lblCurrentAddressState">State:</label>
+                            </div>
+                            <div class="col-md-6 form-group textboxWidth typeAheadEditableField" id="curAddrState">
+                                <div>
+                                    <div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group windowWidth">
+                            <div class="col-md-4 form-group labelWidth">
+                                <label class="calibriFont14 padding-top-5" for="_lblCurrentAddressCity">City:</label>
+                            </div>
+                            <div class="col-md-6 form-group textboxWidth typeAheadEditableField" id="curAddrCity">
+                                <div>
+                                    <div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group windowWidth">
+                            <div class="col-md-4 form-group labelWidth">
+                                <label class="calibriFont14 padding-top-5" for="_lblCurrentAddressZipCode">Pincode:</label>
+                            </div>
+                            <div class="col-md-6 form-group textboxWidth">
+                                <input class="form-control addressEditableField requiredAddressField" id="currentAddressZipCode" min="0" type="text" required="required" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        );
         return (
             <div>
-                <div className="col-md-12 form-group windowWidth">
-                    <div className="toggle btn btn-default off" data-toggle="toggle" disabled="disabled">
-                        {/* <input value={this.state.} onChange={this.handleChange} checked="" data-onstyle="success" id="chkPermanentSameAsPresent" type="checkbox" disabled="" /> */}
-                        <div className="toggle-group">
-                            {/* <label className="btn btn-success toggle-on">Yes</label>
-            <label className="btn btn-default active toggle-off">No</label> */}
-                            <span className="toggle-handle btn btn-default"></span>
+                <div class="col-md-12 form-group windowWidth" style={{ marginTop: '1%' }}>
+                    <div class="toggle btn btn-default off" data-toggle="toggle" style={{ width: 0 + 'px', height: 0 + 'px' }}>
+                        <input checked="" data-onstyle="success" id="chkPermanentSameAsPresent" type="checkbox" onChange={this.handleToggleChange} />
+                        <div class="toggle-group">
+                            <label class="btn btn-success toggle-on">Yes</label>
+                            <label class="btn btn-default active toggle-off">No</label>
+                            <span class="toggle-handle btn btn-default"></span>
                         </div>
-                        <label className="calibriFont14 padding-top-5" >Present Address is same as Permanent Address</label>
                     </div>
+
+                    <label class="calibriFont14 padding-top-5" for="_lblPermanentAddressCountry">Present Address is same as Permanent Address</label>
+
                 </div>
 
                 <div className="col-xs-4 form-group">
@@ -147,10 +239,12 @@ export default class AddressInfo extends React.Component {
                         </div>
                     </div>
 
-                    <Button onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }} >Edit</Button>
-                    <Button onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}>Save</Button>
-                    <Button onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}>Cancel</Button>
+
                 </div>
+                {/* {this.state.toggle ? {element}:{<div></div>}} */}
+                <Button onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }} >Edit</Button>
+                <Button onClick={this.handleSave} style={this.state.edit ? { 'display': 'none' } : {}}>Save</Button>
+                <Button onClick={this.handleCancel} style={this.state.edit ? { 'display': 'none' } : {}}>Cancel</Button>
             </div>
         );
     }

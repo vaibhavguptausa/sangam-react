@@ -4,8 +4,8 @@ export default class SkillsComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { edit: true, user: {}, menuopen: false, classhandler: 0, isEditable: this.props.editable };
-        console.log(`2nd stage`, this.state.isEditable)
+        this.state = { edit: true, user: {}, menuopen: false, classhandler: [], isEditable: this.props.editable, counter: 0 };
+       // console.log(`2nd stage`, this.state.isEditable)
     }
     static getDerivedStateFromProps(props, state) {
 
@@ -24,21 +24,42 @@ export default class SkillsComponent extends React.Component {
     // componentWillReceiveProps(nextProps) {
     //     this.getClassCount(nextProps)
     // }
+    handleComponentofComponentremove = (ID) => {
+        let classhandler = [];
+        let counter = 0
+        console.log(`ID`, 'ch'+ID);
+      for(let i=0;i<this.state.classhandler.length;i++)
+        {
+        
+            if(this.state.classhandler[i].props.children[0].props.id ===('ch'+ID))
+            {
+                console.log(`match`,this.state.classhandler[i].props.children[0].props.id )
+                 continue; 
+            }
+        
+            {
+                classhandler.push(this.state.classhandler[i]);
+            }
+        }
+
+        this.setState({ classhandler: classhandler });
+    }
     handleComponentofComponentAdd = () => {
-        let classhandler = this.state.classhandler;
-
-        // Object.assign(classhandler, this.state.classhandler);
-        var passingprop = this.props.editable;
-
-        classhandler++;//.push(<SkillsComponentComponent editableComponent={this.props.editable}/>)
+        let classhandler = [];
+        Object.assign(classhandler, this.state.classhandler);
+        //  var passingprop = this.props.editable;
+        classhandler.push(<div><SkillsComponentComponent editable={this.props.editable} compIndex={this.state.counter} id={'ch'+this.state.counter} handleRemoveField={this.handleComponentofComponentremove} />
+         <button onClick={(e)=>this.handleComponentofComponentremove(e.target.id)} id={this.state.counter}>Remove field</button></div>)
+        this.setState({ counter: (this.state.counter + 1) })
         this.setState({ classhandler });
-
+        console.log(`classhandler` ,this.state.classhandler)
     }
     getClassCount = (nextProps) => {
-        let some=[]
-        for (let i = 0; i < this.state.classhandler; i++) {
-            some.push(<SkillsComponentComponent editable={this.props.editable} title={this.props.title}/>)
-        }
+        let some = []
+        // for (let i = 0; i < this.state.classhandler; i++) {
+        //     some.push(<SkillsComponentComponent editable={this.props.editable}/>)
+        // }
+        Object.assign(some, this.state.classhandler);
         return some
     }
     render() {
@@ -64,7 +85,7 @@ export default class SkillsComponent extends React.Component {
 
                         <button onClick={this.handleComponentofComponentAdd}>Add field</button>
                         {this.getClassCount()}
-                   </div>
+                    </div>
                 </div>
 
             </div>

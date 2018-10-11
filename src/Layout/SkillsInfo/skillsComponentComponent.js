@@ -7,8 +7,8 @@ export class SkillsComponentComponent extends React.Component{
         this.state={user: [], DisplayStatus: true };
     }
     handleRemoveField=()=>{
-        this.setState({DisplayStatus: false});
-       // this.props.removefield(this.props.compIndex);
+       // this.setState({DisplayStatus: false});
+        this.props.handleRemoveField(this.props.id);
     }
     componentWillReceiveProps({editableComponent}) {
         this.setState({...this.state,editableComponent})
@@ -54,7 +54,7 @@ export class SkillsComponentComponent extends React.Component{
                                         </td>
                                         <td data-label="Expert Level"  id="proficiencydrpdown">
                                             <div className="proficiencyEditableField col-sm-12" >
-                                            <select  disabled={!this.props.editable} className='form-control addressEditableField requiredAddressField '>
+                                            <select   className='form-control addressEditableField requiredAddressField '>
                                                 <option>Beginner</option>
                                                 <option>Intermediate</option>
                                                 <option>Advanced</option>
@@ -65,15 +65,10 @@ export class SkillsComponentComponent extends React.Component{
                                         </td>
                                         <td data-label="Number of Years" id="numofyears">
                                             <div>
-                                                <input className="form-control" min="0" disabled={!this.props.editable} type="number" id="empSkillNumberofYears6849" />
+                                                <input className="form-control" min="0"  type="number" id="empSkillNumberofYears6849" />
                                             </div>
                                         </td>
-
-
-
                                     </tr>
-
-
                                 </tbody>
                             </table>
                             
@@ -81,8 +76,9 @@ export class SkillsComponentComponent extends React.Component{
 
                     </div>
                    
-                    <button onClick={this.handleRemoveField} id={this.props.compIndex}>Remove field</button>
+                  {/*   <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button> */}
                     </div>
+                  
         ) 
     }
     }
