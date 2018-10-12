@@ -61,7 +61,7 @@
   bottom: 0;
   height: 100%;
   left: 0;
-  width: 60px;
+  width: 43px;
   overflow: hidden;
   -webkit-transition: width .05s linear;
   transition: width .05s linear;
@@ -161,4 +161,12 @@ nav ul,nav li {
   font-style: normal;
   font-weight: 300;
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+#treeview-option {
+  vertical-align: middle;
+}
+
+i {
+  vertical-align: middle;
 }

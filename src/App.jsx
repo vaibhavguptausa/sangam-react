@@ -32,7 +32,6 @@ export default class App extends React.Component {
         {this.state.profile && this.state.profile.user_id ?
           <div className="App">
             <Header className="App-header" profile={this.state.profile} />
-
             <Router >
               <div className='App-layout'>
                 <Sidebar className='App-sidebar' />
@@ -55,7 +54,6 @@ export default class App extends React.Component {
           />    </div>
         }
       </div>
-
     );
   }
 }

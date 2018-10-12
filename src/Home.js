@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import App from './App';
 
-class Home extends Component {
+export default class Home extends Component {
   // calls the login method in authentication service
   login = () => {
     this.props.auth.login();
@@ -20,10 +20,7 @@ class Home extends Component {
           <div className="container column">
             <h5>
               You are logged in!{' '}
-              <a
-                style={{ cursor: 'pointer' }}
-                onClick={this.logout}
-              >
+              <a style={{ cursor: 'pointer' }} onClick={this.logout} >
                 Log Out
               </a>.
             </h5>
@@ -36,10 +33,7 @@ class Home extends Component {
               <h5>ReactiveSearch Auth0 Example</h5>
               <h5>
                 You are not logged in! Please{' '}
-                <a
-                  style={{ cursor: 'pointer' }}
-                  onClick={this.login}
-                >
+                <a style={{ cursor: 'pointer' }} onClick={this.login} >
                   Log In
                 </a>
                 {' '}to continue.
@@ -49,8 +43,6 @@ class Home extends Component {
           )
         }
       </div>
-      );
-    }
+    );
   }
-
-  export default Home;
+}
