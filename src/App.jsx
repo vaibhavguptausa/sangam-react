@@ -7,7 +7,8 @@ import RouterFile from './routerFile.js';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TimeOff from './TimeOff/TimeOff.js';
 import GoogleLoginButton from 'react-google-login-button'
-
+import { GoogleLogin } from 'react-google-login';
+import { GoogleLogout } from 'react-google-login';
 export default class App extends React.Component {
   constructor() {
     super();
@@ -26,13 +27,18 @@ export default class App extends React.Component {
     this.setState({ profile: profile });
     localStorage.setItem('profile', profile)
   }
+  logout = () => {
+    this.setState({profile : null});
+  }
   render() {
     return (
       <div>
+
         {this.state.profile && this.state.profile.user_id ?
+
           <div className="App">
             <Header className="App-header" profile={this.state.profile} />
-
+           
             <Router >
               <div className='App-layout'>
                 <Sidebar className='App-sidebar' />
@@ -42,6 +48,12 @@ export default class App extends React.Component {
                 </div>
               </div>
             </Router>
+              <GoogleLogout
+              buttonText="Logout"
+              onLogoutSuccess={this.logout}
+            >
+              Log out
+        </GoogleLogout>
           </div> :
           <div><GoogleLoginButton
             className="Login-Page"
