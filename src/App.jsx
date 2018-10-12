@@ -44,6 +44,7 @@ export default class App extends React.Component {
             </Router>
           </div> :
           <div><GoogleLoginButton
+            className="Login-Page"
             googleClientId='13711333764-l85op5klrq1sorp5lbbuao603ne9nrc5.apps.googleusercontent.com'
             onLoginSuccess={this.onSignIn}
             onLoginFailure={() => console.log('Login failed')}

@@ -76,7 +76,7 @@ export class SkillsComponentComponent extends React.Component{
 
                     </div>
                    
-                  {/*   <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button> */}
+                     <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button> 
                     </div>
                   
         ) 

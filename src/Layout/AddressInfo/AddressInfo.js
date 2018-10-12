@@ -9,14 +9,14 @@ export default class AddressInfo extends React.Component {
 
     handleAddressClick = () => {
         let add = document.getElementById('currentAddress');
-        if (add.style.display == 'none')
+        if (add.style.display === 'none')
             add.style.display = 'block';
         else
             add.style.display = 'none'
     }
     handlePermanentAddressClick = () => {
         let add = document.getElementById('PermanentcurrentAddress');
-        if (add.style.display == 'none')
+        if (add.style.display === 'none')
             add.style.display = 'block';
         else
             add.style.display = 'none'

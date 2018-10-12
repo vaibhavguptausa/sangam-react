@@ -19,7 +19,7 @@ export default class ApplyTimeOff extends React.Component {
         this.setState({ user: Object.assign({}, this.state.user, { [name]: e.target.value }) });
         
         let value = e.target.value;
-        if (value=='FULL-DAY' || value=='HALF-DAY' || value==='') {
+        if (value==='FULL-DAY' || value==='HALF-DAY' || value==='') {
             this.setState({duration: 'single'});
         }
         else {
