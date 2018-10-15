@@ -38,10 +38,7 @@ export default class App extends React.Component {
 
           <div className="App">
             <Header className="App-header" profile={this.state.profile} />
-<<<<<<< HEAD
-=======
            
->>>>>>> 1a44bf5640ee4adc54f7f184dfcb4f117d2e26a9
             <Router >
               <div className='App-layout'>
                 <Sidebar className='App-sidebar' />
