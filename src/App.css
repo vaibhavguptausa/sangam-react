@@ -18,21 +18,21 @@
   grid-row-end: 2;
 }
 
-.App-sidebar{
+.App-sidebar {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 4;
 }
 
-.App-layout{
+.App-layout {
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 4;
 }
 
-.Login-page{
+.Login-page {
   top: 30%;
   right: 30%;
 }

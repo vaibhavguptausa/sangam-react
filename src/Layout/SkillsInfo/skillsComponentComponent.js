@@ -1,31 +1,30 @@
-import React from 'react' ;
+import React from 'react';
 
-export class SkillsComponentComponent extends React.Component{
-    constructor(props)
-    {
+export default class SkillsComponentComponent extends React.Component {
+    constructor(props) {
         super(props);
-        this.state={user: [], DisplayStatus: true };
+        this.state = { user: [], DisplayStatus: true };
     }
-    handleRemoveField=()=>{
-       // this.setState({DisplayStatus: false});
+
+    handleRemoveField = () => {
         this.props.handleRemoveField(this.props.id);
     }
-    componentWillReceiveProps({editableComponent}) {
-        this.setState({...this.state,editableComponent})
-      }
-    render(){
-    
-        if(!this.state.DisplayStatus)
-        {
-            return(
+
+    componentWillReceiveProps({ editableComponent }) {
+        this.setState({ ...this.state, editableComponent })
+    }
+
+    render() {
+        if (!this.state.DisplayStatus) {
+            return (
                 <div></div>
-            )
+            );
         }
-        else{
-        return(
-            <div id="ComponentOfComponent" >
-            <div className="col-xs-11 col-sm-11  padding-top-bottom-20"  id="Hide">
-                  
+        else {
+            return (
+                <div id="ComponentOfComponent" >
+                    <div className="col-xs-11 col-sm-11  padding-top-bottom-20" id="Hide">
+
                         <div>
                             <table align="center" cellSpacing="0">
                                 <thead>
@@ -41,45 +40,41 @@ export class SkillsComponentComponent extends React.Component{
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
 
+                                <tbody>
                                     <tr>
-                                        <td data-label="Skill"  id="skilldrpdown">
-                                            <div className="col-sm-12"  id="skilldrpdown" >
+                                        <td data-label="Skill" id="skilldrpdown">
+                                            <div className="col-sm-12" id="skilldrpdown" >
                                                 <select disabled={!this.props.editable} className='form-control' >
                                                     <option>{this.props.title}</option>
                                                 </select>
-
                                             </div>
                                         </td>
-                                        <td data-label="Expert Level"  id="proficiencydrpdown">
+                                        <td data-label="Expert Level" id="proficiencydrpdown">
                                             <div className="proficiencyEditableField col-sm-12" >
-                                            <select   className='form-control addressEditableField requiredAddressField '>
-                                                <option>Beginner</option>
-                                                <option>Intermediate</option>
-                                                <option>Advanced</option>
-                                                <option>Proficient</option>
-                                                <option>Expert</option>
-                                            </select>
+                                                <select className='form-control addressEditableField requiredAddressField '>
+                                                    <option>Beginner</option>
+                                                    <option>Intermediate</option>
+                                                    <option>Advanced</option>
+                                                    <option>Proficient</option>
+                                                    <option>Expert</option>
+                                                </select>
                                             </div>
                                         </td>
                                         <td data-label="Number of Years" id="numofyears">
                                             <div>
-                                                <input className="form-control" min="0"  type="number" id="empSkillNumberofYears6849" />
+                                                <input className="form-control" min="0" type="number" id="empSkillNumberofYears6849" />
                                             </div>
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
-                            
-                        </div>
 
+                            </table>
+                        </div>
                     </div>
-                   
-                     <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button> 
-                    </div>
-                  
-        ) 
-    }
+                    <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button>
+                </div>
+            );
+        }
     }
 }

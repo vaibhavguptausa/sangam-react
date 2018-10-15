@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab, TabContainer, TabContent, TabPane, MenuItem, NavDropdown, Nav, NavItem, Row, Col } from 'react-bootstrap';
+import { Tab, Nav, NavItem, Row, Col } from 'react-bootstrap';
 import 'react-tabs/style/react-tabs.scss';
 import Personal from './personalContent';
 import AddressInfo from './AddressInfo/AddressInfo';
@@ -10,10 +10,6 @@ import Contact from './Contact/Contact';
 import './layoutStyle.css';
 
 export default class Layout extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className='Tabs'>

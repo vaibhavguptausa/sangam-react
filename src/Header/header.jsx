@@ -11,7 +11,7 @@ export default class Header extends React.Component {
                 </div>
 
                 <div className='main-header-user'>
-                    <img src={this.props.profile.image_url} />
+                    <img src={this.props.profile.image_url} alt="GGK-Tech" />
                     <span className="main-header-username">{this.props.profile.name}</span>
                 </div>
             </div>

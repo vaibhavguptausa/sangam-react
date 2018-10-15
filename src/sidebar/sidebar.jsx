@@ -3,13 +3,9 @@ import './sidebarStyle.css';
 import { Link } from "react-router-dom";
 
 export default class Sidebar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     handleClick = () => {
         let Element = document.getElementById('treeview-option');
-        if (Element.style.display == 'none') {
+        if (Element.style.display === 'none') {
             Element.style.display = 'block';
         }
         else {
@@ -19,7 +15,7 @@ export default class Sidebar extends React.Component {
     
     handleClick1 = () => {
         let Element = document.getElementById('treeview-option1');
-        if (Element.style.display == 'none') {
+        if (Element.style.display === 'none') {
             Element.style.display = 'block';
         }
         else {
@@ -36,7 +32,7 @@ export default class Sidebar extends React.Component {
                             <a href="#">
                                 <i className="fa fa-users fa-2x"></i>
                                 <span className="nav-text">Employee Management</span>
-                                <i class="fa fa-angle-left pull-right"></i>
+                                <i className="fa fa-angle-left pull-right"></i>
                             </a>
 
                             <ul className="treeview-menu" id='treeview-option' style={{display: 'none'}}>
@@ -61,7 +57,7 @@ export default class Sidebar extends React.Component {
                             <a href="#">
                                 <i className="fa fa-clock-o fa-2x"></i>
                                 <span className="nav-text">Time Management</span>
-                                <i class="fa fa-angle-left pull-right" style={{display: 'hidden'}}></i>
+                                <i className="fa fa-angle-left pull-right" style={{display: 'hidden'}}></i>
                             </a>
                         </li>
                         
@@ -69,7 +65,7 @@ export default class Sidebar extends React.Component {
                             <a href="#">
                                 <i className="fa fa-ban fa-2x"></i>
                                 <span className="nav-text">Time-Off Management</span>
-                                <i class="fa fa-angle-left pull-right"></i>
+                                <i className="fa fa-angle-left pull-right"></i>
                             </a>
 
                             <ul className="treeview-menu" id='treeview-option1' style={{display: 'none'}}>

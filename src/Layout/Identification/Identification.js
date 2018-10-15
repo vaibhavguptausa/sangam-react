@@ -29,7 +29,7 @@ export default class Identification extends React.Component {
 
     handleClick = () => {
         let Element = document.getElementById('identityInformation');
-        if (Element.style.display == 'none') {
+        if (Element.style.display === 'none') {
             Element.style.display = 'block';
         }
         else {
@@ -39,7 +39,7 @@ export default class Identification extends React.Component {
 
     handleClick1 = () => {
         let Element = document.getElementById('accountInformation');
-        if (Element.style.display == 'none') {
+        if (Element.style.display === 'none') {
             Element.style.display = 'block';
         }
         else {
@@ -154,7 +154,6 @@ export default class Identification extends React.Component {
                                 <div className="col-md-6 form-group windowWidth">
                                     <div className="col-md-4 form-group labelWidth">
                                         <label className="calibriFont14 padding-top-5">Bank Name:</label>
-                                        {/* <input value={this.state.user.} onChange={this.handleChange} className="form-control identityEditableField requiredAccountField " id="_txtAccountNumber" maxLength="200" type="text" required="required"/> */}
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth " data-hint="Bank name is required">
                                         <input value={this.state.user._txtBankName} onChange={this.handleChange} className="form-control identityEditableField requiredAccountField " id="_txtBankName" maxLength="200" type="text" required="required" disabled={this.state.edit} />
@@ -196,7 +195,6 @@ export default class Identification extends React.Component {
                                         <input value={this.state.user.txtBankAddress} onChange={this.handleChange} className="form-control identityEditableField " id="txtBankAddress" type="text" disabled={this.state.edit} />
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

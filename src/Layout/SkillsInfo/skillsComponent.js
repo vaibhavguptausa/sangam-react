@@ -1,22 +1,22 @@
 import React from 'react';
 import { SkillsComponentComponent } from './skillsComponentComponent';
-export default class SkillsComponent extends React.Component {
 
+export default class SkillsComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { edit: true, user: {}, menuopen: false, classhandler: [], isEditable: this.props.editable, counter: 0 };
         // console.log(`2nd stage`, this.state.isEditable)
     }
-    static getDerivedStateFromProps(props, state) {
 
+    static getDerivedStateFromProps(props, state) {
         if (props.editable !== state.isEditable) {
             return {
                 isEditable: props.editable
-
             };
         }
         return null;
     }
+
     handleClick = () => {
         this.setState({ menuopen: !this.state.menuopen });
     }
@@ -26,7 +26,6 @@ export default class SkillsComponent extends React.Component {
     // }
     handleComponentofComponentremove = (ID) => {
         let classhandler1 = [];
-        let counter = 0
         console.log(`ID`, 'ch' + ID);
         for (let i = 0; i < this.state.classhandler.length; i++) {
 
@@ -34,12 +33,11 @@ export default class SkillsComponent extends React.Component {
                 console.log(`match`, this.state.classhandler[i].props.id)
                 continue;
             }
-            classhandler1.push(Object.assign({},this.state.classhandler[i]));
-            
+            classhandler1.push(Object.assign({}, this.state.classhandler[i]));
         }
-
         this.setState({ classhandler: classhandler1 });
     }
+
     handleComponentofComponentAdd = () => {
         let classhandler = [];
         Object.assign(classhandler, this.state.classhandler);
@@ -49,6 +47,7 @@ export default class SkillsComponent extends React.Component {
         this.setState({ classhandler });
         console.log(`classhandler`, this.state.classhandler)
     }
+
     getClassCount = (nextProps) => {
         let some = []
         // for (let i = 0; i < this.state.classhandler; i++) {
@@ -57,10 +56,9 @@ export default class SkillsComponent extends React.Component {
         Object.assign(some, this.state.classhandler);
         return some
     }
+
     render() {
-
         const style1 = {
-
             'display': 'none'
         }
         const style2 = {
@@ -73,16 +71,12 @@ export default class SkillsComponent extends React.Component {
                         <h4 className="panel-title" style={{ float: 'left' }}>
                             {this.props.title}
                         </h4>
-
-
                     </div>
                     <div style={this.state.menuopen ? style1 : style2}>
-
                         <button onClick={this.handleComponentofComponentAdd}>Add field</button>
                         {this.getClassCount()}
                     </div>
                 </div>
-
             </div>
         );
     }
