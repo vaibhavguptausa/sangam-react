@@ -1,5 +1,5 @@
 import React from 'react';
-import { SkillsComponentComponent } from './skillsComponentComponent';
+import SkillsComponentComponent from './skillsComponentComponent';
 
 export default class SkillsComponent extends React.Component {
     constructor(props) {
