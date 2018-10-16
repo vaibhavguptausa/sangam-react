@@ -1,0 +1,12 @@
+
+.Tabs{
+    grid-column-start: 5;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin: 5% 2% 2% 5%;
+}
+.stylenav{
+    display: flex;
+    background-color: aqua;
+}
