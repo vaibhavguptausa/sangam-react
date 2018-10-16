@@ -3,18 +3,43 @@ import React from 'react';
 export default class SkillsComponentComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { user: [], DisplayStatus: true };
+        this.state = { user: this.props.user, DisplayStatus: true, isEditable: this.props.editable, saveField: false };
     }
-
     handleRemoveField = () => {
-        this.props.handleRemoveField(this.props.id);
+        // this.setState({DisplayStatus: false});
+        this.props.handleRemoveField(this.state.user);
     }
+    // componentWillReceiveProps({ editable }) {
+    //     this.setState({ ...this.state.isEditable, editable })
+    // }
+    //   static getDerivedStateFromProps(props, state) {
 
-    componentWillReceiveProps({ editableComponent }) {
-        this.setState({ ...this.state, editableComponent })
+    //     if (props.editable !== state.isEditable) {
+    //         return {
+    //             isEditable: props.editable
+
+    //         };
+    //     }
+    //     return null;
+    // }
+    handleSave = () => {
+        this.setState({ saveField: true });
+        this.props.handleUserInfo(this.state.user);
+        console.log(`user`, this.state.user)
     }
+    // handleUserInfo = () => {
+    //     console.log(`singleuser`, this.state.user)
+    //     if (this.state.saveField) {
+           
+    //     }
+    // }
+    handleChange = (e) => {
+        const name = e.target.id;
+        this.setState({ user: Object.assign({}, this.state.user, { [name]: e.target.value }) });
 
+    }
     render() {
+        //console.log(`childofchildiseditable`, this.props.editable)
         if (!this.state.DisplayStatus) {
             return (
                 <div></div>
@@ -45,25 +70,28 @@ export default class SkillsComponentComponent extends React.Component {
                                     <tr>
                                         <td data-label="Skill" id="skilldrpdown">
                                             <div className="col-sm-12" id="skilldrpdown" >
-                                                <select disabled={!this.props.editable} className='form-control' >
-                                                    <option>{this.props.title}</option>
+                                                <select id="txtskilldrpdown" onChange={this.handleChange} disabled={this.state.isEditable} value={this.state.user.txtskilldrpdown} className='form-control' >
+                                                    <option value='option1'>option 1</option>
+                                                    <option value='option2'>option 2</option>
+                                                    <option value='option3'>option 3</option>
+                                                    <option value='option4'>option 4</option>
                                                 </select>
                                             </div>
                                         </td>
                                         <td data-label="Expert Level" id="proficiencydrpdown">
                                             <div className="proficiencyEditableField col-sm-12" >
-                                                <select className='form-control addressEditableField requiredAddressField '>
-                                                    <option>Beginner</option>
-                                                    <option>Intermediate</option>
-                                                    <option>Advanced</option>
-                                                    <option>Proficient</option>
-                                                    <option>Expert</option>
+                                                <select className='form-control addressEditableField requiredAddressField ' disabled={this.state.isEditable} id='txtproficiencydrpdown' onChange={this.handleChange} value={this.state.user.txtproficiencydrpdown}>
+                                                    <option value="Beginner">Beginner</option>
+                                                    <option value='Intermediate'>Intermediate</option>
+                                                    <option value='Advanced'>Advanced</option>
+                                                    <option value='Proficient'>Proficient</option>
+                                                    <option value='Expert'>Expert</option>
                                                 </select>
                                             </div>
                                         </td>
                                         <td data-label="Number of Years" id="numofyears">
                                             <div>
-                                                <input className="form-control" min="0" type="number" id="empSkillNumberofYears6849" />
+                                                <input className="form-control" min="0" type="number" disabled={this.state.isEditable} value={this.state.user.empSkillNumberofYears} onChange={this.handleChange} id="empSkillNumberofYears" />
                                             </div>
                                         </td>
                                     </tr>
@@ -72,9 +100,13 @@ export default class SkillsComponentComponent extends React.Component {
                             </table>
                         </div>
                     </div>
+
                     <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button>
+                    <button onClick={this.handleSave} >Save Field</button>
+                    {/* {this.handleUserInfo()} */}
                 </div>
-            );
+
+            )
         }
     }
 }

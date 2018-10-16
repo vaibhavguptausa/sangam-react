@@ -39,9 +39,8 @@ export default class SkillsInfo extends React.Component {
 
     handleEdit = () => {
         this.setState({ isEditable: !this.state.isEditable })
-        console.log(`parentisEditable`, this.state.isEditable)
+       // console.log(`parentisEditable`, this.state.isEditable)
     }
-
     render() {
         return (
             <div className="row">

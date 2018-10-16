@@ -4,7 +4,8 @@ import SkillsComponentComponent from './skillsComponentComponent';
 export default class SkillsComponent extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { edit: true, user: {}, menuopen: false, classhandler: [], isEditable: this.props.editable, counter: 0 };
+        this.state = { edit: true, user: {}, menuopen: false, classhandler: [], isEditable: this.props.editable, counter: 0, userinfo: [] };
+
         // console.log(`2nd stage`, this.state.isEditable)
     }
 
@@ -16,48 +17,72 @@ export default class SkillsComponent extends React.Component {
         }
         return null;
     }
-
+    handleUserInfo=(data)=>{
+        let userinfo=[];
+       // Object.assign(userinfo, this.state.userinfo);
+        for(let i=0;i<this.state.userinfo.length;i++)
+        {
+           if(this.state.userinfo[i].id===data.id)
+           {
+            userinfo.push(data);   
+           }
+           else{
+            userinfo.push(this.state.userinfo[i]);
+           }
+        }
+        this.setState({userinfo: userinfo});
+    }
     handleClick = () => {
         this.setState({ menuopen: !this.state.menuopen });
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //     this.getClassCount(nextProps)
-    // }
-    handleComponentofComponentremove = (ID) => {
-        let classhandler1 = [];
-        console.log(`ID`, 'ch' + ID);
-        for (let i = 0; i < this.state.classhandler.length; i++) {
-
-            if (this.state.classhandler[i].props.id === (ID)) {
-                console.log(`match`, this.state.classhandler[i].props.id)
-                continue;
+   
+    handleRemoveField=(data)=>{
+        let userinfo=[];
+       // this.setState({counter: this.setState.counter-1});
+        for(let i=0;i<this.state.userinfo.length;i++)
+            {
+                if(this.state.userinfo[i].id===data.id)
+                {
+                    
+                }
+                else{
+                    userinfo.push(this.state.userinfo[i]);
+                }
             }
-            classhandler1.push(Object.assign({}, this.state.classhandler[i]));
-        }
-        this.setState({ classhandler: classhandler1 });
+            this.setState({userinfo: userinfo});
+
     }
 
     handleComponentofComponentAdd = () => {
-        let classhandler = [];
-        Object.assign(classhandler, this.state.classhandler);
-        //  var passingprop = this.props.editable;
-        classhandler.push(<SkillsComponentComponent editable={this.props.editable} compIndex={this.state.counter} id={'ch' + this.state.counter} handleRemoveField={this.handleComponentofComponentremove} />)
-        this.setState({ counter: (this.state.counter + 1) })
-        this.setState({ classhandler });
-        console.log(`classhandler`, this.state.classhandler)
+       
+        var user={};
+        user.txtskilldrpdown='';
+        user.txtproficiencydrpdown='';
+        user.empSkillNumberofYears='';
+        user.id=this.state.counter;
+       let userinfo=[];
+       for(let i=0;i<this.state.userinfo.length;i++)
+       {
+           userinfo.push(this.state.userinfo[i]);
+       }
+       userinfo.push(user);
+       this.setState({userinfo: userinfo, counter: this.state.counter +1});
+        
     }
-
-    getClassCount = (nextProps) => {
+    getClassCount = () => {
         let some = []
-        // for (let i = 0; i < this.state.classhandler; i++) {
-        //     some.push(<SkillsComponentComponent editable={this.props.editable}/>)
-        // }
-        Object.assign(some, this.state.classhandler);
+        
+        for(let i=0;i<this.state.userinfo.length;i++)
+        {
+            some.push(<SkillsComponentComponent user={this.state.userinfo[i]} handleUserInfo={this.handleUserInfo} editable={this.state.isEditable}  handleRemoveField={this.handleRemoveField}/>)
+        }
+        
         return some
     }
-
     render() {
+        //console.log(`childisEditable`, this.state.isEditable)
+        console.log(`userInfo`, this.state.userinfo);
         const style1 = {
             'display': 'none'
         }
