@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 import Header from './Header/header';
-import Sidebar from './sidebar/sidebar.jsx';
+import Sidebar from './sidebar/sidebar';
 import Layout from './Layout/layout';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import TimeOff from './TimeOff/TimeOff.js';
+import TimeOff from './TimeOff/TimeOff';
 import GoogleLoginButton from 'react-google-login-button'
-
+import {PerformanceManagement} from './PMS/PMS' ;
 export default class App extends React.Component {
   constructor() {
     super();
@@ -58,6 +58,7 @@ export default class App extends React.Component {
                 <div>
                   <Route path="/ApplyTimeOff" component={TimeOff} />
                   <Route path="/ViewEmployees" component={Layout} />
+                  <Route path="/PerformanceManagement" component={PerformanceManagement} />
                 </div>
               </div>
             </Router>
