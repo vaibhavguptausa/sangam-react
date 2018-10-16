@@ -4,15 +4,17 @@ import Header from './Header/header';
 import Sidebar from './sidebar/sidebar';
 import Layout from './Layout/layout';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import TimeOff from './TimeOff/TimeOff';
-import GoogleLoginButton from 'react-google-login-button'
+import TimeOff from './TimeOff/TimeOff.js';
+import GoogleLoginButton from 'react-google-login-button';
+import TimeOffBalance from './TimeOffBalance/TimeOffBalance.js';
 import {PerformanceManagement} from './PMS/PMS' ;
+
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
       profile: localStorage.getItem('profile')
-    }
+    };
   }
 
   onSignIn = (googleUser) => {
@@ -58,17 +60,13 @@ export default class App extends React.Component {
                 <div>
                   <Route path="/ApplyTimeOff" component={TimeOff} />
                   <Route path="/ViewEmployees" component={Layout} />
+                  <Route path='/TimeOffBalance' component={TimeOffBalance} />
                   <Route path="/PerformanceManagement" component={PerformanceManagement} />
                 </div>
               </div>
             </Router>
-            {/* <GoogleLogout
-              buttonText="Logout"
-              onLogoutSuccess={this.logout}
-            >
-              Log out
-        </GoogleLogout> */}
-        <button onClick={()=>forceMyOwnLogout()} style={{float: 'right'}}>Logout</button>
+
+            <button onClick={() => forceMyOwnLogout()} style={{ float: 'right' }}>Logout</button>
           </div> :
           <div><GoogleLoginButton
             className="Login-Page"

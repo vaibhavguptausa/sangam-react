@@ -12,7 +12,7 @@ export default class Sidebar extends React.Component {
             Element.style.display = 'none';
         }
     }
-    
+
     handleClick1 = () => {
         let Element = document.getElementById('treeview-option1');
         if (Element.style.display === 'none') {
@@ -35,7 +35,7 @@ export default class Sidebar extends React.Component {
                                 <i className="fa fa-angle-left pull-right"></i>
                             </a>
 
-                            <ul className="treeview-menu" id='treeview-option' style={{display: 'none'}}>
+                            <ul className="treeview-menu" id='treeview-option' style={{ display: 'none' }}>
                                 <li style={{ marginLeft: '10px' }} >
                                     <Link to='/ViewEmployees'><a href="/Employee/ViewEmployees" id="10" target="">
                                         <i className="fa fa-street-view"></i>View Employee
@@ -57,10 +57,10 @@ export default class Sidebar extends React.Component {
                             <a href="#">
                                 <i className="fa fa-clock-o fa-2x"></i>
                                 <span className="nav-text">Time Management</span>
-                                <i className="fa fa-angle-left pull-right" style={{display: 'hidden'}}></i>
+                                <i className="fa fa-angle-left pull-right" style={{ display: 'hidden' }}></i>
                             </a>
                         </li>
-                        
+
                         <li className="has-subnav" onClick={this.handleClick1}>
                             <a href="#">
                                 <i className="fa fa-ban fa-2x"></i>
@@ -68,7 +68,7 @@ export default class Sidebar extends React.Component {
                                 <i className="fa fa-angle-left pull-right"></i>
                             </a>
 
-                            <ul className="treeview-menu" id='treeview-option1' style={{display: 'none'}}>
+                            <ul className="treeview-menu" id='treeview-option1' style={{ display: 'none' }}>
                                 <li style={{ marginLeft: '10px' }}>
                                     <Link to="/ApplyTimeOff">
                                         <a href="/Leave/ApplyLeave" id="12" target="">
@@ -76,11 +76,12 @@ export default class Sidebar extends React.Component {
                                         </a>
                                     </Link>
                                 </li>
-
                                 <li style={{ marginLeft: '10px' }}>
-                                    <a href="/Leave/GetLeaveBalance" id="13" target="">
-                                        <i className="fa fa-th-list"></i>TimeOff Balance
-                                    </a>
+                                    <Link to="/TimeOffBalance">
+                                        <a href="/Leave/GetLeaveBalance" id="13" target="">
+                                            <i className="fa fa-th-list"></i>TimeOff Balance
+                                        </a>
+                                    </Link>
                                 </li>
                                 <li style={{ marginLeft: '10px' }}>
                                     <a href="/Leave/GetLeaveHistory" id="11" target="">
@@ -91,11 +92,13 @@ export default class Sidebar extends React.Component {
                         </li>
 
                         <li  >
-                        <Link to="/PerformanceManagement"><a href="#">
-                                <i className="fa fa-ban fa-2x"></i>
-                                <span className="nav-text">Performance Management</span>
-                                
-                            </a></Link>
+                            <Link to="/PerformanceManagement">
+                                <a href="#">
+                                    <i className="fa fa-ban fa-2x"></i>
+                                    <span className="nav-text">Performance Management</span>
+                                    <i className="fa fa-angle-left pull-right"></i>
+                                </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
