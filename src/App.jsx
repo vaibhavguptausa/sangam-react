@@ -5,9 +5,8 @@ import Sidebar from './sidebar/sidebar';
 import Layout from './Layout/layout';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TimeOff from './TimeOff/TimeOff.js';
-import GoogleLoginButton from 'react-google-login-button';
 import TimeOffBalance from './TimeOffBalance/TimeOffBalance.js';
-import {PerformanceManagement} from './PMS/PMS' ;
+import { PerformanceManagement } from './PMS/PMS';
 
 export default class App extends React.Component {
   constructor() {
@@ -16,7 +15,9 @@ export default class App extends React.Component {
       profile: localStorage.getItem('profile')
     };
   }
-
+  componentDidMount = () => {
+    this.buildSignInBtn()
+  }
   onSignIn = (googleUser) => {
     var profile = googleUser.getBasicProfile();
     profile = {
@@ -26,25 +27,41 @@ export default class App extends React.Component {
       email: profile.getEmail()
     }
     this.setState({ profile: profile });
-    localStorage.setItem('profile', profile)
+    Object.keys(profile).map(p => {
+      localStorage.setItem(p, profile[p])
+    })
   }
+  buildSignInBtn = () => {
+    window.gapi.signin2.render('signinbtn', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': this.onSignIn,
+      'onfailure': () => { console.log('login failed') }
+    });
+  }
+  signOut = ((response) => {
 
+    if (window.gapi) {
+      const auth2 = window.gapi.auth2.getAuthInstance()
+      if (auth2 != null) {
+        auth2.signOut().then(() => {
+          this.setState({ profile: null })
+          localStorage.clear()
+          this.buildSignInBtn()
+
+          // auth2.disconnect().then(this.props.onLogoutSuccess)
+        }
+        )
+      }
+    }
+
+    // this.forceUpdate()
+  })
   render() {
 
-    var forceMyOwnLogout = ((response) => {
-       document.cookie.remove('13711333764-l85op5klrq1sorp5lbbuao603ne9nrc5.apps.googleusercontent.com', { path: '/' })
-      if (window.gapi) {
-        const auth2 = window.gapi.auth2.getAuthInstance()
-        if (auth2 != null) {
-          auth2.signOut().then (()=>{
-            this.setState({profile: null})
-             auth2.disconnect().then(this.props.onLogoutSuccess)
-          }
-          )
-        }
-      }
-       this.forceUpdate()
-    })
 
     return (
       <div>
@@ -66,18 +83,11 @@ export default class App extends React.Component {
               </div>
             </Router>
 
-            <button onClick={() => forceMyOwnLogout()} style={{ float: 'right' }}>Logout</button>
+            <button onClick={() => this.signOut()} style={{ float: 'right' }}>Logout</button>
           </div> :
-          <div><GoogleLoginButton
-            className="Login-Page"
-            googleClientId='13711333764-l85op5klrq1sorp5lbbuao603ne9nrc5.apps.googleusercontent.com'
-            onLoginSuccess={this.onSignIn}
-            onLoginFailure={() => console.log('Login failed')}
-            width={140}
-            height={40}
-            longTitle={false}
-            theme="light"
-          />    </div>
+          <div>
+            <div id='signinbtn'></div>
+          </div>
         }
       </div>
     );
