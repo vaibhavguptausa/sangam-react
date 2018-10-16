@@ -72,7 +72,7 @@ export default class AddressInfo extends React.Component {
                                     <label className="calibriFont14 padding-top-5">Address Line1:</label>
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth" title="">
-                                    <input value={this.state.user.currentAddressLine1} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="currentAddressLine1" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                    <input value={this.state.user.currentAddressLine1}  className="form-control addressEditableField requiredAddressField" id="currentAddressLine1" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
                                 </div>
                             </div>
 
@@ -81,7 +81,7 @@ export default class AddressInfo extends React.Component {
                                     <label className="calibriFont14 padding-top-5">Address Line2:</label>
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth">
-                                    <input value={this.state.user.currentAddressLine2} onChange={this.handleChange} className="form-control addressEditableField" id="currentAddressLine2" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                    <input value={this.state.user.currentAddressLine2}  className="form-control addressEditableField" id="currentAddressLine2" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
                                 </div>
                             </div>
 
@@ -90,7 +90,7 @@ export default class AddressInfo extends React.Component {
                                     <label className="calibriFont14 padding-top-5">Street:</label>
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth" title="">
-                                    <input value={this.state.user.currentAddressStreet} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="currentAddressStreet" maxLength="100" type="select" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                    <input value={this.state.user.currentAddressStreet}  className="form-control addressEditableField requiredAddressField" id="currentAddressStreet" maxLength="100" type="select" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
                                 </div>
                             </div>
 
