@@ -5,14 +5,15 @@ import Sidebar from './sidebar/sidebar.jsx';
 import Layout from './Layout/layout';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TimeOff from './TimeOff/TimeOff.js';
-import GoogleLoginButton from 'react-google-login-button'
+import GoogleLoginButton from 'react-google-login-button';
+import TimeOffBalance from './TimeOffBalance/TimeOffBalance.js';
 
 export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
       profile: localStorage.getItem('profile')
-    }
+    };
   }
 
   onSignIn = (googleUser) => {
@@ -30,18 +31,14 @@ export default class App extends React.Component {
   render() {
 
     var forceMyOwnLogout = ((response) => {
-      // cookie.remove('13711333764-l85op5klrq1sorp5lbbuao603ne9nrc5.apps.googleusercontent.com', { path: '/' })
       if (window.gapi) {
         const auth2 = window.gapi.auth2.getAuthInstance()
         if (auth2 != null) {
-          auth2.signOut().then (()=>{
-            this.setState({profile: null})
-            // auth2.disconnect().then(this.props.onLogoutSuccess)
-          }
-          )
+          auth2.signOut().then(() => {
+            this.setState({ profile: null })
+          })
         }
       }
-      // this.forceUpdate()
     })
 
     return (
@@ -58,16 +55,12 @@ export default class App extends React.Component {
                 <div>
                   <Route path="/ApplyTimeOff" component={TimeOff} />
                   <Route path="/ViewEmployees" component={Layout} />
+                  <Route path='/TimeOffBalance' component={TimeOffBalance} />
                 </div>
               </div>
             </Router>
-            {/* <GoogleLogout
-              buttonText="Logout"
-              onLogoutSuccess={this.logout}
-            >
-              Log out
-        </GoogleLogout> */}
-        <button onClick={()=>forceMyOwnLogout()} style={{float: 'right'}}>Logout</button>
+
+            <button onClick={() => forceMyOwnLogout()} style={{ float: 'right' }}>Logout</button>
           </div> :
           <div><GoogleLoginButton
             className="Login-Page"
