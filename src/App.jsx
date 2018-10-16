@@ -30,18 +30,18 @@ export default class App extends React.Component {
   render() {
 
     var forceMyOwnLogout = ((response) => {
-      // cookie.remove('13711333764-l85op5klrq1sorp5lbbuao603ne9nrc5.apps.googleusercontent.com', { path: '/' })
+       document.cookie.remove('13711333764-l85op5klrq1sorp5lbbuao603ne9nrc5.apps.googleusercontent.com', { path: '/' })
       if (window.gapi) {
         const auth2 = window.gapi.auth2.getAuthInstance()
         if (auth2 != null) {
           auth2.signOut().then (()=>{
             this.setState({profile: null})
-            // auth2.disconnect().then(this.props.onLogoutSuccess)
+             auth2.disconnect().then(this.props.onLogoutSuccess)
           }
           )
         }
       }
-      // this.forceUpdate()
+       this.forceUpdate()
     })
 
     return (
