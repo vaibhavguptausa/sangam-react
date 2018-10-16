@@ -64,7 +64,7 @@ export default class BarGraph extends React.Component {
                     rotation: 0,
                     style: {
                         fontSize: '13px',
-                        fontFamily: 'Verdana, sans-serif'
+                        fontFamily: 'sans-serif'
                     }
                 }
             },
@@ -72,7 +72,7 @@ export default class BarGraph extends React.Component {
                 enabled: false
             },
             plotOptions: {
-                pie: {
+                column: {
                     dataLabels: {
                         format: '{point.name}: {point.percentage:.1f} %'
                     },

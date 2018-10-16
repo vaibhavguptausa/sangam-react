@@ -1,6 +1,6 @@
 import React from 'react';
 
-export class SkillsComponentComponent extends React.Component {
+export default class SkillsComponentComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { user: this.props.user, DisplayStatus: true, isEditable: this.props.editable, saveField: false };
@@ -43,7 +43,7 @@ export class SkillsComponentComponent extends React.Component {
         if (!this.state.DisplayStatus) {
             return (
                 <div></div>
-            )
+            );
         }
         else {
             return (
@@ -65,8 +65,8 @@ export class SkillsComponentComponent extends React.Component {
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody>
 
+                                <tbody>
                                     <tr>
                                         <td data-label="Skill" id="skilldrpdown">
                                             <div className="col-sm-12" id="skilldrpdown" >
@@ -76,7 +76,6 @@ export class SkillsComponentComponent extends React.Component {
                                                     <option value='option3'>option 3</option>
                                                     <option value='option4'>option 4</option>
                                                 </select>
-
                                             </div>
                                         </td>
                                         <td data-label="Expert Level" id="proficiencydrpdown">
@@ -97,10 +96,9 @@ export class SkillsComponentComponent extends React.Component {
                                         </td>
                                     </tr>
                                 </tbody>
+
                             </table>
-
                         </div>
-
                     </div>
 
                     <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button>

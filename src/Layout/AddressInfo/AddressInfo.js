@@ -43,22 +43,17 @@ export default class AddressInfo extends React.Component {
     handleToggleChange = () => {
         this.setState({ toggle: !this.state.toggle });
     }
-    render() {
 
+    render() {
         return (
             <div>
-                <div class="col-md-12 form-group windowWidth" style={{ marginTop: '1%' }}>
-
-
-                    <label class="bs-switch">
+                <div className="col-md-12 form-group windowWidth" style={{ marginTop: '1%' }}>
+                    <label className="bs-switch">
                         <input type="checkbox" onClick={this.handleToggleChange} disabled={this.state.edit} />
-                        <span class="slider round"></span>
+                        <span className="slider round"></span>
                     </label>
-
-                    <label class="calibriFont14 padding-top-5" for="_lblPermanentAddressCountry">Present Address is same as Permanent Address</label>
-
+                    <label className="calibriFont14 padding-top-5" for="_lblPermanentAddressCountry">Present Address is same as Permanent Address</label>
                 </div>
-
 
                 <div className="col-sm-11" id="presentAddressDetails">
                     <div className="panel panel-primary">
@@ -97,7 +92,6 @@ export default class AddressInfo extends React.Component {
                             <div className="col-md-6 form-group windowWidth">
                                 <div className="col-md-4 form-group labelWidth select">
                                     <label className="calibriFont14 padding-top-5">Country:</label>
-                                    {/* <input value={this.state.} onChange={this.handleChange} type="select" className="form-control twitter-typeahead underLineTextBox typeAheadStyle tt-input value={this.state.} onChange={this.handleChange}" placeholder="Select a country" id="countrySearch2" autoComplete="off" spellCheck="false"  style={{position: 'relative', verticalAlign: 'top', backgroundColor: 'transparent'}} /> */}
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth" >
                                     <select value={this.state.user.currentAddressCountry} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField' id='currentAddressCountry' disabled={this.state.edit}>
@@ -190,7 +184,6 @@ export default class AddressInfo extends React.Component {
                             <div className="col-md-6 form-group windowWidth">
                                 <div className="col-md-4 form-group labelWidth select">
                                     <label className="calibriFont14 padding-top-5">Country:</label>
-                                    {/* <input value={this.state.} onChange={this.handleChange} type="select" className="form-control twitter-typeahead underLineTextBox typeAheadStyle tt-input value={this.state.} onChange={this.handleChange}" placeholder="Select a country" id="countrySearch2" autoComplete="off" spellCheck="false"  style={{position: 'relative', verticalAlign: 'top', backgroundColor: 'transparent'}} /> */}
                                 </div>
                                 <div className="col-md-6 form-group textboxWidth" >
                                     <select value={this.state.user.PermanentcurrentAddressCountry} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField' id='PermanentcurrentAddressCountry' disabled={this.state.edit}>

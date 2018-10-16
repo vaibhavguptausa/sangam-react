@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab, Tabs, TabContainer, TabContent, TabPane, MenuItem, NavDropdown, Nav, NavItem, Row, Col } from 'react-bootstrap';
+import { Tab, Tabs } from 'react-bootstrap';
 import ApplyTimeOff from './ApplyTimeOff.js';
 import ApplyEventRequest from './ApplyEventRequest.js';
 import MyCalendar from './Calendar.js';

@@ -36,11 +36,11 @@ export default class SkillsInfo extends React.Component {
         }
         this.setState({ classhandler })
     }
+
     handleEdit = () => {
         this.setState({ isEditable: !this.state.isEditable })
        // console.log(`parentisEditable`, this.state.isEditable)
     }
-    
     render() {
         return (
             <div className="row">
@@ -48,9 +48,9 @@ export default class SkillsInfo extends React.Component {
                     <label className="col-md-4">Filter Skills</label>
                     <div className="col-sm-12 col-md-6">
                         <Select
-                            onChange = { this.handleOptionSelect }
-                            options = { options }
-                            isMulti = { true }
+                            onChange={this.handleOptionSelect}
+                            options={options}
+                            isMulti={true}
                         />
                         {/* <MultiSelect onClick={this.handleOptionSelect} /> */}
                     </div>
@@ -60,11 +60,13 @@ export default class SkillsInfo extends React.Component {
                     <label>Primary Skill</label>
                     <input placeholder="Training" disabled={true} />
                 </div>
+
                 <div>
                     {this.state.classhandler.map((ch) => (
                         <SkillsComponent title={ch} editable={this.state.isEditable} />
                     ))}
                 </div>
+                
                 {!this.state.isEditable ? <button onClick={this.handleEdit}>Edit</button> :
                     <button onClick={this.handleEdit}>Save</button>}
             </div>

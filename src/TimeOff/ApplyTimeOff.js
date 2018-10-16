@@ -1,5 +1,4 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
 
 export default class ApplyTimeOff extends React.Component {
     constructor(props) {
@@ -74,7 +73,7 @@ export default class ApplyTimeOff extends React.Component {
                             </div>
                         </div>
 
-                        {this.state.duration=='multiple'? <div></div> : <div _ngcontent-fgg-1="" className="row">
+                        {this.state.duration==='multiple'? <div></div> : <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">Date :</label>
@@ -87,7 +86,7 @@ export default class ApplyTimeOff extends React.Component {
                             </div>
                         </div> }
 
-                        {this.state.duration=='multiple'? <div _ngcontent-fgg-1="" className="row">
+                        {this.state.duration==='multiple'? <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">Start Date :</label>
@@ -100,7 +99,7 @@ export default class ApplyTimeOff extends React.Component {
                             </div>
                         </div>: <div></div>}
 
-                        {this.state.duration=='multiple'? <div _ngcontent-fgg-1="" className="row">
+                        {this.state.duration==='multiple'? <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">End Date :</label>

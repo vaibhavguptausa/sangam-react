@@ -1,19 +1,18 @@
 import React from 'react';
-import { SkillsComponentComponent } from './skillsComponentComponent';
-export default class SkillsComponent extends React.Component {
+import SkillsComponentComponent from './skillsComponentComponent';
 
+export default class SkillsComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { edit: true, user: {}, menuopen: false, classhandler: [], isEditable: this.props.editable, counter: 0, userinfo: [] };
 
         // console.log(`2nd stage`, this.state.isEditable)
     }
-    static getDerivedStateFromProps(props, state) {
 
+    static getDerivedStateFromProps(props, state) {
         if (props.editable !== state.isEditable) {
             return {
                 isEditable: props.editable
-
             };
         }
         return null;
@@ -54,6 +53,7 @@ export default class SkillsComponent extends React.Component {
             this.setState({userinfo: userinfo});
 
     }
+
     handleComponentofComponentAdd = () => {
        
         var user={};
@@ -84,7 +84,6 @@ export default class SkillsComponent extends React.Component {
         //console.log(`childisEditable`, this.state.isEditable)
         console.log(`userInfo`, this.state.userinfo);
         const style1 = {
-
             'display': 'none'
         }
         const style2 = {
@@ -97,16 +96,12 @@ export default class SkillsComponent extends React.Component {
                         <h4 className="panel-title" style={{ float: 'left' }}>
                             {this.props.title}
                         </h4>
-
-
                     </div>
                     <div style={this.state.menuopen ? style1 : style2}>
-
                         <button onClick={this.handleComponentofComponentAdd}>Add field</button>
                         {this.getClassCount()}
                     </div>
                 </div>
-
             </div>
         );
     }
