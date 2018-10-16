@@ -6,8 +6,6 @@ import Layout from './Layout/layout';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TimeOff from './TimeOff/TimeOff.js';
 import GoogleLoginButton from 'react-google-login-button'
-import { GoogleLogout } from 'react-google-login';
-import cookie from 'react-cookies';
 
 export default class App extends React.Component {
   constructor() {
@@ -28,10 +26,6 @@ export default class App extends React.Component {
     this.setState({ profile: profile });
     localStorage.setItem('profile', profile)
   }
-
-  // logout = () => {
-  //   this.setState({ profile: null });
-  // }
 
   render() {
 

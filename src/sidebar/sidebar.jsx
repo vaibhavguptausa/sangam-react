@@ -89,6 +89,14 @@ export default class Sidebar extends React.Component {
                                 </li>
                             </ul>
                         </li>
+
+                        <li className="has-subnav" >
+                        <Link to="/ApplyTimeOff"><a href="#">
+                                <i className="fa fa-ban fa-2x"></i>
+                                <span className="nav-text">Employee Management</span>
+                                <i className="fa fa-angle-left pull-right"></i>
+                            </a></Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
