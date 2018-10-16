@@ -46,7 +46,7 @@ export class OneOnOne extends React.Component{
           };
         return (
           <BootstrapTable data={ products }  options={ options } search={true} pagination={true} columnFilter insertRow>
-              <TableHeaderColumn dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
+              <TableHeaderColumn dataField='Appraisal' isKey >Appraisal</TableHeaderColumn>
               <TableHeaderColumn dataField='Status'>Status</TableHeaderColumn>
               <TableHeaderColumn dataField='ReviewedBy'>Reviewed By</TableHeaderColumn>
               <TableHeaderColumn dataField='Date'>Created Date </TableHeaderColumn>

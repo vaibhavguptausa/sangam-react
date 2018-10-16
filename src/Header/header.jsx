@@ -31,7 +31,7 @@ export default class Header extends React.Component {
                     <li className="user-header">
                         <img src={Image} className="img-circle" alt="User Image" />
                         <p>
-                            <span id="userProfileName"> Diksha Singh </span> <br />
+                            <span id="userProfileName">{this.props.profile.name}</span> <br />
                             <span id="userDesignation"> Intern </span>
                         </p>
                     </li>
