@@ -11,14 +11,8 @@ export default class Header extends React.Component {
         this.state = { disp: false };
     }
     handleClick = () => {
-        // let Element = document.getElementById('logout-dropdown');
-        // if (Element.style.display === 'none') {
-        //     Element.style.display = 'block';
-        // }
-        // else {
-        //     Element.style.display = 'none';
-        // }
-        this.setState({ disp: !this.state.disp });
+       
+        this.setState({disp: !this.state.disp});
     }
 
     render() {

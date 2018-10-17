@@ -4,22 +4,16 @@ import { Button } from 'react-bootstrap';
 export default class AddressInfo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { edit: true, user: {}, toggle: true };
+        this.state = { edit: true, user: {}, toggle: true , presentAddressClick: false, permanentAddressClick: false};
     }
 
-    handleAddressClick = () => {
-        let add = document.getElementById('currentAddress');
-        if (add.style.display === 'none')
-            add.style.display = 'block';
-        else
-            add.style.display = 'none'
+    handlePresentAddressClick = () => {
+        
+        this.setState({presentAddressClick: !this.state.presentAddressClick});
     }
     handlePermanentAddressClick = () => {
-        let add = document.getElementById('PermanentcurrentAddress');
-        if (add.style.display === 'none')
-            add.style.display = 'block';
-        else
-            add.style.display = 'none'
+        
+        this.setState({permanentAddressClick: !this.state.permanentAddressClick});
     }
 
     handleEdit = () => {
@@ -57,10 +51,10 @@ export default class AddressInfo extends React.Component {
 
                 <div className="col-sm-11" id="presentAddressDetails">
                     <div className="panel panel-primary">
-                        <div className="panel-heading clickable height-0 panel-blue-color panel-collapsed" id="curAddressDiv" onClick={this.handleAddressClick}>
+                        <div className="panel-heading clickable height-0 panel-blue-color panel-collapsed" id="curAddressDiv" onClick={this.handlePresentAddressClick}>
                             <h3 className="panel-title">Present Address</h3>
                         </div>
-
+                        {this.state.presentAddressClick ?
                         <div className="row padding-top-20" id="currentAddress">
                             <div className="col-md-6 form-group windowWidth">
                                 <div className="col-md-4 form-group labelWidth">
@@ -144,7 +138,8 @@ export default class AddressInfo extends React.Component {
                             </div>
 
                         </div>
-                    </div>
+                    :<div></div>}
+                </div> 
                 </div>
 
                 {this.state.toggle ? <div className="col-sm-11" id="PermanentAddressDetails">
@@ -152,7 +147,7 @@ export default class AddressInfo extends React.Component {
                         <div className="panel-heading clickable height-0 panel-blue-color panel-collapsed" id="PermanentcurAddressDiv" onClick={this.handlePermanentAddressClick}>
                             <h3 className="panel-title">Permanent Address</h3>
                         </div>
-
+                        {  this.state.permanentAddressClick ?    
                         <div className="row padding-top-20" id="PermanentcurrentAddress">
                             <div className="col-md-6 form-group windowWidth">
                                 <div className="col-md-4 form-group labelWidth">
@@ -235,7 +230,7 @@ export default class AddressInfo extends React.Component {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> :<div></div>}
                     </div>
                 </div> : <div></div>}
                 <Button onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }} >Edit</Button>
