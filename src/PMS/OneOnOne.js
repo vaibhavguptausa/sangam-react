@@ -3,6 +3,7 @@ import Popup from "reactjs-popup";
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import { Button } from 'react-bootstrap';
 import './TableStyle.css';
+
 function onAfterInsertRow(row) {
     let newRowStr = '';
 
@@ -39,9 +40,7 @@ var products = [{
 }];
 
 export class OneOnOne extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    
     onRowClick = (row) => {
         console.log(`hi`);
         <Popup trigger={<Button> Trigger</Button>} position="right center">

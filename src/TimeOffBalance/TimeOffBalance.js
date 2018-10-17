@@ -41,11 +41,11 @@ export default class TimeOffBalance extends React.Component {
                                 <h5>Time Off Details for the Year 2018</h5>
                                 <br />
                                 <br />
-                                <div class="eq-col-9">
-                                    <span class="TextBoxHeader opening-balance">Available Balance</span>
-                                    <div class="TextBox TextBoxBorder">
-                                        <span class="pto-bal-total">0.87</span>
-                                        <span class="leaveBalanceSign1">=</span>
+                                <div className="eq-col-9">
+                                    <span className="TextBoxHeader opening-balance">Available Balance</span>
+                                    <div className="TextBox TextBoxBorder">
+                                        <span className="pto-bal-total">0.87</span>
+                                        <span className="leaveBalanceSign1">=</span>
                                     </div>
                                 </div>
                             </div>
