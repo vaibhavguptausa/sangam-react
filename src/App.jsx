@@ -12,7 +12,8 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      profile: localStorage.getItem('profile')
+      profile: localStorage.getItem('profile'),
+      nightMode: false
     };
   }
   componentDidMount = () => {
@@ -59,17 +60,22 @@ export default class App extends React.Component {
 
     // this.forceUpdate()
   })
+
+  handleNightMode = () => {
+    this.setState({ nightMode: !this.state.nightMode })
+  }
+
   render() {
     return (
       <div>
         {this.state.profile && this.state.profile.user_id ?
 
           <Router >
-            <div className="App">
-              <Header className="App-header" profile={this.state.profile} signOut={this.signOut} />
+            <div className={this.state.nightMode ? 'night-app' : 'app'}>{console.log(this.state.nightMode)}
+              <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
 
-              <div className='App-layout'>
-                <Sidebar className='App-sidebar' />
+              <div className='app-layout'>
+                <Sidebar className='app-sidebar' />
                 <div>
                   <Route path="/ApplyTimeOff" component={TimeOff} />
                   <Route path="/ViewEmployees" component={Layout} />

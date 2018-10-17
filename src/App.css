@@ -2,7 +2,13 @@
 body{
   overflow: hidden;
 }
-.App-header {
+.night-app div{
+  background-color: black!important;
+}
+.night-app label{
+  color: white!important;
+}
+.app-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
@@ -13,14 +19,14 @@ body{
   grid-row-end: 2;
 }
 
-.App-sidebar {
+.app-sidebar {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 4;
 }
 
-.App-layout {
+.app-layout {
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 1;

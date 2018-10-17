@@ -1,7 +1,9 @@
 import React from 'react';
 import '../Header/headerStyle.css';
 import Image from '../logoggk-sangam.png';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import Toggle from 'react-toggle';
+import "react-toggle/style.css"
 
 export default class Header extends React.Component {
 
@@ -35,6 +37,13 @@ export default class Header extends React.Component {
                         <img src={this.props.profile.image_url} className="img-circle" alt="User Image" />
                         <p>
                             <span id="userProfileName">{this.props.profile.name}</span> <br />
+                            <label>
+                                <span>Night mode</span>
+                                <Toggle
+                                    icons={false}
+                                    onChange={()=>this.props.handleNightMode()} />
+                            </label>
+
                         </p>
                     </li>
 
@@ -43,7 +52,7 @@ export default class Header extends React.Component {
                     </li>
                 </ul>
 
-            </div>
+            </div >
         );
     }
 }
