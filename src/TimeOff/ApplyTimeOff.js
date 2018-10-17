@@ -1,5 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+import './ApplyTimeOffStyle.css';
+
 export default class ApplyTimeOff extends React.Component {
     constructor(props) {
         super(props);
@@ -16,13 +18,13 @@ export default class ApplyTimeOff extends React.Component {
         const name = e.target.id;
         console.log(name);
         this.setState({ user: Object.assign({}, this.state.user, { [name]: e.target.value }) });
-        
+
         let value = e.target.value;
-        if (value==='FULL-DAY' || value==='HALF-DAY' || value==='') {
-            this.setState({duration: 'single'});
+        if (value === 'FULL-DAY' || value === 'HALF-DAY' || value === '') {
+            this.setState({ duration: 'single' });
         }
         else {
-            this.setState({duration: 'multiple'});
+            this.setState({ duration: 'multiple' });
         }
     }
 
@@ -73,7 +75,7 @@ export default class ApplyTimeOff extends React.Component {
                             </div>
                         </div>
 
-                        {this.state.duration==='multiple'? <div></div> : <div _ngcontent-fgg-1="" className="row">
+                        {this.state.duration === 'multiple' ? <div></div> : <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">Date :</label>
@@ -84,9 +86,9 @@ export default class ApplyTimeOff extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div> }
+                        </div>}
 
-                        {this.state.duration==='multiple'? <div _ngcontent-fgg-1="" className="row">
+                        {this.state.duration === 'multiple' ? <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">Start Date :</label>
@@ -97,9 +99,9 @@ export default class ApplyTimeOff extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>: <div></div>}
+                        </div> : <div></div>}
 
-                        {this.state.duration==='multiple'? <div _ngcontent-fgg-1="" className="row">
+                        {this.state.duration === 'multiple' ? <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">End Date :</label>
@@ -110,15 +112,15 @@ export default class ApplyTimeOff extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>: <div></div>}
+                        </div> : <div></div>}
 
                         <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 padding-top-bottom-10">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <label _ngcontent-fgg-1="" className="fontSize" id="_lblApproverName">Approver Name :</label>
                                 </div>
-                                <div _ngcontent-fgg-1="" className="col-md-4 form-group" style={{ textAlign: 'left !Important' }}>
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_approverName" style={{ color: 'rgba(64, 126, 181, 0.99)' }}>Kishore Ithadi</label>
+                                <div _ngcontent-fgg-1="" className="col-md-4 form-group">
+                                    <label _ngcontent-fgg-1="" className="fontSize" id="_approverName">Kishore Ithadi</label>
                                 </div>
                             </div>
                         </div>
@@ -130,14 +132,14 @@ export default class ApplyTimeOff extends React.Component {
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-6 form-group">
                                     <div _ngcontent-fgg-1="" className="_divLeaveComments">
-                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxlength="256" rows="5" style={{ resize: 'none' }}></textarea>
+                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxlength="256" rows="5"></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div _ngcontent-fgg-1="" className="pull-right padding-right-20">
-                            <Button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave"  onClick={this.handleSubmit}>
+                            <Button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave" onClick={this.handleSubmit}>
                                 <i _ngcontent-fgg-1="" className="fa fa-save"></i> Submit
                             </Button>
                         </div>

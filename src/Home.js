@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import App from './App';
 
-export default class Home extends Component {
+export default class Home extends React.Component {
   // calls the login method in authentication service
   login = () => {
     this.props.auth.login();

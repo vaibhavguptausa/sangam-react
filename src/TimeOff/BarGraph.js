@@ -38,7 +38,7 @@ export default class BarGraph extends React.Component {
                 }
                 ]
             }]
-        }
+        };
     }
 
     componentDidMount() {
@@ -85,8 +85,7 @@ export default class BarGraph extends React.Component {
 
     render() {
         return (
-            <div id="timeOff-balance">
-            </div>
+            <div id="timeOff-balance"></div>
         );
     }
 }

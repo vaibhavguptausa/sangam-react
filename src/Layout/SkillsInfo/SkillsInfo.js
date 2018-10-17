@@ -2,6 +2,8 @@ import React from 'react';
 import Select from 'react-select';
 import SkillsComponent from './skillsComponent';
 import { Button } from 'react-bootstrap';
+import './SkillsInfoStyle.css';
+
 const options = [
 
     { value: '.net', label: '.net' },
@@ -25,7 +27,7 @@ export default class SkillsInfo extends React.Component {
             selectedOption: [],
             classhandler: [],
             isEditable: false
-        }
+        };
     }
 
     handleOptionSelect = (data) => {
@@ -34,12 +36,11 @@ export default class SkillsInfo extends React.Component {
         for (let i = 0; i < data.length; i++) {
             classhandler.push(data[i].value)
         }
-        this.setState({ classhandler })
+        this.setState({ classhandler });
     }
 
     handleEdit = () => {
-        this.setState({ isEditable: !this.state.isEditable })
-       // console.log(`parentisEditable`, this.state.isEditable)
+        this.setState({ isEditable: !this.state.isEditable });
     }
     render() {
         return (
@@ -52,7 +53,6 @@ export default class SkillsInfo extends React.Component {
                             options={options}
                             isMulti={true}
                         />
-                        {/* <MultiSelect onClick={this.handleOptionSelect} /> */}
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@ export default class SkillsInfo extends React.Component {
                         <SkillsComponent title={ch} editable={this.state.isEditable} />
                     ))}
                 </div>
-                
+
                 {!this.state.isEditable ? <Button onClick={this.handleEdit}>Edit</Button> :
                     <Button onClick={this.handleEdit}>Save</Button>}
             </div>

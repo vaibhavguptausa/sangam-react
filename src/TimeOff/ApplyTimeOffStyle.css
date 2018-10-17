@@ -1,0 +1,11 @@
+.col-md-4 {
+    text-align: left !important;
+}
+
+#_approverName {
+    color: rgba(64, 126, 181, 0.99);
+}
+
+#_areaReason {
+    resize: none;
+}

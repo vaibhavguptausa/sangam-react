@@ -18,7 +18,7 @@
   width: 300px;
 } */
 
-.treeview {
+/* .treeview {
   padding: 15px;
   float: left;
   display: block;
@@ -26,9 +26,9 @@
 }
 
 .treeview > a {
-    float:left;
-    padding-left: 10%
-}
+  float: left;
+  padding-left: 500px;
+} */
 
 .fa-2x {
   font-size: 2em;
@@ -56,8 +56,7 @@
   top: 55px;
   bottom: 0;
   height: 100%;
-  left: 0;
-  width: 43px;
+  width: 47px;
   overflow: hidden;
   -webkit-transition: width .05s linear;
   transition: width .05s linear;
@@ -66,7 +65,7 @@
 }
   
 .main-menu > ul {
-  margin: 7px 0;
+  margin: 7px -8px;
 }
   
 .main-menu li {
@@ -148,7 +147,6 @@ nav ul,nav li {
 .area {
   float: left;
   background: #e2e2e2;
-  
   height: 100%;
 }
 
@@ -161,8 +159,14 @@ nav ul,nav li {
 
 #treeview-option {
   vertical-align: middle;
+  display: none;
 }
 
-i {
+.treeview-dropdown {
+  margin-left: 10px;
+}
+
+#treeview-option1 {
   vertical-align: middle;
+  display: none;
 }

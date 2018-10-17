@@ -11,12 +11,10 @@ export default class Header extends React.Component {
         this.state = { disp: false };
     }
     handleClick = () => {
-       
-        this.setState({disp: !this.state.disp});
+        this.setState({ disp: !this.state.disp });
     }
 
     render() {
-
         return (
             <div className='main-header'>
                 <div className='main-header-logo'>
@@ -42,7 +40,6 @@ export default class Header extends React.Component {
                                         icons={false}
                                         onChange={() => this.props.handleNightMode()} />
                                 </label>
-
                             </p>
                         </li>
 
@@ -50,8 +47,6 @@ export default class Header extends React.Component {
                             <a id="logout" className="btn btn-default btn-flat" onClick={() => this.props.signOut()}> Logout </a>
                         </li>
                     </ul> : <div></div>}
-
-
             </div >
         );
     }

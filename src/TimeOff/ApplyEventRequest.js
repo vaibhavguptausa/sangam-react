@@ -1,6 +1,7 @@
 import React from 'react';
 import './ApplyEventRequest.css';
 import { Button } from 'react-bootstrap';
+
 export default class ApplyEventRequest extends React.Component {
     constructor(props) {
         super(props);
@@ -38,7 +39,7 @@ export default class ApplyEventRequest extends React.Component {
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 control-group">
                                     <div className="twitter-typeahead">
-                                            <input value={this.state.user.EventStartDate} onChange={this.handleChange} className="form-control" id="EventStartDate" type="date" />
+                                        <input value={this.state.user.EventStartDate} onChange={this.handleChange} className="form-control" id="EventStartDate" type="date" />
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +52,7 @@ export default class ApplyEventRequest extends React.Component {
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-6 form-group">
                                     <div _ngcontent-fgg-1="" className="_divLeaveComments">
-                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxlength="256" rows="5" style={{ resize: 'none' }}></textarea>
+                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxlength="256" rows="5"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -66,6 +67,6 @@ export default class ApplyEventRequest extends React.Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }

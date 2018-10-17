@@ -1,45 +1,28 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
+
 export default class SkillsComponentComponent extends React.Component {
     constructor(props) {
         super(props);
         this.state = { user: this.props.user, DisplayStatus: true, isEditable: this.props.editable, saveField: false };
     }
+
     handleRemoveField = () => {
-        // this.setState({DisplayStatus: false});
         this.props.handleRemoveField(this.state.user);
     }
-    // componentWillReceiveProps({ editable }) {
-    //     this.setState({ ...this.state.isEditable, editable })
-    // }
-    //   static getDerivedStateFromProps(props, state) {
 
-    //     if (props.editable !== state.isEditable) {
-    //         return {
-    //             isEditable: props.editable
-
-    //         };
-    //     }
-    //     return null;
-    // }
     handleSave = () => {
         this.setState({ saveField: true });
         this.props.handleUserInfo(this.state.user);
-        console.log(`user`, this.state.user)
+        console.log(`user`, this.state.user);
     }
-    // handleUserInfo = () => {
-    //     console.log(`singleuser`, this.state.user)
-    //     if (this.state.saveField) {
-           
-    //     }
-    // }
+
     handleChange = (e) => {
         const name = e.target.id;
         this.setState({ user: Object.assign({}, this.state.user, { [name]: e.target.value }) });
-
     }
+
     render() {
-        //console.log(`childofchildiseditable`, this.props.editable)
         if (!this.state.DisplayStatus) {
             return (
                 <div></div>
@@ -103,7 +86,6 @@ export default class SkillsComponentComponent extends React.Component {
 
                     <Button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</Button>
                     <Button onClick={this.handleSave} >Save Field</Button>
-                    {/* {this.handleUserInfo()} */}
                 </div>
 
             )

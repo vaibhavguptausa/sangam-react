@@ -16,9 +16,11 @@ export default class App extends React.Component {
       nightMode: false
     };
   }
+
   componentDidMount = () => {
-    this.buildSignInBtn()
+    this.buildSignInBtn();
   }
+
   onSignIn = (googleUser) => {
     var profile = googleUser.getBasicProfile();
     profile = {
@@ -30,8 +32,9 @@ export default class App extends React.Component {
     this.setState({ profile: profile });
     Object.keys(profile).map(p => {
       localStorage.setItem(p, profile[p])
-    })
+    });
   }
+
   buildSignInBtn = () => {
     window.gapi.signin2.render('signinbtn', {
       'scope': 'profile email',
@@ -43,26 +46,22 @@ export default class App extends React.Component {
       'onfailure': () => { console.log('login failed') }
     });
   }
+
   signOut = (() => {
     if (window.gapi) {
       const auth2 = window.gapi.auth2.getAuthInstance()
       if (auth2 != null) {
         auth2.signOut().then(() => {
-          this.setState({ profile: null })
+          this.setState({ profile: null });
           localStorage.clear()
-          this.buildSignInBtn()
-
-          // auth2.disconnect().then(this.props.onLogoutSuccess)
-        }
-        )
+          this.buildSignInBtn();
+        })
       }
     }
-
-    // this.forceUpdate()
   })
 
   handleNightMode = () => {
-    this.setState({ nightMode: !this.state.nightMode })
+    this.setState({ nightMode: !this.state.nightMode });
   }
 
   render() {
