@@ -1,5 +1,5 @@
 import React from 'react';
-import './SidebarStyle.css';
+import './sidebarStyle.css';
 import { Link } from "react-router-dom";
 
 export default class Sidebar extends React.Component {
@@ -32,18 +32,19 @@ export default class Sidebar extends React.Component {
                             <a href="#">
                                 <i className="fa fa-users fa-2x"></i>
                                 <span className="nav-text">Employee Management</span>
-                                <i className="fa fa-angle-left pull-right"></i>
+                                <i className="fa fa-angle-left pull-right" style={{ verticalAlign: 'sub' }}></i>
                             </a>
 
                             <ul className="treeview-menu" id='treeview-option' style={{ display: 'none' }}>
                                 <li style={{ marginLeft: '10px' }} >
-                                    <Link to='/ViewEmployees'><a href="/Employee/ViewEmployees" id="10" target="">
+                                    <Link to='/ViewEmployees'>
                                         <i className="fa fa-street-view"></i>View Employee
-                                     </a></Link>
+                                    </Link>
                                 </li>
                                 <li style={{ marginLeft: '10px' }}>
                                     <a href="/Employee/SearchEmployees" id="14" target="">
-                                        <i className="fa fa-search"></i>Search Employees</a>
+                                        <i className="fa fa-search"></i>Search Employees
+                                    </a>
                                 </li>
                                 <li style={{ marginLeft: '10px' }}>
                                     <a href="/Employee/OrganizationChart" id="18" target="">
@@ -71,16 +72,12 @@ export default class Sidebar extends React.Component {
                             <ul className="treeview-menu" id='treeview-option1' style={{ display: 'none' }}>
                                 <li style={{ marginLeft: '10px' }}>
                                     <Link to="/ApplyTimeOff">
-                                        <a href="/Leave/ApplyLeave" id="12" target="">
-                                            <i className="fa fa-calendar-minus-o"></i>Apply TimeOff
-                                        </a>
+                                        <i className="fa fa-calendar-minus-o"></i>Apply TimeOff
                                     </Link>
                                 </li>
                                 <li style={{ marginLeft: '10px' }}>
                                     <Link to="/TimeOffBalance">
-                                        <a href="/Leave/GetLeaveBalance" id="13" target="">
                                             <i className="fa fa-th-list"></i>TimeOff Balance
-                                        </a>
                                     </Link>
                                 </li>
                                 <li style={{ marginLeft: '10px' }}>
@@ -91,13 +88,11 @@ export default class Sidebar extends React.Component {
                             </ul>
                         </li>
 
-                        <li  >
+                        <li>
                             <Link to="/PerformanceManagement">
-                                <a href="#">
-                                    <i className="fa fa-ban fa-2x"></i>
-                                    <span className="nav-text">Performance Management</span>
-                                    <i className="fa fa-angle-left pull-right"></i>
-                                </a>
+                                <i className="fa fa-ban fa-2x"></i>
+                                <span className="nav-text">Performance Management</span>
+                                <i className="fa fa-angle-left pull-right"></i>
                             </Link>
                         </li>
                     </ul>

@@ -1,4 +1,3 @@
-
 .main-Sidebar {
     display: inline-block;
     background-color: #15273f;
@@ -6,24 +5,24 @@
     width: 300px;
 }
 
-.Sidebar-menu {
-    margin-top: 0;
-    width: 300px;
-    padding-right: 0px;
-    padding-left: 0px;
+/* .Sidebar-menu {
+  margin-top: 0;
+  width: 300px;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 
 .Sidebar {
-    margin-top: 30px;
-    float: left;
-    width: 300px;
-}
+  margin-top: 30px;
+  float: left;
+  width: 300px;
+} */
 
 .treeview {
-    padding: 15px;
-    float: left;
-    display: block;
-    width: 300px;
+  padding: 15px;
+  float: left;
+  display: block;
+  width: 300px;
 }
 
 .treeview > a {
