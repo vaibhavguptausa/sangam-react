@@ -1,5 +1,5 @@
 import React from 'react';
-// import './TimeOffBalance.css';
+ import './TimeOffBalance.css';
 import YearPicker from 'react-year-picker';
 
 export default class TimeOffBalance extends React.Component {

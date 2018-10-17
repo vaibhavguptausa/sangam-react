@@ -97,10 +97,11 @@ export default class SkillsComponent extends React.Component {
                             {this.props.title}
                         </h4>
                     </div>
-                    <div style={this.state.menuopen ? style1 : style2}>
+                    { this.state.menuopen ?
+                    <div >
                         <button onClick={this.handleComponentofComponentAdd}>Add field</button>
                         {this.getClassCount()}
-                    </div>
+                    </div>:<div></div>}
                 </div>
             </div>
         );
