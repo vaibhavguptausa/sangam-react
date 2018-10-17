@@ -12,7 +12,8 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      profile: localStorage.getItem('profile')
+      profile: localStorage.getItem('profile'),
+      nightMode: false
     };
   }
   componentDidMount = () => {
@@ -42,8 +43,7 @@ export default class App extends React.Component {
       'onfailure': () => { console.log('login failed') }
     });
   }
-  signOut = ((response) => {
-
+  signOut = (() => {
     if (window.gapi) {
       const auth2 = window.gapi.auth2.getAuthInstance()
       if (auth2 != null) {
@@ -60,20 +60,22 @@ export default class App extends React.Component {
 
     // this.forceUpdate()
   })
+
+  handleNightMode = () => {
+    this.setState({ nightMode: !this.state.nightMode })
+  }
+
   render() {
-
-
     return (
       <div>
-
         {this.state.profile && this.state.profile.user_id ?
 
-          <div className="App">
-            <Header className="App-header" profile={this.state.profile} />
+          <Router >
+            <div className={this.state.nightMode ? 'night-app' : 'app'}>{console.log(this.state.nightMode)}
+              <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
 
-            <Router >
-              <div className='App-layout'>
-                <Sidebar className='App-sidebar' />
+              <div className='app-layout'>
+                <Sidebar className='app-sidebar' />
                 <div>
                   <Route path="/ApplyTimeOff" component={TimeOff} />
                   <Route path="/ViewEmployees" component={Layout} />
@@ -81,10 +83,8 @@ export default class App extends React.Component {
                   <Route path="/PerformanceManagement" component={PerformanceManagement} />
                 </div>
               </div>
-            </Router>
-
-            <button onClick={() => this.signOut()} style={{ float: 'right' }}>Logout</button>
-          </div> :
+            </div>
+          </Router> :
           <div>
             <div id='signinbtn'></div>
           </div>
