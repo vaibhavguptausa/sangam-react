@@ -1,0 +1,14 @@
+.col-xs-11 {
+    display: grid;
+    width: 100vh;
+}
+
+.panel-title {
+    float: left;
+}
+
+.panel-heading {
+    padding-top: 8px;
+    display: flex;
+    height: 40px;
+}

@@ -6,10 +6,10 @@
 }
 
 .content-wrapper {
-    /* padding-top: 90px; */
     background-color: #dde2ec; 
     background: linear-gradient(white 80%,#cce0f1);
     transition: transform .3s ease-in-out, margin .3s ease-in-out;
+    min-height: 912px;
 }
 
 .content-header {
@@ -19,12 +19,7 @@
     width: 100%;
     top: 70px;
     z-index: 8;
-    /* padding-top: 18px; */
 }
-
-/* .content-header {
-    padding: 11px 15px 12px;
-} */
 
 .margintop-20 {
     margin-top: -20px;
@@ -69,4 +64,16 @@ h1 {
     display: flex;
     margin-left:auto;
     margin-right:auto;
+}
+
+h5 {
+    text-align: center;
+    color: #8c7171;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: underline;
+}
+
+.pto-bal-total {
+    color: #5cb15c;
 }

@@ -146,7 +146,7 @@ export default class Contact extends React.Component {
                                 <label className="calibriFont14 padding-top-5" id="_lblFirstName">Mobile Number:</label>
                             </div>
                             <div className="col-md-6 form-group contactInfotextboxWidth">
-                                <input onChange={this.handleChange} value={this.state.user.emergencyNumber} className="form-control contactEditableField requiredContactField " id="emergencyNumber" type="text" tabIndex="-1" disabled={this.state.edit}/>
+                                <input onChange={this.handleChange} value={this.state.user.emergencyNumber} className="form-control contactEditableField requiredContactField " id="emergencyNumber" type="text" tabIndex="-1" disabled={this.state.edit} />
                             </div>
                         </div>
 
@@ -155,7 +155,7 @@ export default class Contact extends React.Component {
                                 <label className="calibriFont14 padding-top-5" id="_lblFirstName">Relationship:</label>
                             </div>
                             <div className="col-md-6 form-group contactInfotextboxWidth">
-                                <input onChange={this.handleChange} value={this.state.user.emergencyHomePhone} className="form-control contactEditableField " id="emergencyHomePhone" type="text" tabIndex="-1" disabled={this.state.edit}/>
+                                <input onChange={this.handleChange} value={this.state.user.emergencyHomePhone} className="form-control contactEditableField " id="emergencyHomePhone" type="text" tabIndex="-1" disabled={this.state.edit} />
                             </div>
                         </div>
 
@@ -164,7 +164,7 @@ export default class Contact extends React.Component {
                                 <label className="calibriFont14 padding-top-5" id="_lblFirstName">Home Phone:</label>
                             </div>
                             <div className="col-md-6 form-group contactInfotextboxWidth">
-                                <input onChange={this.handleChange} value={this.state.user.emergencyHomePhone} className="form-control contactEditableField " id="emergencyHomePhone" type="text" tabIndex="-1" disabled={this.state.edit}/>
+                                <input onChange={this.handleChange} value={this.state.user.emergencyHomePhone} className="form-control contactEditableField " id="emergencyHomePhone" type="text" tabIndex="-1" disabled={this.state.edit} />
                             </div>
                         </div>
 
@@ -173,7 +173,7 @@ export default class Contact extends React.Component {
                                 <label className="calibriFont14 padding-top-5" id="_lblFirstName">Work Phone:</label>
                             </div>
                             <div className="col-md-6 form-group contactInfotextboxWidth">
-                                <input onChange={this.handleChange} value={this.state.user.emergencyWorkPhone} className="form-control contactEditableField " id="emergencyWorkPhone" type="text" tabIndex="-1" disabled={this.state.edit}/>
+                                <input onChange={this.handleChange} value={this.state.user.emergencyWorkPhone} className="form-control contactEditableField " id="emergencyWorkPhone" type="text" tabIndex="-1" disabled={this.state.edit} />
                             </div>
                         </div>
 
@@ -182,10 +182,10 @@ export default class Contact extends React.Component {
                                 <label className="calibriFont14 padding-top-5" id="_lblFirstName">Email:</label>
                             </div>
                             <div className="col-md-6 form-group contactInfotextboxWidth">
-                                <input onChange={this.handleChange} value={this.state.user.emergencyContactEmail} className="form-control contactEditableField " id="emergencyContactEmail" maxLength="50" type="text" tabIndex="-1" disabled={this.state.edit}/>
+                                <input onChange={this.handleChange} value={this.state.user.emergencyContactEmail} className="form-control contactEditableField " id="emergencyContactEmail" maxLength="50" type="text" tabIndex="-1" disabled={this.state.edit} />
                             </div>
                         </div>
-                        
+
                     </div>
 
                     <Button onClick={this.handleEdit} style={this.state.edit ? {} : { 'display': 'none' }} >Edit</Button>

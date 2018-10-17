@@ -9,8 +9,7 @@ import './TimeOff.css';
 export default class TimeOff extends React.Component {
     render() {
         return (
-            <div className="content-wrapper" style={{ minHeight: 912 + 'px' }}>
-
+            <div className="content-wrapper">
                 <section className='tabs'>
                     <div>
                         <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
@@ -23,7 +22,6 @@ export default class TimeOff extends React.Component {
                         </Tabs>
                     </div>
                 </section>
-
                 <div className='calendar'><MyCalendar /></div>
                 <div className="bar-graph"><BarGraph /></div>
             </div>
