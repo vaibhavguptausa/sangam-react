@@ -22,9 +22,9 @@
     /* padding-top: 18px; */
 }
 
-.content-header {
+/* .content-header {
     padding: 11px 15px 12px;
-}
+} */
 
 .margintop-20 {
     margin-top: -20px;
@@ -64,3 +64,9 @@ h1 {
     list-style: none;
 }
 
+.my-row {
+    padding: 127px 885px 40px 885px;
+    display: flex;
+    margin-left:auto;
+    margin-right:auto;
+}
