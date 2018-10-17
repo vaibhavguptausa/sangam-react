@@ -20,7 +20,7 @@ export default class TimeOffBalance extends React.Component {
                         <h4 id="lblReportName">TimeOff Balance</h4>
 
                         <div className="breadcrumb hidden-sm hidden-xs">
-                            <div className="item"><a href="http://sangam.ggktech.com/Home/Index">Dashboard</a> &gt;
+                            <div className="item"><a href="/">Dashboard</a> &gt;
                                 <span style={{ color: "Gray" }}>
                                     <i className="fa fa-calendar-times-o"></i><span> TimeOff Management</span>
                                 </span> &gt;

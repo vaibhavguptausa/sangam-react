@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import SkillsComponent from './skillsComponent';
-
+import { Button } from 'react-bootstrap';
 const options = [
 
     { value: '.net', label: '.net' },
@@ -67,8 +67,8 @@ export default class SkillsInfo extends React.Component {
                     ))}
                 </div>
                 
-                {!this.state.isEditable ? <button onClick={this.handleEdit}>Edit</button> :
-                    <button onClick={this.handleEdit}>Save</button>}
+                {!this.state.isEditable ? <Button onClick={this.handleEdit}>Edit</Button> :
+                    <Button onClick={this.handleEdit}>Save</Button>}
             </div>
         );
     }

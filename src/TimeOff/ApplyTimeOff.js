@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button } from 'react-bootstrap';
 export default class ApplyTimeOff extends React.Component {
     constructor(props) {
         super(props);
@@ -137,9 +137,9 @@ export default class ApplyTimeOff extends React.Component {
                         </div>
 
                         <div _ngcontent-fgg-1="" className="pull-right padding-right-20">
-                            <button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave"  onClick={this.handleSubmit}>
+                            <Button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave"  onClick={this.handleSubmit}>
                                 <i _ngcontent-fgg-1="" className="fa fa-save"></i> Submit
-                            </button>
+                            </Button>
                         </div>
 
                     </div>

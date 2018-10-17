@@ -1,5 +1,5 @@
 import React from 'react';
-import './sidebarStyle.css';
+import './SidebarStyle.css';
 import { Link } from "react-router-dom";
 
 export default class Sidebar extends React.Component {

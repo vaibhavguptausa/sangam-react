@@ -1,6 +1,6 @@
 import React from 'react';
 import './ApplyEventRequest.css';
-
+import { Button } from 'react-bootstrap';
 export default class ApplyEventRequest extends React.Component {
     constructor(props) {
         super(props);
@@ -58,9 +58,9 @@ export default class ApplyEventRequest extends React.Component {
                         </div>
 
                         <div _ngcontent-fgg-1="" className="pull-right padding-right-20">
-                            <button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave">
+                            <Button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave">
                                 <i _ngcontent-fgg-1="" className="fa fa-save"></i> Request
-                            </button>
+                            </Button>
                         </div>
 
                     </div>
