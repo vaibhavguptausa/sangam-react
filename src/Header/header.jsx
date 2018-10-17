@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Header/headerStyle.css';
 import Image from '../logoggk-sangam.png';
+import { Link } from 'react-router-dom'
 
 export default class Header extends React.Component {
 
@@ -19,7 +20,9 @@ export default class Header extends React.Component {
         return (
             <div className='main-header'>
                 <div className='main-header-logo'>
-                    <img src={Image} border="0" alt="GGK-Tech" title="GGK-Tech" />
+                    <Link to='/'>
+                        <img src={Image} border="0" alt="GGK-Tech" title="GGK-Tech" />
+                    </Link>
                 </div>
 
                 <div className='main-header-user' onClick={this.handleClick}>
@@ -29,15 +32,14 @@ export default class Header extends React.Component {
 
                 <ul className="my-dropdown-menu" id="logout-dropdown" style={{ display: 'none' }}>
                     <li className="user-header">
-                        <img src={Image} className="img-circle" alt="User Image" />
+                        <img src={this.props.profile.image_url} className="img-circle" alt="User Image" />
                         <p>
                             <span id="userProfileName">{this.props.profile.name}</span> <br />
-                            <span id="userDesignation"> Intern </span>
                         </p>
                     </li>
 
                     <li className="user-footer">
-                        <a id="logout" className="btn btn-default btn-flat"> Logout </a>
+                        <a id="logout" className="btn btn-default btn-flat" onClick={() => this.props.signOut()}> Logout </a>
                     </li>
                 </ul>
 

@@ -42,8 +42,7 @@ export default class App extends React.Component {
       'onfailure': () => { console.log('login failed') }
     });
   }
-  signOut = ((response) => {
-
+  signOut = (() => {
     if (window.gapi) {
       const auth2 = window.gapi.auth2.getAuthInstance()
       if (auth2 != null) {
@@ -61,17 +60,14 @@ export default class App extends React.Component {
     // this.forceUpdate()
   })
   render() {
-
-
     return (
       <div>
-
         {this.state.profile && this.state.profile.user_id ?
 
-          <div className="App">
-            <Header className="App-header" profile={this.state.profile} />
+          <Router >
+            <div className="App">
+              <Header className="App-header" profile={this.state.profile} signOut={this.signOut} />
 
-            <Router >
               <div className='App-layout'>
                 <Sidebar className='App-sidebar' />
                 <div>
@@ -81,10 +77,8 @@ export default class App extends React.Component {
                   <Route path="/PerformanceManagement" component={PerformanceManagement} />
                 </div>
               </div>
-            </Router>
-
-            <button onClick={() => this.signOut()} style={{ float: 'right' }}>Logout</button>
-          </div> :
+            </div>
+          </Router> :
           <div>
             <div id='signinbtn'></div>
           </div>
