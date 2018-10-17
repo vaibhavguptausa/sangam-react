@@ -6,7 +6,7 @@ import Layout from './Layout/layout';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import TimeOff from './TimeOff/TimeOff';
 import TimeOffBalance from './TimeOffBalance/TimeOffBalance';
-import { PerformanceManagement } from './PMS/PMS';
+import PerformanceManagement from './PMS/PMS';
 
 export default class App extends React.Component {
   constructor() {

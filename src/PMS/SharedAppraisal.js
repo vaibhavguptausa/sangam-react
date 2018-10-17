@@ -26,7 +26,7 @@ var products = [{
     Details: 'No details'
 },];
 
-export class SharedAppraisal extends React.Component {
+export default class SharedAppraisal extends React.Component {
     
     render() {
         const options = {

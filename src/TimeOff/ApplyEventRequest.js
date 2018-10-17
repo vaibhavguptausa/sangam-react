@@ -52,7 +52,7 @@ export default class ApplyEventRequest extends React.Component {
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-6 form-group">
                                     <div _ngcontent-fgg-1="" className="_divLeaveComments">
-                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxlength="256" rows="5"></textarea>
+                                        <textarea _ngcontent-fgg-1="" className="form-control" id="_areaReason" maxLength="256" rows="5"></textarea>
                                     </div>
                                 </div>
                             </div>
