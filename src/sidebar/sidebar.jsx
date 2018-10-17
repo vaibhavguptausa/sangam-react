@@ -78,7 +78,7 @@ export default class Sidebar extends React.Component {
                                 </li>
                                 <li className="treeview-dropdown">
                                     <Link to="/TimeOffBalance">
-                                            <i className="fa fa-th-list"></i>TimeOff Balance
+                                        <i className="fa fa-th-list"></i>TimeOff Balance
                                     </Link>
                                 </li>
                                 <li className="treeview-dropdown">
@@ -91,17 +91,9 @@ export default class Sidebar extends React.Component {
 
                         <li>
                             <Link to="/PerformanceManagement">
-<<<<<<< HEAD
-                                <a href="#">
-                                    <i className="fa fa-line-chart fa-2x"></i>
-                                    <span className="nav-text">Performance Management</span>
-                                    <i className="fa fa-angle-left pull-right"></i>
-                                </a>
-=======
-                                <i className="fa fa-ban fa-2x"></i>
+                                <i className="fa fa-line-chart fa-2x"></i>
                                 <span className="nav-text">Performance Management</span>
                                 <i className="fa fa-angle-left pull-right"></i>
->>>>>>> 9120f3fd28c06144cab6c18cae430f9270fa304d
                             </Link>
                         </li>
                     </ul>

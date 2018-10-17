@@ -28,18 +28,10 @@ export default class Identification extends React.Component {
     }
 
     handleIdentityClick = () => {
-<<<<<<< HEAD
-      
-=======
->>>>>>> 9120f3fd28c06144cab6c18cae430f9270fa304d
         this.setState({ identityClick: !this.state.identityClick });
     }
 
     handleSalaryClick = () => {
-<<<<<<< HEAD
-       
-=======
->>>>>>> 9120f3fd28c06144cab6c18cae430f9270fa304d
         this.setState({ salaryClick: !this.state.salaryClick });
     }
 
