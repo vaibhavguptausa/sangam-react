@@ -94,7 +94,7 @@ export default class Sidebar extends React.Component {
                         <li  >
                             <Link to="/PerformanceManagement">
                                 <a href="#">
-                                    <i className="fa fa-ban fa-2x"></i>
+                                    <i className="fa fa-line-chart fa-2x"></i>
                                     <span className="nav-text">Performance Management</span>
                                     <i className="fa fa-angle-left pull-right"></i>
                                 </a>

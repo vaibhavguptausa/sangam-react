@@ -28,24 +28,12 @@ export default class Identification extends React.Component {
     }
 
     handleIdentityClick = () => {
-        // let Element = document.getElementById('identityInformation');
-        // if (Element.style.display === 'none') {
-        //     Element.style.display = 'block';
-        // }
-        // else {
-        //     Element.style.display = 'none';
-        // }
+      
         this.setState({ identityClick: !this.state.identityClick });
     }
 
     handleSalaryClick = () => {
-        // let Element = document.getElementById('accountInformation');
-        // if (Element.style.display === 'none') {
-        //     Element.style.display = 'block';
-        // }
-        // else {
-        //     Element.style.display = 'none';
-        // }
+       
         this.setState({ salaryClick: !this.state.salaryClick });
     }
 

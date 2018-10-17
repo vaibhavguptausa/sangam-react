@@ -1,7 +1,7 @@
 import React from 'react'
-
+import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
-
+import './TableStyle.css';
   var products = [{
     Appraisal: 'Poor',
     Status: "failed",
@@ -36,10 +36,10 @@ export class SelfAppraisal extends React.Component{
           };
         return (
           <BootstrapTable data={ products }  options={ options } search={true} pagination={true} columnFilter>
-              <TableHeaderColumn dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
-              <TableHeaderColumn dataField='Status'>Status</TableHeaderColumn>
-              <TableHeaderColumn dataField='Appraiser'>Appraiser</TableHeaderColumn>
-              <TableHeaderColumn dataField='Details'>Details</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Status'>Status</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Appraiser'>Appraiser</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Details'>Details</TableHeaderColumn>
           </BootstrapTable>
         );
       }

@@ -8,5 +8,20 @@
 }
 .stylenav{
     display: flex;
-    background-color: aqua;
+    background-color: skyblue;
+   
+}
+#nav-dropdown-within-tab>title{
+    
+    font-weight: bolder;
+    font-size: medium;
+   
+}
+.nav-item-tabs{
+    font-weight: bolder;
+    font-size: medium;
+    width: 25vh;
+    text-align: center;
+    color: antiquewhite
+
 }

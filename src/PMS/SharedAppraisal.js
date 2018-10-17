@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './TableStyle.css';
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 
   var products = [{
@@ -36,10 +36,10 @@ export class SharedAppraisal extends React.Component{
           };
         return (
           <BootstrapTable data={ products }  options={ options } search={true} pagination={true} columnFilter>
-              <TableHeaderColumn dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
-              <TableHeaderColumn dataField='Status'>Status</TableHeaderColumn>
-              <TableHeaderColumn dataField='Appraiser'>Main Appraiser</TableHeaderColumn>
-              <TableHeaderColumn dataField='Details'>Details</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Status'>Status</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Appraiser'>Main Appraiser</TableHeaderColumn>
+              <TableHeaderColumn className='table-header' dataField='Details'>Details</TableHeaderColumn>
           </BootstrapTable>
         );
       }

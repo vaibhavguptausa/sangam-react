@@ -14,16 +14,16 @@ export class PerformanceManagement extends React.Component {
                 <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" >
                     <Row className="clearfix">
                         <Col sm={12} className='stylenav'>
-                            <Nav bsStyle="pills">
-                                <NavItem eventKey="1">Home</NavItem>
-                                <NavDropdown eventKey="2" title="Appraisal" id="nav-dropdown-within-tab">
+                            <Nav bsStyle="tabs">
+                                <NavItem className='nav-item-tabs' eventKey="1">Home</NavItem>
+                                <NavDropdown className='nav-item-tabs' eventKey="2" title={"Appraisal"} id="nav-dropdown-within-tab" >
                                     <MenuItem eventKey="2.1">Self Appraisal</MenuItem>
                                     <MenuItem eventKey="2.2">Shared Appraisal</MenuItem>
                                     <MenuItem eventKey="2.3">One on One</MenuItem>
                                     <MenuItem eventKey="2.4">Sangam Home</MenuItem>
                                 </NavDropdown>
-                                <NavItem eventKey="3">Performance mgt tookKit</NavItem>
-                                <NavItem eventKey="4">Sangam Home</NavItem>
+                                <NavItem className='nav-item-tabs' eventKey="3">Performance mgt tookKit</NavItem>
+                                <NavItem className='nav-item-tabs' eventKey="4">Sangam Home</NavItem>
                             </Nav>
                         </Col>
                         <Col sm={12}>

@@ -2,6 +2,7 @@ import React from 'react'
 import Popup from "reactjs-popup";
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import { Button } from 'react-bootstrap';
+import './TableStyle.css';
 function onAfterInsertRow(row) {
     let newRowStr = '';
 
@@ -48,19 +49,20 @@ export class OneOnOne extends React.Component {
         </Popup>
     }
     render() {
-       
+
         const options = {
             firstPage: 'First Page',
             lastPage: 'Last Page',
             onRowClick: this.onRowClick
 
         };
+       
         return (
-            <BootstrapTable data={products} options={options} search={true} pagination={true} columnFilter insertRow >
-                <TableHeaderColumn dataField='Appraisal' isKey >Appraisal</TableHeaderColumn>
-                <TableHeaderColumn dataField='Status'>Status</TableHeaderColumn>
-                <TableHeaderColumn dataField='ReviewedBy'>Reviewed By</TableHeaderColumn>
-                <TableHeaderColumn dataField='Date'>Created Date </TableHeaderColumn>
+            <BootstrapTable data={products} options={options} search={true} pagination={true} columnFilter insertRow trClassName='tr-string-example' >
+                <TableHeaderColumn className='table-header' dataField='Appraisal' isKey >Appraisal</TableHeaderColumn>
+                <TableHeaderColumn className='table-header' dataField='Status'>Status</TableHeaderColumn>
+                <TableHeaderColumn className='table-header' dataField='ReviewedBy'>Reviewed By</TableHeaderColumn>
+                <TableHeaderColumn className='table-header' dataField='Date'>Created Date </TableHeaderColumn>
             </BootstrapTable>
         );
     }
