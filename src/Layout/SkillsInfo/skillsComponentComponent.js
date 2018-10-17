@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Button } from 'react-bootstrap';
 export default class SkillsComponentComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -101,8 +101,8 @@ export default class SkillsComponentComponent extends React.Component {
                         </div>
                     </div>
 
-                    <button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</button>
-                    <button onClick={this.handleSave} >Save Field</button>
+                    <Button onClick={this.handleRemoveField} id={this.state.counter}>Remove field</Button>
+                    <Button onClick={this.handleSave} >Save Field</Button>
                     {/* {this.handleUserInfo()} */}
                 </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillsComponentComponent from './skillsComponentComponent';
-
+import { Button } from 'react-bootstrap';
 export default class SkillsComponent extends React.Component {
     constructor(props) {
         super(props);
@@ -83,12 +83,7 @@ export default class SkillsComponent extends React.Component {
     render() {
         //console.log(`childisEditable`, this.state.isEditable)
         console.log(`userInfo`, this.state.userinfo);
-        const style1 = {
-            'display': 'none'
-        }
-        const style2 = {
-            'display': 'block'
-        }
+       
         return (
             <div className="col-xs-11 col-sm-11 " style={{ display: 'grid', width: `${100}vh` }} id='NewComponent' >
                 <div className="panel panel-primary" >
@@ -99,7 +94,7 @@ export default class SkillsComponent extends React.Component {
                     </div>
                     { this.state.menuopen ?
                     <div >
-                        <button onClick={this.handleComponentofComponentAdd}>Add field</button>
+                        <Button onClick={this.handleComponentofComponentAdd}>Add field</Button>
                         {this.getClassCount()}
                     </div>:<div></div>}
                 </div>

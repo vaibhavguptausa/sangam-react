@@ -1,6 +1,7 @@
 import React from 'react'
 import Popup from "reactjs-popup";
 import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
+import { Button } from 'react-bootstrap';
 function onAfterInsertRow(row) {
     let newRowStr = '';
 
@@ -42,7 +43,7 @@ export class OneOnOne extends React.Component {
     }
     onRowClick = (row) => {
         console.log(`hi`);
-        <Popup trigger={<button> Trigger</button>} position="right center">
+        <Popup trigger={<Button> Trigger</Button>} position="right center">
             <div>Popup content here !!</div>
         </Popup>
     }

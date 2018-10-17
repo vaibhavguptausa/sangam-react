@@ -1,22 +1,19 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
-.main-sidebar {
+.main-Sidebar {
     display: inline-block;
     background-color: #15273f;
     margin-top: 0;
     width: 300px;
 }
 
-.sidebar-menu {
+.Sidebar-menu {
     margin-top: 0;
     width: 300px;
     padding-right: 0px;
     padding-left: 0px;
 }
 
-.sidebar {
+.Sidebar {
     margin-top: 30px;
     float: left;
     width: 300px;

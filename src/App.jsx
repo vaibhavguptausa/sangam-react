@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import Header from './Header/header';
-import Sidebar from './sidebar/sidebar';
+import Sidebar from './sidebar/Sidebar';
 import Layout from './Layout/layout';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import TimeOff from './TimeOff/TimeOff.js';
-import TimeOffBalance from './TimeOffBalance/TimeOffBalance.js';
+import TimeOff from './TimeOff/TimeOff';
+import TimeOffBalance from './TimeOffBalance/TimeOffBalance';
 import { PerformanceManagement } from './PMS/PMS';
 
 export default class App extends React.Component {
@@ -75,7 +75,7 @@ export default class App extends React.Component {
               <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
 
               <div className='app-layout'>
-                <Sidebar className='app-sidebar' />
+                <Sidebar className='app-Sidebar' />
                 <div>
                   <Route path="/ApplyTimeOff" component={TimeOff} />
                   <Route path="/ViewEmployees" component={Layout} />

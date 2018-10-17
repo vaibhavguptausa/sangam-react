@@ -59,7 +59,7 @@ export default class Identification extends React.Component {
 
                         <div className="row padding-top-20" id="identityInformation">
                             <div className="col-md-12">
-                            
+
                                 <div className="col-md-6 form-group windowWidth">
                                     <div className="col-md-4 form-group labelWidth">
                                         <label className="calibriFont14 padding-top-5">UID Number:</label>
