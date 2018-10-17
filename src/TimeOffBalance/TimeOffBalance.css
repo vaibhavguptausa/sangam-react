@@ -77,3 +77,7 @@ h5 {
 .pto-bal-total {
     color: #5cb15c;
 }
+
+.picker-panel {
+    z-index: 10;
+}

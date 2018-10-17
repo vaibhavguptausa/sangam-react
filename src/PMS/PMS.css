@@ -1,27 +1,25 @@
-
-.Tabs{
+.Tabs {
     grid-column-start: 5;
     grid-column-end: 13;
     grid-row-start: 2;
     grid-row-end: 4;
     margin: 5% 2% 2% 5%;
 }
-.stylenav{
+
+.stylenav {
     display: flex;
     background-color: skyblue;
-   
 }
-#nav-dropdown-within-tab>title{
-    
+
+#nav-dropdown-within-tab>title {
     font-weight: bolder;
     font-size: medium;
-   
 }
-.nav-item-tabs{
+
+.nav-item-tabs {
     font-weight: bolder;
     font-size: medium;
     width: 25vh;
     text-align: center;
-    color: antiquewhite
-
+    color: antiquewhite;
 }

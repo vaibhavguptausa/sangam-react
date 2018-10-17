@@ -2,11 +2,11 @@ import React from 'react';
 import { Tab, Nav, NavItem, Row, Col, MenuItem, NavDropdown } from 'react-bootstrap';
 import 'react-tabs/style/react-tabs.scss';
 import './PMS.css';
-import { SelfAppraisal } from './SelfAppraisal';
-import { OneOnOne } from './OneOnOne';
-import { SharedAppraisal } from './SharedAppraisal';
+import SelfAppraisal from './SelfAppraisal';
+import OneOnOne from './OneOnOne';
+import SharedAppraisal from './SharedAppraisal';
 
-export class PerformanceManagement extends React.Component {
+export default class PerformanceManagement extends React.Component {
     render() {
         return (
             <div className='Tabs'>
