@@ -33,7 +33,7 @@ export default class Contact extends React.Component {
                 <div id="contactDetails">
                     <div className="row container-fluid">
                         <div className="col-md-12 form-group">
-                            <h3 className="contactDetailHeading">Contact Details:</h3>
+                            <h3 className="contactDetailHeading"><label>Contact Details:</label></h3>
                         </div>
 
                         <div className="col-md-6 form-group windowWidth">
@@ -129,7 +129,7 @@ export default class Contact extends React.Component {
 
                     <div className="row container-fluid" id="emergencyContactDetails">
                         <div className="col-md-12 form-group">
-                            <h3 className="emergencyContactDetailsHeading">Emergency Contact Details:</h3>
+                            <h3 className="emergencyContactDetailsHeading"><label>Emergency Contact Details:</label></h3>
                         </div>
 
                         <div className="col-md-6 form-group windowWidth">

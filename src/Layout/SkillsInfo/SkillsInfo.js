@@ -20,6 +20,8 @@ const options = [
 
 ];
 
+   
+  
 export default class SkillsInfo extends React.Component {
     constructor(props) {
         super(props);
@@ -52,6 +54,16 @@ export default class SkillsInfo extends React.Component {
                             onChange={this.handleOptionSelect}
                             options={options}
                             isMulti={true}
+                            theme={(theme) => ({
+                                ...theme,
+                                borderRadius: 0,
+                                colors: {
+                                ...theme.colors,
+                                  text: 'orangered',
+                                  primary25: 'hotpink',
+                                  primary: 'blue',
+                                },
+                              })}
                         />
                     </div>
                 </div>

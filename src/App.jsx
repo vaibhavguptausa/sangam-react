@@ -70,8 +70,10 @@ export default class App extends React.Component {
         {this.state.profile && this.state.profile.user_id ?
 
           <Router >
+            <div style={{height: 100+'vh'}}> 
+             <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
             <div className={this.state.nightMode ? 'night-app' : 'app'}>{console.log(this.state.nightMode)}
-              <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
+             
 
               <div className='app-layout'>
                 <Sidebar className='app-Sidebar' />
@@ -82,6 +84,7 @@ export default class App extends React.Component {
                   <Route path="/PerformanceManagement" component={PerformanceManagement} />
                 </div>
               </div>
+            </div>
             </div>
           </Router> :
           <div>

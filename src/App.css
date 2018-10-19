@@ -3,7 +3,9 @@ body{
 }
 
 .night-app div{
-  background-color: black!important;
+  background-color: black;
+  
+  
 }
 
 .night-app label{

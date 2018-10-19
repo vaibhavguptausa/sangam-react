@@ -130,9 +130,9 @@ export default class Identification extends React.Component {
                 </div>
 
                 <div className="col-sm-11 margin-top-20">
-                    <div className="panel panel-primary">
+                    <div className="panel panel-primary" onClick={this.handleSalaryClick}>
                         <div className="panel-heading panel-blue-color clickable height-0" id="accountInfoDiv">
-                            <h3 className="panel-title" onClick={this.handleSalaryClick}>Salary Account Details</h3>
+                            <h3 className="panel-title" >Salary Account Details</h3>
                             <span className="pull-right "><i className="glyphicon glyphicon-minus"></i></span>
                         </div>
                         {this.state.salaryClick ?
