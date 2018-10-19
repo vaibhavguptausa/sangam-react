@@ -14,7 +14,7 @@ export default class Layout extends React.Component {
     return (
       <div className='Tabs'>
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-          <Row className="clearfix">
+          <Row className="clearfix" style={{marginTop : 50+'px'}}>
             <Col sm={1}>
               <Nav bsStyle="tabs" stacked>
                 <NavItem eventKey="first"><i className="fa fa-envelope fa-2x iconColor"></i>Personal</NavItem>
