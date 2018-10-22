@@ -5,11 +5,15 @@ import './PMS.css';
 import SelfAppraisal from './SelfAppraisal';
 import OneOnOne from './OneOnOne';
 import SharedAppraisal from './SharedAppraisal';
-
+import classNames from 'classnames';
 export default class PerformanceManagement extends React.Component {
     render() {
+        var cluster=classNames({
+            'Tabs': true,
+            'margin-class': true
+        })
         return (
-            <div className='Tabs'>
+            <div className={cluster}>
 
                 <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" >
                     <Row className="clearfix">

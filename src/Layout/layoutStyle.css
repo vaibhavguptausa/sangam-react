@@ -3,8 +3,12 @@
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 4;
-    margin: 5% 2% 2% 10%;
+    
     height: 100vh;
+}
+.margin1-class{
+    margin: 0% 2% 2% 10%;
+    padding-top: 5%;
 }
 #left-tabs-example
 {

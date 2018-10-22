@@ -8,11 +8,17 @@ import SkillsInfo from './SkillsInfo/SkillsInfo';
 import Identification from './Identification/Identification';
 import Contact from './Contact/Contact';
 import './layoutStyle.css';
+import classNames from 'classnames' ;
 
 export default class Layout extends React.Component {
   render() {
+    var cluster = classNames({
+      'margin1-class': true,
+       'Tabs': true
+
+    })
     return (
-      <div className='Tabs'>
+      <div className={cluster}>
         <Tab.Container id="left-tabs-example" defaultActiveKey="first">
           <Row className="clearfix" style={{marginTop : 50+'px'}}>
             <Col sm={1}>

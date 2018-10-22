@@ -38,7 +38,7 @@ export default class ApplyTimeOff extends React.Component {
                 <div id="timeOffDetails">
                     <div className="row container-fluid">
                         <div className="col-md-12 form-group">
-                            <h4 className="timeOffDetailHeading pull-left">Available TimeOff Balance : 0.87</h4>
+                            <h4 className="timeOffDetailHeading pull-left"><label>Available TimeOff Balance : 0.87</label></h4>
                         </div>
 
                         <div _ngcontent-fgg-1="" className="col-md-12">
