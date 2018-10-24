@@ -15,9 +15,9 @@ export default class TimeOffBalance extends React.Component {
     render() {
         return (
             <div className='wrapper' id='container-wrapper'>
-                <div className="content-wrapper">
+                <div className="content-wrapper1">
                     <section className="content-header margintop-20">
-                        <h4 id="lblReportName">TimeOff Balance</h4>
+                        <h4 id="lblReportName"><strong>TimeOff Balance</strong></h4>
 
                         <div className="breadcrumb hidden-sm hidden-xs">
                             <div className="item"><a href="/">Dashboard</a> &gt;

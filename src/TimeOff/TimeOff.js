@@ -22,7 +22,7 @@ export default class TimeOff extends React.Component {
                         </Tabs>
                     </div>
                 </section>
-                <div className='calendar'><MyCalendar /></div>
+                <div className='calendarcustom'><MyCalendar /></div>
                 <div className="bar-graph"><BarGraph /></div>
             </div>
         );
