@@ -147,13 +147,13 @@ export default class AddressInfo extends React.Component {
                             <h3 className="panel-title">Permanent Address</h3>
                         </div>
                         {this.state.permanentAddressClick ?
-                            <div className="row padding-top-20" id="PermanentcurrentAddress">
+                            <div className="row padding-top-20" id="permanentCurrentAddress">
                                 <div className="col-md-6 form-group windowWidth">
                                     <div className="col-md-4 form-group labelWidth">
                                         <label className="calibriFont14 padding-top-5">Address Line1:</label>
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth" title="">
-                                        <input value={this.state.user.PermanentcurrentAddressLine1} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="PermanentcurrentAddressLine1" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                        <input value={this.state.user.PermanentcurrentAddressLine1} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="permanentCurrentAddressLine1" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
                                     </div>
                                 </div>
 
@@ -162,7 +162,7 @@ export default class AddressInfo extends React.Component {
                                         <label className="calibriFont14 padding-top-5">Address Line2:</label>
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth">
-                                        <input value={this.state.user.PermanentcurrentAddressLine2} onChange={this.handleChange} className="form-control addressEditableField" id="PermanentcurrentAddressLine2" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                        <input value={this.state.user.PermanentcurrentAddressLine2} onChange={this.handleChange} className="form-control addressEditableField" id="permanentCurrentAddressLine2" maxLength="100" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
                                     </div>
                                 </div>
 
@@ -171,7 +171,7 @@ export default class AddressInfo extends React.Component {
                                         <label className="calibriFont14 padding-top-5">Street:</label>
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth" title="">
-                                        <input value={this.state.user.PermanentcurrentAddressStreet} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="PermanentcurrentAddressStreet" maxLength="100" type="select" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                        <input value={this.state.user.PermanentcurrentAddressStreet} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="permanentCurrentAddressStreet" maxLength="100" type="select" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
                                     </div>
                                 </div>
 
@@ -225,7 +225,7 @@ export default class AddressInfo extends React.Component {
                                         <label className="calibriFont14 padding-top-5">Pincode:</label>
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth" title="">
-                                        <input value={this.state.user.PermanentcurrentAddressZipCode} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="PermanentcurrentAddressZipCode" min="0" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
+                                        <input value={this.state.user.PermanentcurrentAddressZipCode} onChange={this.handleChange} className="form-control addressEditableField requiredAddressField" id="permanentCurrentAddressZipCode" min="0" type="text" tabIndex="-1" disabled={this.state.edit} onChange={this.handleChange} />
                                     </div>
                                 </div>
 
