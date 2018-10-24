@@ -12,7 +12,7 @@ export default class MyCalendar extends React.Component {
 
   render() {
     return (
-      <Calendar onChange={this.onChange} value={this.state.date} />
+      <Calendar onChange={this.onChange} value={this.state.date}  />
     );
   }
 }

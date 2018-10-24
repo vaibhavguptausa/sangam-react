@@ -1,4 +1,7 @@
 .react-calendar {
   width: unset;
   line-height: 2.125em;
+  z-index: 100;
+  color: gray;
+
 }

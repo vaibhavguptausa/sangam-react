@@ -44,7 +44,7 @@ var products = [{
 export default class OneOnOne extends React.Component {
 
     onRowClick = (row) => {
-        console.log(`hi`);
+        // console.log(`hi`);
         <Popup trigger={<Button> Trigger</Button>} position="right center">
             <div>Popup content here !!</div>
         </Popup>
@@ -59,7 +59,7 @@ export default class OneOnOne extends React.Component {
         };
 
         return (
-            <BootstrapTable data={products} options={options} search={true} pagination={true} columnFilter insertRow trClassName='tr-string-example' >
+            <BootstrapTable data={products} options={options} search={true} pagination={true} insertRow trClassName='tr-string-example' tableBodyClass='my-body-class' >
                 <TableHeaderColumn className='table-header' dataField='Appraisal' isKey >Appraisal</TableHeaderColumn>
                 <TableHeaderColumn className='table-header' dataField='Status'>Status</TableHeaderColumn>
                 <TableHeaderColumn className='table-header' dataField='ReviewedBy'>Reviewed By</TableHeaderColumn>

@@ -34,7 +34,7 @@ export default class ApplyTimeOff extends React.Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <div id="timeOffDetails">
                     <div className="row container-fluid">
                         <div className="col-md-12 form-group">

@@ -1,20 +1,25 @@
 .wrapper {
-    background-color: #15273f;
+    background-color:white;
     position: relative;
-    overflow: hidden!important;
-    min-height: 100%;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    
+    
 }
 
-.content-wrapper {
-    background-color: #dde2ec; 
+.content-wrapper1 {
+    background-color: black; 
     background: linear-gradient(white 80%,#cce0f1);
     transition: transform .3s ease-in-out, margin .3s ease-in-out;
-    min-height: 912px;
+    
+  
+    width: 100%;
 }
 
 .content-header {
-    background: #f0f4fa;
-    box-shadow: 3px 0 5px #ccd9e9;
+    /* background: #f0f4fa; */
+    /* box-shadow: 3px 0 5px #ccd9e9; */
     position: fixed;
     width: 100%;
     top: 70px;
@@ -29,8 +34,8 @@ section {
     display: block;
 }
 
-.content-header > h1 {
-    color: #1a304d;
+.content-header > h4 {
+    color: blue;
 }
 
 h1 {
@@ -45,7 +50,7 @@ h1 {
 
 .content-header>.breadcrumb {
     float: right;
-    background: 0 0;
+    /* background: 0 0; */
     font-size: 12px;
     position: fixed;
     top: 61px;
@@ -64,6 +69,7 @@ h1 {
     display: flex;
     margin-left:auto;
     margin-right:auto;
+    color: gray;
 }
 
 h5 {
@@ -80,4 +86,11 @@ h5 {
 
 .picker-panel {
     z-index: 10;
+}
+#lblReportName{
+    text-align: center;
+}
+.eq-col-9{
+    color: gray;
+    text-align: center;
 }

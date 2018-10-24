@@ -3,18 +3,19 @@
     grid-column-end: 13;
     grid-row-start: 2;
     grid-row-end: 4;
-   
 }
-.margin-class{
+
+.margin-class {
     margin: 0% 2% 2% 5%;
-    padding-top: 5%
+    padding-top: 5%;
 }
+
 .stylenav {
     display: flex;
     background-color: skyblue;
 }
 
-#nav-dropdown-within-tab>title {
+#nav-dropdown-within-tab > title {
     font-weight: bolder;
     font-size: medium;
 }
