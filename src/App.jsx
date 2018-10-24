@@ -29,6 +29,7 @@ export default class App extends React.Component {
       image_url: profile.getImageUrl(),
       email: profile.getEmail()
     }
+    
     this.setState({ profile: profile });
     Object.keys(profile).map(p => {
       localStorage.setItem(p, profile[p])
@@ -70,21 +71,21 @@ export default class App extends React.Component {
         {this.state.profile && this.state.profile.user_id ?
 
           <Router >
-            <div style={{height: 100+'vh'}}> 
-             <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
-            <div className={this.state.nightMode ? 'night-app' : 'app'}>{console.log(this.state.nightMode)}
-             
+            <div style={{ height: 100 + 'vh' }}>
+              <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
+              <div className={this.state.nightMode ? 'night-app' : 'app'}>{console.log(this.state.nightMode)}
 
-              <div className='app-layout'>
-                <Sidebar className='app-Sidebar' />
-                <div>
-                  <Route path="/ApplyTimeOff" component={TimeOff} />
-                  <Route path="/ViewEmployees" component={Layout} />
-                  <Route path='/TimeOffBalance' component={TimeOffBalance} />
-                  <Route path="/PerformanceManagement" component={PerformanceManagement} />
+
+                <div className='app-layout'>
+                  <Sidebar className='app-Sidebar' />
+                  <div>
+                    <Route path="/ApplyTimeOff" component={TimeOff} />
+                    <Route path="/ViewEmployees" component={Layout} />
+                    <Route path='/TimeOffBalance' component={TimeOffBalance} />
+                    <Route path="/PerformanceManagement" component={PerformanceManagement} />
+                  </div>
                 </div>
               </div>
-            </div>
             </div>
           </Router> :
           <div>

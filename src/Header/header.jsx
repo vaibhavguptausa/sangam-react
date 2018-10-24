@@ -8,11 +8,23 @@ import "react-toggle/style.css"
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { disp: false };
+        this.state = { disp: false, open: false };
+    }
+    componentDidMount = () => {
+        window.addEventListener('click', (e) => {
+            if ((document.getElementById('mainHeaderUser') && document.getElementById('mainHeaderUser').contains(e.target))
+                || (document.getElementById('logoutDropdown') && document.getElementById('logoutDropdown').contains(e.target))) {
+                this.setState({ disp: !this.state.disp });
+            } else {
+                this.setState({ disp: false });
+            }
+        })
     }
     handleClick = () => {
         this.setState({ disp: !this.state.disp });
     }
+
+    
 
     render() {
         return (
@@ -23,13 +35,13 @@ export default class Header extends React.Component {
                     </Link>
                 </div>
 
-                <div className='main-header-user' onClick={this.handleClick}>
+                <div className='main-header-user' id='mainHeaderUser'>
                     <img src={this.props.profile.image_url} alt="User Image" />
-                    <span className="main-header-username">{this.props.profile.name}</span>
+                        <span className="main-header-username">{this.props.profile.name}</span>
                 </div>
 
                 {this.state.disp ?
-                    <ul className="my-dropdown-menu" id="logout-dropdown" >
+                    <ul className="my-dropdown-menu" id="logoutDropdown" >
                         <li className="user-header">
                             <img src={this.props.profile.image_url} className="img-circle" alt="User Image" />
                             <p>
