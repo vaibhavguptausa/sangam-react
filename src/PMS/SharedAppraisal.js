@@ -35,12 +35,12 @@ export default class SharedAppraisal extends React.Component {
         };
 
         return (
-            <BootstrapTable data={products} options={options} search={true} pagination={true} columnFilter>
+            <BootstrapTable data={products} options={options} search={true} pagination={true} tableBodyClass='my-body-class'>
                 <TableHeaderColumn className='table-header' dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
                 <TableHeaderColumn className='table-header' dataField='Status'>Status</TableHeaderColumn>
                 <TableHeaderColumn className='table-header' dataField='Appraiser'>Main Appraiser</TableHeaderColumn>
                 <TableHeaderColumn className='table-header' dataField='Details'>Details</TableHeaderColumn>
             </BootstrapTable>
-        );
+        )
     }
 }

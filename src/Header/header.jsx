@@ -3,7 +3,8 @@ import './headerStyle.css';
 import Image from '../logoggk-sangam.png';
 import { Link } from 'react-router-dom';
 import Toggle from 'react-toggle';
-import "react-toggle/style.css"
+import "react-toggle/style.css";
+import '../PMS/TableStyle.css';
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -12,6 +13,7 @@ export default class Header extends React.Component {
     }
     handleClick = () => {
         this.setState({ disp: !this.state.disp });
+        document.getElementsByClassName('my-body-class').color= 'white' ;
     }
 
     render() {
