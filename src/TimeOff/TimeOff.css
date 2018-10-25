@@ -23,11 +23,10 @@
     grid-row-end: 9;
 }
 
-.calendarcustom {
+.calendar-custom {
     grid-column-start: 4;
     grid-column-end: 7;
     grid-row-start: 2;
     grid-row-end: 6;
-  
     color: black;
 }

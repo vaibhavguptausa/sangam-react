@@ -1,16 +1,16 @@
-.Tabs{
+.Tabs {
     grid-column-start: 5;
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 4;
-    
     height: 100vh;
 }
-.margin1-class{
+
+.margin1-class {
     margin: 0% 2% 2% 10%;
     padding-top: 5%;
 }
-#left-tabs-example
-{
+
+#lefTabsExample {
     margin-top: 3%;
 }

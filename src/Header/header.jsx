@@ -9,8 +9,9 @@ import '../PMS/TableStyle.css';
 export default class Header extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { disp: false, open: false };
+        this.state = { disp: false };
     }
+
     componentDidMount = () => {
         window.addEventListener('click', (e) => {
             if ((document.getElementById('mainHeaderUser') && document.getElementById('mainHeaderUser').contains(e.target))
@@ -21,12 +22,11 @@ export default class Header extends React.Component {
             }
         })
     }
+
     handleClick = () => {
         this.setState({ disp: !this.state.disp });
-        document.getElementsByClassName('my-body-class').color= 'white' ;
+        document.getElementsByClassName('my-body-class').color='white' ;
     }
-
-    
 
     render() {
         return (

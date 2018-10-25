@@ -72,9 +72,9 @@ export default class SkillsComponent extends React.Component {
         console.log(`userInfo`, this.state.userinfo);
 
         return (
-            <div className="col-xs-11 col-sm-11"  id='NewComponent' >
+            <div className="col-xs-11 col-sm-11"  id='newComponent' >
                 <div className="panel panel-primary" >
-                    <div className="panel-heading clickable height-0" id="Skills10" onClick={this.handleClick}>
+                    <div className="panel-heading clickable height-0" id="skills10" onClick={this.handleClick}>
                         <h4 className="panel-title">
                             {this.props.title}
                         </h4>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default class Sidebar extends React.Component {
 
     handleClick = () => {
-        let Element = document.getElementById('treeview-option');
+        let Element = document.getElementById('treeviewOption');
         if (Element.style.display === 'none') {
             Element.style.display = 'block';
         }
@@ -15,7 +15,7 @@ export default class Sidebar extends React.Component {
     }
 
     handleClick1 = () => {
-        let Element = document.getElementById('treeview-option1');
+        let Element = document.getElementById('treeviewOption1');
         if (Element.style.display === 'none') {
             Element.style.display = 'block';
         }
@@ -36,19 +36,19 @@ export default class Sidebar extends React.Component {
                                 <i className="fa fa-angle-left pull-right"></i>
                             </a>
 
-                            <ul className="treeview-menu" id='treeview-option'>
+                            <ul className="treeview-menu" id='treeviewOption'>
                                 <li className="treeview-dropdown">
                                     <Link to='/ViewEmployees'>
                                         <i className="fa fa-street-view"></i>View Employee
                                     </Link>
                                 </li>
                                 <li className="treeview-dropdown">
-                                    <a href="/Employee/SearchEmployees" id="14" target="">
+                                    <a href="/Employee/SearchEmployees" target="">
                                         <i className="fa fa-search"></i>Search Employees
                                     </a>
                                 </li>
                                 <li className="treeview-dropdown">
-                                    <a href="/Employee/OrganizationChart" id="18" target="">
+                                    <a href="/Employee/OrganizationChart" target="">
                                         <i className="fa fa-users"></i>Organization Chart
                                     </a>
                                 </li>
@@ -70,7 +70,7 @@ export default class Sidebar extends React.Component {
                                 <i className="fa fa-angle-left pull-right"></i>
                             </a>
 
-                            <ul className="treeview-menu" id='treeview-option1' >
+                            <ul className="treeview-menu" id='treeviewOption1' >
                                 <li className="treeview-dropdown">
                                     <Link to="/ApplyTimeOff">
                                         <i className="fa fa-calendar-minus-o"></i>Apply TimeOff
@@ -82,7 +82,7 @@ export default class Sidebar extends React.Component {
                                     </Link>
                                 </li>
                                 <li className="treeview-dropdown">
-                                    <a href="/Leave/GetLeaveHistory" id="11" target="">
+                                    <a href="/Leave/GetLeaveHistory" target="">
                                         <i className="fa fa-history"></i>TimeOff History
                                     </a>
                                 </li>

@@ -15,12 +15,12 @@ export default class PerformanceManagement extends React.Component {
         return (
             <div className={cluster}>
 
-                <Tab.Container id="tabs-with-dropdown" defaultActiveKey="first" >
+                <Tab.Container id="tabsWithDropdown" defaultActiveKey="first" >
                     <Row className="clearfix">
                         <Col sm={12} className='stylenav'>
                             <Nav bsStyle="tabs">
                                 <NavItem className='nav-item-tabs' eventKey="1">Home</NavItem>
-                                <NavDropdown className='nav-item-tabs' eventKey="2" title={"Appraisal"} id="nav-dropdown-within-tab" >
+                                <NavDropdown className='nav-item-tabs' eventKey="2" title={"Appraisal"} id="navDropdownWithinTab" >
                                     <MenuItem eventKey="2.1">Self Appraisal</MenuItem>
                                     <MenuItem eventKey="2.2">Shared Appraisal</MenuItem>
                                     <MenuItem eventKey="2.3">One on One</MenuItem>

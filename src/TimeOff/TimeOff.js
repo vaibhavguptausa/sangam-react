@@ -12,7 +12,7 @@ export default class TimeOff extends React.Component {
             <div className="content-wrapper">
                 <section className='tabs'>
                     <div>
-                        <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+                        <Tabs defaultActiveKey={1} id="uncontrolledTabExample">
                             <Tab eventKey={1} title="Apply TimeOff">
                                 <ApplyTimeOff />
                             </Tab>
@@ -22,7 +22,7 @@ export default class TimeOff extends React.Component {
                         </Tabs>
                     </div>
                 </section>
-                <div className='calendarcustom'><MyCalendar /></div>
+                <div className='calendar-custom'><MyCalendar /></div>
                 <div className="bar-graph"><BarGraph /></div>
             </div>
         );

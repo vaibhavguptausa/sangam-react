@@ -38,12 +38,12 @@ export default class ApplyTimeOff extends React.Component {
                 <div id="timeOffDetails">
                     <div className="row container-fluid">
                         <div className="col-md-12 form-group">
-                            <h4 className="timeOffDetailHeading pull-left"><label>Available TimeOff Balance : 0.87</label></h4>
+                            <h4 className="timeOff-detail-heading pull-left"><label>Available TimeOff Balance : 0.87</label></h4>
                         </div>
 
                         <div _ngcontent-fgg-1="" className="col-md-12">
                             <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveType">TimeOff Type :</label>
+                                <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveType">TimeOff Type :</label>
                             </div>
                             <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                 <div className="twitter-typeahead" >
@@ -60,7 +60,7 @@ export default class ApplyTimeOff extends React.Component {
                         <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDuration">TimeOff Duration :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveDuration">TimeOff Duration :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <div className="twitter-typeahead" >
@@ -78,11 +78,11 @@ export default class ApplyTimeOff extends React.Component {
                         {this.state.duration === 'multiple' ? <div></div> : <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">Date :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveDurationStartDate">Date :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 control-group">
                                     <div className="twitter-typeahead">
-                                        <input value={this.state.user.Date} onChange={this.handleChange} className="form-control identityEditableField " id="Date" type="date" />
+                                        <input value={this.state.user.Date} onChange={this.handleChange} className="form-control identityEditableField " id="date" type="date" />
                                     </div>
                                 </div>
                             </div>
@@ -91,11 +91,11 @@ export default class ApplyTimeOff extends React.Component {
                         {this.state.duration === 'multiple' ? <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">Start Date :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveDurationStartDate">Start Date :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 control-group">
                                     <div className="twitter-typeahead">
-                                        <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="StartDate" type="date" />
+                                        <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="startDate" type="date" />
                                     </div>
                                 </div>
                             </div>
@@ -104,11 +104,11 @@ export default class ApplyTimeOff extends React.Component {
                         {this.state.duration === 'multiple' ? <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">End Date :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveDurationStartDate">End Date :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 control-group">
                                     <div className="twitter-typeahead">
-                                        <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="LicenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
+                                        <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="licenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
                                     </div>
                                 </div>
                             </div>
@@ -117,10 +117,10 @@ export default class ApplyTimeOff extends React.Component {
                         <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 padding-top-bottom-10">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblApproverName">Approver Name :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblApproverName">Approver Name :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_approverName">Kishore Ithadi</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_approverName">Kishore Ithadi</label>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ export default class ApplyTimeOff extends React.Component {
                         <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveReason">Reason/Comments :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveReason">Reason/Comments :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-6 form-group">
                                     <div _ngcontent-fgg-1="" className="_divLeaveComments">
