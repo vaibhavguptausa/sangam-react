@@ -6,9 +6,10 @@ import SelfAppraisal from './SelfAppraisal';
 import OneOnOne from './OneOnOne';
 import SharedAppraisal from './SharedAppraisal';
 import classNames from 'classnames';
+
 export default class PerformanceManagement extends React.Component {
     render() {
-        var cluster=classNames({
+        var cluster = classNames({
             'Tabs': true,
             'margin-class': true
         })
@@ -26,7 +27,7 @@ export default class PerformanceManagement extends React.Component {
                                     <MenuItem eventKey="2.3">One on One</MenuItem>
                                     <MenuItem eventKey="2.4">Sangam Home</MenuItem>
                                 </NavDropdown>
-                                <NavItem className='nav-item-tabs' eventKey="3">Performance mgt tookKit</NavItem>
+                                <NavItem className='nav-item-tabs' eventKey="3">Performance Mgt ToolKit</NavItem>
                                 <NavItem className='nav-item-tabs' eventKey="4">Sangam Home</NavItem>
                             </Nav>
                         </Col>

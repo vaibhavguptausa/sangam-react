@@ -5,6 +5,7 @@ import './TableStyle.css';
 import { Redirect } from 'react-router-dom'
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
+
 var products = [{
     Appraisal: 'Poor',
     Status: "failed",
@@ -29,39 +30,36 @@ var products = [{
     Details: 'No details'
 },];
 
- class SelfAppraisal extends React.Component {
-    constructor(props)
-    {
+class SelfAppraisal extends React.Component {
+    constructor(props) {
         super(props)
-        this.state={redirect: false};
+        this.state = { redirect: false };
     }
-    onRowClick = (fieldValue, row, rowIdx, colIdx) => {
-        //console.log(`hi`);
-        var togo= "/pms/appraisal/summary"+ rowIdx;
-        
-        this.props.history.push(togo);
-   }
-   onClick=(togo)=>{
 
-       return togo ;
-   }
+    onRowClick = (fieldValue, row, rowIdx, colIdx) => {
+        var togo = "/pms/appraisal/summary" + rowIdx;
+        this.props.history.push(togo);
+    }
+
+    onClick = (togo) => {
+        return togo;
+    }
+
     render() {
         const options = {
-            
             onRowClick: this.onRowClick
         };
+
         return (
             <div>
-                {/* <Link to="/pms/appraisal/summary"> */}
-            <BootstrapTable data={products} options={options} search={true} pagination={true} tableBodyClass='my-body-class'>
-                <TableHeaderColumn className='table-header' dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
-                <TableHeaderColumn className='table-header' dataField='Status'>Status</TableHeaderColumn>
-                <TableHeaderColumn className='table-header' dataField='Appraiser'>Appraiser</TableHeaderColumn>
-                <TableHeaderColumn className='table-header' dataField='Details'>Details</TableHeaderColumn>
-            </BootstrapTable>
-            {/* this is a link</Link> */}
+                <BootstrapTable data={products} options={options} search={true} pagination={true} tableBodyClass='my-body-class'>
+                    <TableHeaderColumn className='table-header' dataField='Appraisal' isKey>Appraisal</TableHeaderColumn>
+                    <TableHeaderColumn className='table-header' dataField='Status'>Status</TableHeaderColumn>
+                    <TableHeaderColumn className='table-header' dataField='Appraiser'>Appraiser</TableHeaderColumn>
+                    <TableHeaderColumn className='table-header' dataField='Details'>Details</TableHeaderColumn>
+                </BootstrapTable>
             </div>
-        )
+        );
     }
 }
 export default withRouter(SelfAppraisal);

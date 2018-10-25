@@ -15,9 +15,13 @@ export default class Header extends React.Component {
     componentDidMount = () => {
         window.addEventListener('click', (e) => {
             if ((document.getElementById('mainHeaderUser') && document.getElementById('mainHeaderUser').contains(e.target))
-                || (document.getElementById('logoutDropdown') && document.getElementById('logoutDropdown').contains(e.target))) {
+            ) {
                 this.setState({ disp: !this.state.disp });
-            } else {
+            }
+            else if ((document.getElementById('logoutDropdown') && document.getElementById('logoutDropdown').contains(e.target))) {
+                this.setState({ disp: true });
+            }
+            else {
                 this.setState({ disp: false });
             }
         })
@@ -25,7 +29,7 @@ export default class Header extends React.Component {
 
     handleClick = () => {
         this.setState({ disp: !this.state.disp });
-        document.getElementsByClassName('my-body-class').color='white' ;
+        document.getElementsByClassName('my-body-class').color = 'white';
     }
 
     render() {
@@ -39,7 +43,7 @@ export default class Header extends React.Component {
 
                 <div className='main-header-user' id='mainHeaderUser'>
                     <img src={this.props.profile.image_url} alt="User Image" />
-                        <span className="main-header-username">{this.props.profile.name}</span>
+                    <span className="main-header-username">{this.props.profile.name}</span>
                 </div>
 
                 {this.state.disp ?
