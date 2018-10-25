@@ -47,10 +47,10 @@ export default class OneOnOne extends React.Component {
         this.state={modalState: false};
     }
 
-    onRowClick = (row) => {
+    onRowClick = (fieldValue, row, rowIdx, colIdx) => {
          console.log(`hi`);
          this.setState({modalState: !this.state.modalState})
-         
+         this.setState({Index: rowIdx});
     }
     handleClose=()=> {
         this.setState({ modalState: false });
@@ -72,7 +72,7 @@ export default class OneOnOne extends React.Component {
                 <TableHeaderColumn className='table-header' dataField='ReviewedBy'>Reviewed By</TableHeaderColumn>
                 <TableHeaderColumn className='table-header' dataField='Date'>Created Date </TableHeaderColumn>
             </BootstrapTable>
-            { this.state.modalState ? <Popup modalState={this.state.modalState} onClose={this.handleClose}></Popup>:<div></div>}
+            { this.state.modalState ? <Popup modalState={this.state.modalState} information={this.state.Index} onClose={this.handleClose}></Popup>:<div></div>}
         
             </div>
         );
