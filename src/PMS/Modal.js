@@ -8,7 +8,8 @@ export class Popup extends React.Component {
     //   this.handleClose = this.handleClose.bind(this);
   
       this.state = {
-        show: false
+        show: false 
+       
       };
     }
     static getDerivedStateFromProps(props, state) {
@@ -19,6 +20,8 @@ export class Popup extends React.Component {
         }
         return null;
     }
+    
+    
     handleClose=()=> {
       this.setState({ show: false });
       this.props.onClose();
@@ -41,7 +44,7 @@ export class Popup extends React.Component {
   
           <Modal show={this.state.show} onHide={this.handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title>{this.props.information}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <h4>Text in a modal</h4>
