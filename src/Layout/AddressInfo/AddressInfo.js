@@ -122,7 +122,7 @@ export default class AddressInfo extends React.Component {
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth typeAheadEditableField" id="curAddrCity" disabled="disabled">
                                         <div>
-                                            <input value={this.state.user.txtcurrentCity} onChange={this.handleChange} id="txtcurrentCity" type="text" className='form-control addressEditableField requiredAddressField' tabIndex="-1" disabled={this.state.edit} autoComplete="off" spellCheck="false" />
+                                            <input value={this.state.user.txtcurrentCity} onChange={this.handleChange} id="txtCurrentCity" type="text" className='form-control addressEditableField requiredAddressField' tabIndex="-1" disabled={this.state.edit} autoComplete="off" spellCheck="false" />
                                         </div>
                                     </div>
                                 </div>
@@ -141,9 +141,9 @@ export default class AddressInfo extends React.Component {
                     </div>
                 </div>
 
-                {this.state.toggle ? <div className="col-sm-11" id="PermanentAddressDetails">
+                {this.state.toggle ? <div className="col-sm-11" id="permanentAddressDetails">
                     <div className="panel panel-primary">
-                        <div className="panel-heading clickable height-0 panel-blue-color panel-collapsed" id="PermanentcurAddressDiv" onClick={this.handlePermanentAddressClick}>
+                        <div className="panel-heading clickable height-0 panel-blue-color panel-collapsed" id="permanentcurAddressDiv" onClick={this.handlePermanentAddressClick}>
                             <h3 className="panel-title">Permanent Address</h3>
                         </div>
                         {this.state.permanentAddressClick ?
@@ -180,7 +180,7 @@ export default class AddressInfo extends React.Component {
                                         <label className="calibriFont14 padding-top-5">Country:</label>
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth" >
-                                        <select value={this.state.user.PermanentcurrentAddressCountry} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField' id='PermanentcurrentAddressCountry' disabled={this.state.edit}>
+                                        <select value={this.state.user.PermanentcurrentAddressCountry} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField' id='permanentCurrentAddressCountry' disabled={this.state.edit}>
                                             <option value="">Select</option>
                                             <option value="INDIA">India</option>
                                             <option value="AMERICA">America</option>
@@ -197,7 +197,7 @@ export default class AddressInfo extends React.Component {
                                         <label className="calibriFont14 padding-top-5">State:</label>
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth typeAheadEditableField" id="curAddrState" disabled="disabled">
-                                        <select value={this.state.user.PermanentcurrentAddressState} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField' id='PermanentcurrentAddressState' disabled={this.state.edit}>
+                                        <select value={this.state.user.PermanentcurrentAddressState} onChange={this.handleChange} className='form-control addressEditableField requiredAddressField' id='permanentCurrentAddressState' disabled={this.state.edit}>
                                             <option value="">Select</option>
                                             <option value="UP">UP</option>
                                             <option value="TELANGANA">Telangana</option>
@@ -215,7 +215,7 @@ export default class AddressInfo extends React.Component {
                                     </div>
                                     <div className="col-md-6 form-group textboxWidth typeAheadEditableField" id="curAddrCity" disabled="disabled">
                                         <div>
-                                            <input value={this.state.user.PermanenttxtcurrentCity} onChange={this.handleChange} id="PermanenttxtcurrentCity" type="text" className='form-control addressEditableField requiredAddressField' tabIndex="-1" disabled={this.state.edit} autoComplete="off" spellCheck="false" />
+                                            <input value={this.state.user.PermanenttxtcurrentCity} onChange={this.handleChange} id="permanentTxtCurrentCity" type="text" className='form-control addressEditableField requiredAddressField' tabIndex="-1" disabled={this.state.edit} autoComplete="off" spellCheck="false" />
                                         </div>
                                     </div>
                                 </div>

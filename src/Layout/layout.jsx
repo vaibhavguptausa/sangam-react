@@ -19,7 +19,7 @@ export default class Layout extends React.Component {
     })
     return (
       <div className={cluster}>
-        <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+        <Tab.Container id="leftTabsExample" defaultActiveKey="first">
           <Row className="clearfix" style={{marginTop : 50+'px'}}>
             <Col sm={1}>
               <Nav bsStyle="tabs" stacked>

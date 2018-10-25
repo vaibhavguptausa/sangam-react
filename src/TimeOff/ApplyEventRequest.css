@@ -5,3 +5,13 @@
 #_areaReason {
     resize: none;
 }
+
+.fa-save {
+    padding-top: 10px;
+    margin-left: -20px;
+}
+
+.btn {
+    background-color: green;
+    color: #F5F2F2;
+}

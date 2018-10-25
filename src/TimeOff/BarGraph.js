@@ -49,7 +49,7 @@ export default class BarGraph extends React.Component {
         Highcharts.chart({
             chart: {
                 type: 'column',
-                renderTo: 'timeOff-balance'
+                renderTo: 'timeOffBalance'
             },
             title: {
                 floating: true,
@@ -85,7 +85,7 @@ export default class BarGraph extends React.Component {
 
     render() {
         return (
-            <div id="timeOff-balance"></div>
+            <div id="timeOffBalance"></div>
         );
     }
 }

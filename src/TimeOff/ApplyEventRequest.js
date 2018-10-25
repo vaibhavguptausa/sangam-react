@@ -22,11 +22,11 @@ export default class ApplyEventRequest extends React.Component {
                         <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveType">Event Type :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveType">Event Type :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
                                     <div className="twitter-typeahead" >
-                                        <input value={this.state.user.eventType} onChange={this.handleChange} className="form-control" id="EventType" maxLength="100" />
+                                        <input value={this.state.user.eventType} onChange={this.handleChange} className="form-control" id="eventType" maxLength="100" />
                                     </div>
                                 </div>
                             </div>
@@ -35,11 +35,11 @@ export default class ApplyEventRequest extends React.Component {
                         <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveDurationStartDate">Event Start Date :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveDurationStartDate">Event Start Date :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-4 control-group">
                                     <div className="twitter-typeahead">
-                                        <input value={this.state.user.EventStartDate} onChange={this.handleChange} className="form-control" id="EventStartDate" type="date" />
+                                        <input value={this.state.user.EventStartDate} onChange={this.handleChange} className="form-control" id="eventStartDate" type="date" />
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ export default class ApplyEventRequest extends React.Component {
                         <div _ngcontent-fgg-1="" className="row">
                             <div _ngcontent-fgg-1="" className="col-md-12 ">
                                 <div _ngcontent-fgg-1="" className="col-md-4 form-group">
-                                    <label _ngcontent-fgg-1="" className="fontSize" id="_lblLeaveReason">Comments :</label>
+                                    <label _ngcontent-fgg-1="" className="font-size" id="_lblLeaveReason">Comments :</label>
                                 </div>
                                 <div _ngcontent-fgg-1="" className="col-md-6 form-group">
                                     <div _ngcontent-fgg-1="" className="_divLeaveComments">
@@ -58,11 +58,9 @@ export default class ApplyEventRequest extends React.Component {
                             </div>
                         </div>
 
-                        <div _ngcontent-fgg-1="" className="pull-right padding-right-20">
-                            <Button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave">
-                                <i _ngcontent-fgg-1="" className="fa fa-save"></i> Request
-                            </Button>
-                        </div>
+                        <Button _ngcontent-fgg-1="" className="btn btnSubmit" id="_btnSubmitLeave">
+                            <i _ngcontent-fgg-1="" className="fa fa-save"></i> Request
+                        </Button>
 
                     </div>
                 </div>

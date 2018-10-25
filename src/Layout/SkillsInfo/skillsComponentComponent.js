@@ -51,8 +51,8 @@ export default class SkillsComponentComponent extends React.Component {
 
                                 <tbody>
                                     <tr>
-                                        <td data-label="Skill" id="skilldrpdown">
-                                            <div className="col-sm-12" id="skilldrpdown" >
+                                        <td data-label="Skill" id="skillDrpDown">
+                                            <div className="col-sm-12" id="skillDrpDown" >
                                                 <select id="txtskilldrpdown" onChange={this.handleChange} disabled={this.state.isEditable} value={this.state.user.txtskilldrpdown} className='form-control' >
                                                     <option value='option1'>option 1</option>
                                                     <option value='option2'>option 2</option>
@@ -61,7 +61,7 @@ export default class SkillsComponentComponent extends React.Component {
                                                 </select>
                                             </div>
                                         </td>
-                                        <td data-label="Expert Level" id="proficiencydrpdown">
+                                        <td data-label="Expert Level" id="proficiencyDrpDown">
                                             <div className="proficiencyEditableField col-sm-12" >
                                                 <select className='form-control addressEditableField requiredAddressField ' disabled={this.state.isEditable} id='txtproficiencydrpdown' onChange={this.handleChange} value={this.state.user.txtproficiencydrpdown}>
                                                     <option value="Beginner">Beginner</option>
@@ -72,7 +72,7 @@ export default class SkillsComponentComponent extends React.Component {
                                                 </select>
                                             </div>
                                         </td>
-                                        <td data-label="Number of Years" id="numofyears">
+                                        <td data-label="Number of Years" id="numOfYears">
                                             <div>
                                                 <input className="form-control" min="0" type="number" disabled={this.state.isEditable} value={this.state.user.empSkillNumberofYears} onChange={this.handleChange} id="empSkillNumberofYears" />
                                             </div>

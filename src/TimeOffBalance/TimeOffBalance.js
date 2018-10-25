@@ -14,7 +14,7 @@ export default class TimeOffBalance extends React.Component {
 
     render() {
         return (
-            <div className='wrapper' id='container-wrapper'>
+            <div className='wrapper' id='containerWrapper'>
                 <div className="content-wrapper1">
                     <section className="content-header margintop-20">
                         <h4 id="lblReportName"><strong>TimeOff Balance</strong></h4>
@@ -36,16 +36,16 @@ export default class TimeOffBalance extends React.Component {
                             Year: <YearPicker onChange={this.handleChange} />
                         </div>
 
-                        <div className="col-sm-12" id="LeaveBalance">
+                        <div className="col-sm-12" id="leaveBalance">
                             <div className="my-row2">
                                 <h5>Time Off Details for the Year 2018</h5>
                                 <br />
                                 <br />
                                 <div className="eq-col-9">
-                                    <span className="TextBoxHeader opening-balance">Available Balance</span>
-                                    <div className="TextBox TextBoxBorder">
+                                    <span className="text-box-header opening-balance">Available Balance</span>
+                                    <div className="text-box text-box-border">
                                         <span className="pto-bal-total">0.87</span>
-                                        <span className="leaveBalanceSign1">=</span>
+                                        <span className="leave-balance-sign1">=</span>
                                     </div>
                                 </div>
                             </div>

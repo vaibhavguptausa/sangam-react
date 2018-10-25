@@ -81,7 +81,7 @@ export default class Identification extends React.Component {
                                         </div>
                                         <div className="col-md-6 form-group textboxWidth">
                                             <div className="inlineFlex">
-                                                <input value={this.state.user.PassportDate} onChange={this.handleChange} className="form-control identityEditableField " id="PassportDate" type="date" disabled={this.state.edit} tabIndex="-1" />
+                                                <input value={this.state.user.PassportDate} onChange={this.handleChange} className="form-control identityEditableField " id="passportDate" type="date" disabled={this.state.edit} tabIndex="-1" />
                                             </div>
                                         </div>
                                     </div>
@@ -101,7 +101,7 @@ export default class Identification extends React.Component {
                                         </div>
                                         <div className="col-md-6 form-group textboxWidth">
                                             <div className="inlineFlex">
-                                                <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="LicenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
+                                                <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="licenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
                                             </div>
                                         </div>
                                     </div>

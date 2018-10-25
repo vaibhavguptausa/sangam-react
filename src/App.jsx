@@ -29,7 +29,7 @@ export default class App extends React.Component {
       image_url: profile.getImageUrl(),
       email: profile.getEmail()
     }
-    
+
     this.setState({ profile: profile });
     Object.keys(profile).map(p => {
       localStorage.setItem(p, profile[p])
@@ -74,7 +74,6 @@ export default class App extends React.Component {
             <div style={{ height: 100 + 'vh' }}>
               <Header className="app-header" profile={this.state.profile} signOut={this.signOut} handleNightMode={this.handleNightMode} />
               <div className={this.state.nightMode ? 'night-app' : 'app'}>{console.log(this.state.nightMode)}
-
 
                 <div className='app-layout'>
                   <Sidebar className='app-Sidebar' />

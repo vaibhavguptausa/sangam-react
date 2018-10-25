@@ -1,14 +1,12 @@
-body{
+body {
   overflow: hidden;
 }
 
-.night-app div{
+.night-app div {
   background-color: black;
-  
-  
 }
 
-.night-app label{
+.night-app label {
   color: white!important;
 }
 
