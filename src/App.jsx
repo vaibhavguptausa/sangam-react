@@ -83,6 +83,7 @@ export default class App extends React.Component {
                     <Route path="/ViewEmployees" component={Layout} />
                     <Route path='/TimeOffBalance' component={TimeOffBalance} />
                     <Route path="/PerformanceManagement" component={PerformanceManagement} />
+        <Route path ="/pms/appraisal/summary" component={<div style={{display: 'block', width: '100vh', height: '100vh', backgroundColor: 'blue'}}>Hi</div>}/>
                   </div>
                 </div>
               </div>
