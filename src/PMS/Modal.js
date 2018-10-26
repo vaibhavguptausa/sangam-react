@@ -1,5 +1,6 @@
 import React from 'react';
-import {Popover,Tooltip,Button, Modal, OverlayTrigger} from 'react-bootstrap' ;
+import { Popover, Tooltip, Button, Modal, OverlayTrigger } from 'react-bootstrap';
+
 export class Popup extends React.Component {
     constructor(props, context) {
       super(props, context);
@@ -83,5 +84,4 @@ export class Popup extends React.Component {
       );
     }
   }
-  
- 
+}
