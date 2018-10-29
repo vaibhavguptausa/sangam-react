@@ -1,0 +1,24 @@
+{
+    "ContactDetails" :{
+        "Field1" : "Personal Email" ,
+        "Field2" : "Alternate Email" ,
+        "Field3" : "Company Email" ,
+        "Field4" : "Mobile Number" ,
+        "Field5" : "Alternate Number" ,
+        "Field6" : "Home Phone" ,
+        "Field7" : "Work Phone" ,
+        "Field8" : "LinkedIn Link" ,
+        "Field9" : "FB Link" ,
+        "Field10" : "Twitter Link" 
+    },
+   
+    "EmergencyContactDetails" :{
+        "Field1" : "Name" ,
+        "Field2" : "Mobile Number" ,
+        "Field3" : "Relationship" ,
+        "Field4" : "Home Phone" ,
+        "Field5" : "Work Phone" ,
+        "Field6" : "Email" 
+        
+    }
+}

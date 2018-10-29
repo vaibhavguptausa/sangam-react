@@ -15,21 +15,12 @@ export default class Header extends React.Component {
     componentDidMount = () => {
         window.addEventListener('click', (e) => {
             if ((document.getElementById('mainHeaderUser') && document.getElementById('mainHeaderUser').contains(e.target))
-<<<<<<< HEAD
                ) {
                 this.setState({ disp: !this.state.disp });
             }
             else if((document.getElementById('logoutDropdown') && document.getElementById('logoutDropdown').contains(e.target))){
                 this.setState({disp: true});
             } 
-=======
-            ) {
-                this.setState({ disp: !this.state.disp });
-            }
-            else if ((document.getElementById('logoutDropdown') && document.getElementById('logoutDropdown').contains(e.target))) {
-                this.setState({ disp: true });
-            }
->>>>>>> c28f5a1f576a6c32883fcbec6232d175d19dbbfd
             else {
                 this.setState({ disp: false });
             }
