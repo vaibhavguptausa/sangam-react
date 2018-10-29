@@ -43,9 +43,9 @@ export default class PerformanceManagement extends React.Component {
                             </Tab.Content>
                         </Col>
                     </Row>
-                </Tab.Container>;
+                </Tab.Container>
 
-          </div>
+            </div>
         )
     }
 }

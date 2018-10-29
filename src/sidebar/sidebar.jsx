@@ -96,6 +96,14 @@ export default class Sidebar extends React.Component {
                                 <i className="fa fa-angle-left pull-right"></i>
                             </Link>
                         </li>
+
+                        <li>
+                            <Link to="/ProjectManagement" target="_blank">
+                                <i className="fa fa-line-chart fa-2x"></i>
+                                <span className="nav-text">Project Management</span>
+                                <i className="fa fa-angle-left pull-right"></i>
+                            </Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
