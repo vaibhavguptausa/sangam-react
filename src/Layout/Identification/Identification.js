@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-
+import {IdentityInformation,SalaryAccountDetails} from './Identification.json';
 export default class Identification extends React.Component {
     constructor(props) {
         super(props);
@@ -34,6 +34,52 @@ export default class Identification extends React.Component {
     handleSalaryClick = () => {
         this.setState({ salaryClick: !this.state.salaryClick });
     }
+    createIdentityInformation=()=>{
+        let children=[];
+        for(var i=1;i<=Object.keys(IdentityInformation).length;i++)
+        {
+            let data=IdentityInformation[`Field${i}`];
+            if(data==="Passport Expiration" || data==="Driving License Expiration")
+            children.push( <div className="col-md-6 form-group windowWidth">
+            <div className="col-md-4 form-group labelWidth">
+                <label className="calibriFont14 padding-top-5">{data}</label>
+            </div>
+            <div className="col-md-6 form-group textboxWidth">
+                <div className="inlineFlex">
+                    <input value={this.state.user[data]} onChange={this.handleChange} className="form-control identityEditableField " id={data} type="date" disabled={this.state.edit} tabIndex="-1" />
+                </div>
+            </div>
+        </div>)
+        else
+        {
+            children.push(<div className="col-md-6 form-group windowWidth">
+            <div className="col-md-4 form-group labelWidth">
+                <label className="calibriFont14 padding-top-5">{data}</label>
+            </div>
+            <div className="col-md-6 form-group textboxWidth">
+                <input value={this.state.user[data]} onChange={this.handleChange} className="form-control identityEditableField " id={data} maxLength="20" type="text" tabIndex="-1" disabled={this.state.edit} />
+            </div>
+        </div>)
+        }
+        }
+        return children;
+    }
+    createSalaryAccountDetails=()=>{
+        let children=[];
+        for(var i=1;i<=Object.keys(SalaryAccountDetails).length;i++)
+        {
+            let data=SalaryAccountDetails[`Field${i}`];
+            children.push(<div className="col-md-6 form-group windowWidth">
+            <div className="col-md-4 form-group labelWidth">
+                <label className="calibriFont14 padding-top-5">{data}</label>
+            </div>
+            <div className="col-md-6 form-group textboxWidth " >
+                <input value={this.state.user[data]} onChange={this.handleChange} className="form-control identityEditableField requiredAccountField " id={data} maxLength="200" type="text" required="required" disabled={this.state.edit} />
+            </div>
+        </div>)
+        }
+        return children;
+    }
 
     render() {
         return (
@@ -48,81 +94,7 @@ export default class Identification extends React.Component {
                             <div className="row padding-top-20" id="identityInformation">
                                 <div className="col-md-12">
 
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">UID Number:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtUIDNumber} onChange={this.handleChange} className="form-control identityEditableField " id="txtUIDNumber" maxLength="20" type="text" tabIndex="-1" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">PAN Card Number:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtPanCardNumber} onChange={this.handleChange} className="form-control identityEditableField " id="txtPanCardNumber" maxLength="20" type="text" tabIndex="-1" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Passport Number:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtPassportNumber} onChange={this.handleChange} className="form-control identityEditableField " id="txtPassportNumber" maxLength="20" type="text" tabIndex="-1" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Passport Expiration:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <div className="inlineFlex">
-                                                <input value={this.state.user.PassportDate} onChange={this.handleChange} className="form-control identityEditableField " id="passportDate" type="date" disabled={this.state.edit} tabIndex="-1" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Driving License Number:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtLicenceNumber} onChange={this.handleChange} className="form-control identityEditableField " id="txtLicenceNumber" maxLength="20" type="text" tabIndex="-1" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Driving License Expiration:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <div className="inlineFlex">
-                                                <input value={this.state.user.LicenseDate} onChange={this.handleChange} className="form-control identityEditableField " id="licenseDate" type="date" disabled={this.state.edit} tabIndex="-1" />
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5" >Voter Id:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtVoterId} onChange={this.handleChange} className="form-control identityEditableField " id="txtVoterId" maxLength="20" type="text" tabIndex="-1" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Comments/Notes:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtCommentsNotes} onChange={this.handleChange} className="form-control identityEditableField " id="txtCommentsNotes" maxLength="500" type="text" tabIndex="-1" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
+                                    {this.createIdentityInformation()}
 
                                 </div>
                             </div> : <div></div>}
@@ -130,59 +102,16 @@ export default class Identification extends React.Component {
                 </div>
 
                 <div className="col-sm-11 margin-top-20">
-                    <div className="panel panel-primary" onClick={this.handleSalaryClick}>
-                        <div className="panel-heading panel-blue-color clickable height-0" id="accountInfoDiv">
+                    <div className="panel panel-primary" >
+                        <div className="panel-heading panel-blue-color clickable height-0" id="accountInfoDiv" onClick={this.handleSalaryClick}>
                             <h3 className="panel-title" >Salary Account Details</h3>
                             <span className="pull-right "><i className="glyphicon glyphicon-minus"></i></span>
                         </div>
                         {this.state.salaryClick ?
                             <div className="row padding-top-20" id="accountInformation">
                                 <div className="col-md-12">
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Bank Name:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth " data-hint="Bank name is required">
-                                            <input value={this.state.user._txtBankName} onChange={this.handleChange} className="form-control identityEditableField requiredAccountField " id="_txtBankName" maxLength="200" type="text" required="required" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Account Number:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth has-error hint--top hint--rounded hint--bounce hint--always" data-hint="Account Number is required">
-                                            <input value={this.state.user._txtAccountNumber} onChange={this.handleChange} className="form-control identityEditableField requiredAccountField " id="_txtAccountNumber" maxLength="200" type="text" required="required" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">IFSC Code:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth has-error hint--top hint--rounded hint--bounce hint--always" data-hint="IFSC Code is required">
-                                            <input value={this.state.user._txtIfscCode} onChange={this.handleChange} className="form-control identityEditableField requiredAccountField " id="_txtIfscCode" maxLength="200" type="text" required="required" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5">Bank Branch:</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtBankBranch} onChange={this.handleChange} className="form-control identityEditableField " id="txtBankBranch" maxLength="200" type="text" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
-
-                                    <div className="col-md-6 form-group windowWidth">
-                                        <div className="col-md-4 form-group labelWidth">
-                                            <label className="calibriFont14 padding-top-5" >Bank Address</label>
-                                        </div>
-                                        <div className="col-md-6 form-group textboxWidth">
-                                            <input value={this.state.user.txtBankAddress} onChange={this.handleChange} className="form-control identityEditableField " id="txtBankAddress" type="text" disabled={this.state.edit} />
-                                        </div>
-                                    </div>
+                                    {this.createSalaryAccountDetails()}
+                                   
                                 </div>
                             </div> : <div></div>}
                     </div>
