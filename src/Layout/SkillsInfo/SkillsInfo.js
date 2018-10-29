@@ -20,8 +20,8 @@ const options = [
 
 ];
 
-   
-  
+
+
 export default class SkillsInfo extends React.Component {
     constructor(props) {
         super(props);
@@ -44,10 +44,11 @@ export default class SkillsInfo extends React.Component {
     handleEdit = () => {
         this.setState({ isEditable: !this.state.isEditable });
     }
+    
     render() {
         return (
             <div className="row">
-                <div className="col-sm-12  col-md-8 padding-top-10" id="filterName">
+                <div className="col-sm-12 col-md-8 padding-top-10" id="filterName">
                     <label className="col-md-4">Filter Skills</label>
                     <div className="col-sm-12 col-md-6">
                         <Select
@@ -58,17 +59,17 @@ export default class SkillsInfo extends React.Component {
                                 ...theme,
                                 borderRadius: 0,
                                 colors: {
-                                ...theme.colors,
-                                  text: 'orangered',
-                                  primary25: 'hotpink',
-                                  primary: 'blue',
+                                    ...theme.colors,
+                                    text: 'orangered',
+                                    primary25: 'hotpink',
+                                    primary: 'blue',
                                 },
-                              })}
+                            })}
                         />
                     </div>
                 </div>
 
-                <div className="col-sm-12 col-md-2  padding-top-10" id="filterName">
+                <div className="col-sm-12 col-md-2 padding-top-10" id="filterName">
                     <label>Primary Skill</label>
                     <input placeholder="Training" disabled={true} />
                 </div>

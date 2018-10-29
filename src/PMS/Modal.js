@@ -83,4 +83,4 @@ export class Popup extends React.Component {
         </div>
       );
     }
-  }
+}
