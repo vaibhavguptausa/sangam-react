@@ -1,0 +1,21 @@
+{
+    "IdentityInformation" :{
+        "Field1" : "UID Number",
+        "Field2" : "PAN Card Number",
+        "Field3" : "Passport Number",
+        "Field4" : "Passport Expiration",
+        "Field5" : "Driving License Number",
+        "Field6" : "Driving License Expiration",
+        "Field7" : "Voter Id",
+        "Field8" : "Comments/Notes"
+      
+
+    },
+    "SalaryAccountDetails" :{
+        "Field1" : "Bank Name",
+        "Field2" : "Account Number",
+        "Field3" : "IFSC Code",
+        "Field4" : "Bank Branch",
+        "Field5" : "Bank Address"
+    }
+}
